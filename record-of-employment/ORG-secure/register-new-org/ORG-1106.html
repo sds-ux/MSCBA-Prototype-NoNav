@@ -1,9 +1,4 @@
 
-
-
-
-
-
 	<!DOCTYPE html>
 	<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 	<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
@@ -348,10 +343,16 @@ For more information visit the			<a href="https://www.canada.ca/en/employment-so
 		</p>
 		
 <input type="hidden" name="struts.token.name" value="token" />
-<input type="hidden" name="token" value="CQ8UAEOW1TZNYJW1QPLO1W6SJ4IPOEFX" /><input type="hidden" name="orgAccessId" value="A8CF628738C76AB0" id="validate-organization_orgAccessId"/><input type="hidden" name="model.organizationDefaultAddressEncryptedAddressId" value="" id="validate-organization_model_organizationDefaultAddressEncryptedAddressId"/>		
-<input type="submit" id="validate-organization_validate-organization_save" name="method:addBusiness" value="Save" class="btn btn-primary"/>
-<input type="submit" id="validate-organization_validate-organization_skip" name="method:skipBusiness" value="Skip For Now" class="btn btn-default"/>
-<input type="submit" id="validate-organization_validate-organization_cancel" name="method:cancel" value="Cancel" class="btn btn-default"/>
+
+	<input type="hidden" name="token" value="CQ8UAEOW1TZNYJW1QPLO1W6SJ4IPOEFX" /><input type="hidden" name="orgAccessId" value="A8CF628738C76AB0" id="validate-organization_orgAccessId"/>
+	<input type="hidden" name="model.organizationDefaultAddressEncryptedAddressId" value="" id="validate-organization_model_organizationDefaultAddressEncryptedAddressId"/>		
+
+	<a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" href="/MSCBA-Prototype/record-of-employment/ORG-secure/validated-organization/ORG-1101.html">Save</a>
+
+	<a class="btn btn-default" id="validate-organization_validate-organization_skip" name="method:skipBusiness" href="/MSCBA-Prototype/record-of-employment/ORG-secure/register-new-org/ORG-1102-p1.html">Skip For Now</a>
+	
+
+	<input type="submit" id="validate-organization_validate-organization_cancel" name="method:cancel" value="Cancel" class="btn btn-default"/>
 </form>
 
 
@@ -362,7 +363,7 @@ For more information visit the			<a href="https://www.canada.ca/en/employment-so
 					<nav id="wb-sec" class="wb-sec col-md-3 col-md-pull-9" typeof="SiteNavigationElement" role="navigation">
 <h2 id="wb-sec-h" class="wb-inv">Section menu</h2>
 <section class="list-group menu list-unstyled">
-						<h3><a href="#">Test Account</a></h3>
+						<h3><a href="#">Riley Smith</a></h3>
 				<ul class="list-group menu list-unstyled">
 						<li><a href="/MSCBA-Prototype/record-of-employment/ORG-secure/ORG-1000.html" class="list-group-item">My Information</a></li>
 						<li><a href="/MSCBA-Prototype/record-of-employment/ORG-secure/register-new-org/ORG-1104.html" class="list-group-item">Register New Organization</a></li>
@@ -373,7 +374,7 @@ For more information visit the			<a href="https://www.canada.ca/en/employment-so
 							document.getElementById("wb-sec").innerHTML = wet.builder.secmenu({
 								sections: [
 										{
-											sectionName: "Test Account",
+											sectionName: "Riley Smith",
 											menuLinks: [
 												{
 													href: "/MSCBA-Prototype/record-of-employment/ORG-secure/ORG-1000.html",
