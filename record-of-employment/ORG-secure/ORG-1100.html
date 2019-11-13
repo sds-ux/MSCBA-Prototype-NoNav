@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-	<html class="no-js" lang="en" dir="ltr">
+	<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+	<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
 		<head>
 			<meta charset="utf-8"/>
 			<meta content="width=device-width,initial-scale=1" name="viewport"/>
 
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+     wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
 
 				<title>Record of Employment - [My Organization(s)]</title>
 
@@ -13,23 +16,34 @@
 			<link href="https://srv136.services.gc.ca/sc/mscba-mdesc/portal-portail/pro/roe/mscba/StaticContent/theme-mscba-mdesc/css/mscba.css" rel="stylesheet"/>
 
 			<noscript>
-			
+				<!--[if gte IE 9 | !IE ]><!-->
 				<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/favicon.ico" rel="icon" type="image/x-icon"/>
 				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/theme.min.css"/>
 				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsfixes.css"/>
 				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsapps.css"/>
-				
-				
+				<!--<![endif]-->
+
+				<!--[if lt IE 9]>
+				<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/favicon.ico" rel="shortcut icon"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/ie8-theme.min.css"/>
+				<![endif]-->
+
+				<!--[if lte IE 9]><![endif]-->
 				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/noscript.min.css"/>
 				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsnoscript.css"/>
 
-
+<!--[if gte IE 9 | !IE ]><!-->
 <link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/assets/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/theme.min.css">
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsfixes.css">
 <!-- Are you using the application templates? If so add the following CSS file -->
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsapps.css">
-
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/ie8-theme.min.css" />
+<![endif]-->
+<!--[if lte IE 9]><![endif]-->
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/noscript.min.css" />
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsnoscript.css" />			</noscript>
 
@@ -213,10 +227,8 @@ Gouvernement du Canada					</span>
 		
     </div>
 	
-
+</div>
 						</main>
-
-				</div>
 
 				<div id="def-preFooter"><div class="row pagedetails">
 	<div class="datemod col-xs-12 mrgn-tp-lg">
@@ -280,65 +292,51 @@ Gouvernement du Canada					</span>
 					document.getElementById("def-footer").outerHTML = wet.builder.appFooter({
 						cdnEnv: "AKAMAI",
 						footerSections: [
-
-
-
-
-
-
 							 {
 									href: "https://www.canada.ca/en/employment-social-development/corporate/contact/employer-contact-center.html",
 									text: "Employer Contact Center",
 									newWindow: true
 							},
-
 							 {
 									href: "http://www.servicecanada.gc.ca/tbsc-fsco/sc-hme.jsp?lang=eng",
 									text: "Find a Service Canada Office",
 									newWindow: true
 							},
-
 							 {
 									href: "https://www.canada.ca/en/employment-social-development/programs/ei/ei-list/reports/roe-web-admin-guide.html",
 									text: "ROE Web",
 									newWindow: true
 							},
-
 							 {
 									href: "https://www.canada.ca/en/employment-social-development/programs/ei/ei-list/reports/roe-guide.html",
 									text: "ROE Guide",
 									newWindow: true
 							},
-
 							 {
 									href: "https://www.canada.ca/en/employment-social-development/programs/ei/ei-list/reports/employers/roe-tutorials.html",
 									text: "Tutorials on Completing ROE  Form",
 									newWindow: true
 							},
-
 							 {
 									href: "http://www.cra-arc.gc.ca/esrvc-srvce/tx/ndvdls/myccnt/menu-eng.html",
 									text: "CRA - My Account for Individuals",
 									newWindow: true
 							},
-
 							 {
 									href: "http://www.cra-arc.gc.ca/esrvc-srvce/tx/bsnss/myccnt/menu-eng.html",
 									text: "CRA – My Business Account",
 									newWindow: true
 							},
-
 							 {
 									href: "http://www.cra-arc.gc.ca/esrvc-srvce/tx/rprsnttvs/menu-eng.html",
 									text: "CRA – Represent a Client",
 									newWindow: true
 							},
-
 						],
 						contactLink: "http://www.edsc.gc.ca/cgi-bin/op-so/msca/redirection.asp?linkmsca=2e.html",
 						termsLink: "https://srv136.services.gc.ca/ecas-seca/rascl/SCL/PNS.aspx?mode=READONLY&amp;lang=eng",
 						privacyLink: "https://srv136.services.gc.ca/ecas-seca/rascl/SCL/PNS.aspx?mode=READONLY&amp;lang=eng",
-						showFeatures: false
+						showFeatures: true
 					});
 				</script>
 			</div>
@@ -366,4 +364,3 @@ Gouvernement du Canada					</span>
 			<script type="text/javascript"></script>
 		</body>
 	</html>
-
