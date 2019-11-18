@@ -242,7 +242,10 @@
 </div>
                     </div>
                     <!-- Write closure template -->
-                   
+                    <script type="text/javascript">
+                        var defPreFooter = document.getElementById("def-preFooter");
+                        defPreFooter.outerHTML = wet.builder.preFooter({"cdnEnv":"prod","dateModified":"2018-08-09","showPostContent":true,"showFeedback":"https://www.canada.ca/en/report-problem.html","showShare":false});
+                    </script>
                 </main>
         	    <nav class="wb-sec col-md-3 col-md-pull-9" typeof="SiteNavigationElement" id="wb-sec" role="navigation">
                     <!-- Write closure fall-back static file -->
@@ -272,12 +275,7 @@
 <p>The menu is not available when Javascript is disabled.</p>
 		        </nav>
                 <!-- Write closure template -->
-	            <script type="text/javascript">
-	                var secondarymenu = document.getElementById("wb-sec");
-	                secondarymenu.innerHTML = wet.builder.secmenu(
-	                    {"sections":[{"sectionName":"Menu","menuLinks":[{"href":"https://www.canada.ca/ECAS-SECA/RASCL/Support/HelpPage.aspx?rurl=/ecas-seca/rascl/SCL/ClientConfirmation.aspx","text":"Help"},{"href":"https://www.canada.ca/ECAS-SECA/RASCL/Support/FAQ.aspx?rurl=/ecas-seca/rascl/SCL/ClientConfirmation.aspx","text":"Frequently asked questions (FAQs)"},{"href":"https://www.canada.ca/ECAS-SECA/RASCL/SCL/PNS.aspx?rurl=/ecas-seca/rascl/SCL/ClientConfirmation.aspx","text":"ROE Web Terms and Conditions"},{"href":"https://www.canada.ca/ECAS-SECA/RASCL/Support/LogOut.aspx","text":"Log Out"}]}]}
-	                );
-	            </script>	
+	            	
              </div>
 	    </div>
         <div id="def-footer">
