@@ -275,7 +275,12 @@
 <p>The menu is not available when Javascript is disabled.</p>
 		        </nav>
                 <!-- Write closure template -->
-	            	
+	            	<script type="text/javascript">
+	                var secondarymenu = document.getElementById("wb-sec");
+	                secondarymenu.innerHTML = wet.builder.secmenu(
+	                    {"sections":[{"sectionName":"Menu","menuLinks":[{"href":"https://www.canada.ca/ECAS-SECA/RASCL/Support/HelpPage.aspx?rurl=/ecas-seca/rascl/SCL/ClientConfirmation.aspx","text":"Help"},{"href":"https://www.canada.ca/ECAS-SECA/RASCL/Support/FAQ.aspx?rurl=/ecas-seca/rascl/SCL/ClientConfirmation.aspx","text":"Frequently asked questions (FAQs)"},{"href":"https://www.canada.ca/ECAS-SECA/RASCL/SCL/PNS.aspx?rurl=/ecas-seca/rascl/SCL/ClientConfirmation.aspx","text":"ROE Web Terms and Conditions"},{"href":"https://www.canada.ca/ECAS-SECA/RASCL/Support/LogOut.aspx","text":"Log Out"}]}]}
+	                );
+	            </script>
              </div>
 	    </div>
         <div id="def-footer">
