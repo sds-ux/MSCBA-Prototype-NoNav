@@ -337,14 +337,22 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
           </div>
           <br />
           <p>Within your Organization Profile, you can:
-			  <ul>
-			<li>Edit the Number of Employees within the Organization;</li>
-				  <li>Edit the address information;</li>
-				  <li></li>
-				  <li></li>
-			</ul>
-			  Here you can invite or remove representatives from the organization and modify their access rights. Representatives will only have the ability to delegate or remove rights they already possess.</p>
-          <ul class="list-unstyled list-inline">
+		  <ul>
+			<li><strong>Edit Organization Profile</strong>, which allows you to: <ul>
+				<li>update the Number of Employees within the Organization; and/or</li>
+				  <li>update the main address for your organization.</li>
+				</ul></li>
+			  <li><strong>Manage Address</strong>, which allows you to add or remove multiple addresses for your Organization. Note that you must set 1 of the given addresses as the <strong>Main Address</strong>.<br />
+			<details>
+			<summary>Why add additional addresses?</summary>
+			<p>Adding additional addresses is particularly helpful when creating ROEs for employees of an organization which has multiple locations. When completing an ROE you will be able to select from this list of addresses to specify the appropriate employer address on the ROE.</p>
+			</details>
+			 </li>
+				  </ul>
+			<p>If your organization submits ROEs on behalf of other businesses, you can add their Business Numbers to your organization as needed by selecting <strong>Manage CRA Businesses</strong>.</p>
+
+			
+		  <ul class="list-unstyled list-inline">
             <li class="mrgn-bttm-sm">
               <button onclick="window.location.href = '/MSCA-Prototype/scenarioA/services/my-account/MSCA/EI/Tax_Slips/Tax_Slips_T4E.html';" type="button" class="btn btn-default">Edit Organization Profile</button>
             </li>
@@ -383,7 +391,7 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
             <div class="brdr-bttm-fade"></div>
           </div>
           <br />
-          <p>This option is only available if you are the Primary Officer or a representative authorized to manage other representatives.</p>
+          <p>This option is only available if you are the Primary Officer or a representative authorized to manage other representatives. Representatives are people invited into the  Organization to submit ROEs or to do other tasks.</p>
           <p>Here you can:</p>
           <ul>
             <li>view all of the representatives belonging to the organization;</li>
@@ -412,7 +420,7 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
             on those ROEs is sensitive in nature. </p>
           <ul class="list-unstyled list-inline">
             <li class="mrgn-bttm-sm">
-              <button onclick="window.location.href = '/MSCA-Prototype/scenarioA/services/my-account/MSCA/';" type="button" class="btn btn-default">Creat a Folder</button>
+              <button onclick="window.location.href = '/MSCA-Prototype/scenarioA/services/my-account/MSCA/';" type="button" class="btn btn-default">Create a Folder</button>
             </li>
             <li class="mrgn-bttm-sm">
               <button onclick="window.location.href = '/MSCA-Prototype/scenarioA/services/my-account/MSCA/';" type="button" class="btn btn-default">View Folders</button>
@@ -427,11 +435,9 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
             <div class="brdr-bttm-fade"></div>
           </div>
           <br />
-          <p>Use this option when assigning access rights for each user</p>
+          <p>This option is only available if your organization has many employees submitting ROEs and many business numbers to manage. Manage User Access By CRA Business Number lets you select a business number, view a list of users, and assign/remove access to that business number for each user on the list. Use this if your organization has many people submitting ROEs for many business numbers.</p>
           <ul class="list-unstyled list-inline">
-            <li class="mrgn-bttm-sm">
-              <button onclick="window.location.href = '/MSCA-Prototype/scenarioA/services/my-account/MSCA/';" type="button" class="btn btn-default">Manage User Access By Representative</button>
-            </li>
+            
 			  <li class="mrgn-bttm-sm">
               <button onclick="window.location.href = '/MSCA-Prototype/scenarioA/services/my-account/MSCA/';" type="button" class="btn btn-default">Manage User Access By CRA Business Number</button>
             </li>
