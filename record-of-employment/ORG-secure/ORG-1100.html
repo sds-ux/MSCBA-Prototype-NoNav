@@ -54,7 +54,96 @@
 
 			<script type="text/javascript">document.write(wet.builder.refTop({ cdnEnv: "AKAMAI", isApplication: true }))</script>
 			<style>.modal-footer { background-color: #FFF }</style>
-			
+		<style type="text/css">
+.orange-bg {
+    background: linear-gradient(#f68b1f, #f89736);
+}
+.blue-bg {
+    background-color: #11409F;
+}
+.header-bg {
+    line-height: normal;
+    background: linear-gradient(to right, #ddd 50%, #fff 75%, #fff);
+}
+.header-bg .brdr-bttm-fade {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #26374a 50%, #fff 75%, #fff);
+}
+.header-bg h2 {
+    background: linear-gradient(297.5deg, transparent, transparent 25px, white 26px, white 31px, #26374a 32px, #26374a);
+    color: white;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px 30px 5px 15px;
+    min-width: 300px;
+    font-size: 1.3em;
+}
+.large-btn {
+    width: 85%;
+    text-align: left;
+}
+.large-btn b {
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+}
+.large-btn img {
+    display: inline-block;
+    width: 10%;
+    margin-left: 3%;
+}
+a.btn-green:hover, a.btn-purple:hover, a.btn-blue:hover {
+    color: white;
+}
+a.btn-green:link, a.btn-green:visited, a.btn-green:hover, a.btn-green:active, a.btn-purple:link, a.btn-purple:visited, a.btn-purple:hover, a.btn-purple:active, a.btn-blue:link, a.btn-blue:visited, a.btn-blue:hover, a.btn-blue:active {
+    color: white;
+    padding-left: 5px;
+}
+a.btn-green {
+    background: #444;
+}
+a.btn-green:hover, a.btn-green:active {
+    background: #787878;
+}
+a.btn-purple {
+    background: #32002A;
+}
+a.btn-purple:hover, a.btn-purple:active {
+    background: #4A0B38;
+}
+a.btn-blue:link, a.btn-blue:visited {
+    background: #283a7b;
+}
+a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
+    background: #26374a;
+}
+	/*
+	
+		
+	a.btn-green {
+		background: #000000;
+	}
+	a.btn-green:hover, a.btn-green:active {
+		background: #787878;
+	}
+	
+	
+	a.btn-purple {
+		background: #32002A;
+	}
+	a.btn-purple:hover, a.btn-purple:active {
+		background: #4A0B38;
+	}
+	
+	
+	a.btn-blue {
+		background: #26374a;
+	}
+	a.btn-blue:hover, a.btn-blue:active {
+		background: #26374a;
+	}*/
+</style>	
 		</head>
 
 		<body vocab="http://schema.org/" typeof="WebPage">
@@ -197,28 +286,59 @@ Gouvernement du Canada					</span>
 
 	<h2>My Organization(s)</h2>
 
-		<i>You currently have no organizations registered to your account.</i>
+		<p><em>You currently have no organizations registered to your account.</em></p>
 	
-	<h2>Options</h2>
-	
-	
-    <div class="well">
-	    <h2>New Organization</h2>
-<p>Submit a new request to register the organization you represent to the ROE Web program. Please ensure the organization is not already registered and that you are authorized to act as the account administrator (primary officer).</p><a class="btn btn-default" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1104.html">Register a New Organization</a>			
-	
-		</div>
-    <div class="well">
-	    <h2>Primary Officer</h2>
-<p>Submit a request to become the new account administrator (primary officer) for an already registered organization. Before submitting a request, ensure you are authorized to replace the current primary officer.</p>
-	    <a class="btn btn-default" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/replace-or-become-po/ORG-1400.html">Replace/become the Primary Officer of an existing organization</a>
-		
-    </div>
-    <div class="well">
-	    <h2>Become a Representative</h2>
-		<p>To become a representative of a registered organization, you will need to provide your user reference number (URN) to the primary officer or authorized representative of that organization. Your URN is a unique alphanumeric code that can be found on top of this page. It will be used by the primary officer or the authorized representative to send you an invitation to join the organization.</p> 
-		
-    </div>
-	
+<section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="mrgn-tp-md header-bg">
+              <h2 id="a1-1" class="mrgn-tp-0">Register a New Organization&nbsp;</h2>
+              <div class="brdr-bttm-fade"></div>
+            </div>
+            <br />
+            <p>Submit a request to register the organization you represent to the ROE web. Please ensure the organization is not 
+              already registered and that you are authorized to act as the account administrator (primary officer).</p>
+            <ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1104.html';" type="button" class="btn btn-default">Register a New Organization</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+					
+   <section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="mrgn-tp-md header-bg">
+              <h2 id="a1-2" class="mrgn-tp-0">Replace the Primary Officer&nbsp;</h2>
+              <div class="brdr-bttm-fade"></div>
+            </div>
+            <br />
+            <p>Submit a new request to become the new account administrator (primary officer) for an already registered organization. 
+              Before submitting a request, ensure you are authorized to replace the current primary officer. </p>
+            <ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/replace-or-become-po/ORG-1400.html';" type="button" class="btn btn-default">Replace the Primary Officer</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+					
+					<section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="mrgn-tp-md header-bg">
+              <h2 id="a1-2" class="mrgn-tp-0">Become a Representative&nbsp;</h2>
+              <div class="brdr-bttm-fade"></div>
+            </div>
+            <br />
+            <p>To become a representative of a registered organization, you will need to provide your user reference number (URN) to the primary officer or authorized representative of that organization. Your URN is a unique alphanumeric code that can be found on top of this page. It will be used by the primary officer or the authorized representative to send you an invitation to join the organization.</p>
+            
+          </div>
+        </div>
+      </section>
 </div>
 						</main>
 
