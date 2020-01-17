@@ -202,32 +202,28 @@ Gouvernement du Canada					</span>
 							<h1 property="name" id="wb-cont">Validate the Organization</h1>
 
 
-	<p>
-For more information on how your privacy is protected, please refer to our 		<a href="###" target="_blank" rel="external">Personal Information Collection Statement</a>.
-	</p>
-	
-	<p>In order to validate the existence of your organization, please enter its 15 digit Canada Revenue Agency (CRA) business number or, for registered charities and non-profit organizations, its registration number (e.g., 123456789 AB 1234).</p>
-	<p>This is the Business/Registration Number that was issued by CRA when the Organization Legal Name was registered. The Payroll Program Account Business Number (RP extension) should be used, if you have one. If not, another extension may be used. Note that supporting documentation may be requested to complete the validation process in these cases.</p>
-	
+	<p>A Business/Registration Number was issued by Canada Revenue Agency (CRA)  when the Organization Legal Name was registered. If a Payroll Program Account  Business Number was provided with an RP extension, this should be used instead  as it will expedite the confirmation process.</p>
+<p>In order to confirm the existence of your organization, please enter the  15 digit CRA Business Number. If you are a registered charity or a non-profit  organization, please enter its registration number (e.g., 123456789 AB 1234)</p>
+<p>Note: Supporting documentation may be requested  to complete the validation process in these cases.</p>
+<p>In  addition, you may provide a CRA Operating Name. This name will appear as the  name of your business on the Records of Employment (ROEs) that you will be  issuing. If you do not provide a CRA Operating Name, the CRA Legal Name will  appear on your ROEs.</p>
+
 	
 <form id="validate-organization" name="validate-organization" action="###" method="post" role="form">		
 			<div class="form-group">
 <input type="hidden" name="model.isBusinessNumberRequired" value="true" id="validate-organization_model_isBusinessNumberRequired"/>			</div>
-		
-				
-			<p tabindex="0">Using the RP program account to your organization will expedite the validation process.</p>
-	
+		<p tabindex="0">All fields are required unless otherwise stated.</p>
+			
 			<div id="businessDetails" class="hidden-toggle">
 				<div class="form-group">
 
 <div class="input"><fieldset class="form-inline">
 
-<legend class="label"><span class="field-name">CRA Business Number:</span><span class="required">(required)</span></legend>
+<legend class="label"><span class="field-name">CRA Business Number:</span></legend>
 	<label class="sr-only" for="validate-organization_model_businessNumberPrefix">
-CRA Business Number (prefix):<span class="required">(required)</span>	</label>
+CRA Business Number (prefix):</label>
 <input type="text" name="model.businessNumberPrefix" size="9" maxlength="9" value="" id="validate-organization_model_businessNumberPrefix" class="form-control"/>
 	<label class="sr-only" for="validate-organization_model_businessNumberIdentifier">
-CRA Business Number (identifier):<span class="required">(required)</span>	</label>
+CRA Business Number (identifier):</label>
 	
 <select name="model.businessNumberIdentifier" id="validate-organization_model_businessNumberIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
     <option value="RP">RP</option>
@@ -237,7 +233,7 @@ CRA Business Number (identifier):<span class="required">(required)</span>	</labe
 
 			
 	<label class="sr-only" for="validate-organization_model_businessNumberSuffix">
-CRA Business Number (suffix):<span class="required">(required)</span>	</label>
+CRA Business Number (suffix):</label>
 <input type="text" name="model.businessNumberSuffix" size="4" maxlength="4" value="" id="validate-organization_model_businessNumberSuffix" class="form-control"/></fieldset>
 	
 </div>
@@ -249,7 +245,7 @@ CRA Business Number (suffix):<span class="required">(required)</span>	</label>
 				</div>
 				
 				<div class="form-group">
-<div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">CRA Operating Name (Common Name):</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
+<div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">CRA Operating Name: (optional)</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
 </div>
 				</div>
 			</div>
@@ -286,14 +282,15 @@ CRA Business Number (suffix):	</label>
 				</div>
 	
 				<div class="form-group">
-<div class="input"><label for="validate-organization_validate-organization_operatingName"><span class="field-name">CRA Operating Name (Common Name):</span></label><input type="text" name="validate-organization.operatingName" size="50" value="" disabled="disabled" id="validate-organization_validate-organization_operatingName" class="form-control"/>
+<div class="input"><label for="validate-organization_validate-organization_operatingName"><span class="field-name">CRA Operating Name: (optional)</span></label><input type="text" name="validate-organization.operatingName" size="50" value="" disabled="disabled" id="validate-organization_validate-organization_operatingName" class="form-control"/>
 </div>
 				</div>
 			</div>			
 
 				<div id="businessPostalCode" class="hidden-toggle">
 					<div class="form-group">
-<div class="input"><label for="validate-organization_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span><span class="required">(required)</span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="validate-organization_model_regionPostalCode" class="form-control"/>
+<div class="input">
+  <label for="validate-organization_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="validate-organization_model_regionPostalCode" class="form-control"/>
 </div>
 					</div>
 				</div>
@@ -304,10 +301,11 @@ CRA Business Number (suffix):	</label>
 					</div>
 				</div>
 		
-			<h2 tabindex="0">Overlapping Records of Employment (ROEs)</h2>
-			<p tabindex="0">If you have at least one employee who works in more than one position under this CRA Business Number, and is recorded separately under different payroll reference numbers, it may be necessary for you to issue more than one ROE for the same period of employment for this employee.</p>
+			<h2 tabindex="0">Overlapping ROEs</h2>
+			<p>If you have at least 1 employee who works in more than 1 position under  this CRA Business Number, and if it is recorded separately under different  payroll reference numbers, it may be necessary for you to issue more than one  ROE for the same period of employment for this employee. </p>
 			<div class="form-group">
-<div class="input"><label for="validate-organization_model_isOverlapRuleRequired"><span class="field-name">Do you have at least one employee where the above applies?</span><span class="required">(required)</span></label><select name="model.isOverlapRuleRequired" id="validate-organization_model_isOverlapRuleRequired" class="form-control">
+<div class="input">
+  <label for="validate-organization_model_isOverlapRuleRequired"><span class="field-name">Do you have at least one employee where the above applies?</span></label><select name="model.isOverlapRuleRequired" id="validate-organization_model_isOverlapRuleRequired" class="form-control">
 		<option value="">Please select...</option>
 		<option value="false">No</option>
 		<option value="true">Yes</option>
@@ -353,7 +351,7 @@ For more information visit the			<a href="###" target="_blank">help guide</a>.
 	</div>
 </div></div>
 
-				<script type="text/javascript">
+			  <script type="text/javascript">
 					document.getElementById("def-preFooter").outerHTML = wet.builder.preFooter({
 							cdnEnv: "AKAMAI",
 							showShare: false,
