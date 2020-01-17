@@ -94,7 +94,7 @@ Gouvernement du Canada					</span>
 			<div class="row">
 				<section class="col-sm-7">
 						<h2 class="wb-inv">Record of Employment</h2>
-						<a class="app-name" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-p1.html">Record of Employment</a>
+						<a class="app-name" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-2.html">Record of Employment</a>
 				</section>
 					<nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
 						<h2 class="wb-inv">Account menu</h2>
@@ -122,7 +122,7 @@ Gouvernement du Canada					</span>
 			<ul class="list-inline menu" role="menubar">
 				<li>
 							<a
- href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-p1.html">My Organizations</a>
+ href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-2.html">My Organizations</a>
 				</li>
 					<li>
 						<a href="#section1" class="item">Record of Employment</a>
@@ -185,8 +185,9 @@ Gouvernement du Canada					</span>
 		<div class="container">
 			<div class="row">
 				<ol class="breadcrumb">
-						<li><a href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-p1.html">Record of Employment</a></li>
-						<li>Confirm your Organization
+						<li><a href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-2.html">Record of Employment</a></li>
+						<li>
+								Confirm your Organization
 						</li>
 				</ol>
 			</div>
@@ -204,25 +205,25 @@ Gouvernement du Canada					</span>
 	<p>A Business/Registration Number was issued by Canada Revenue Agency (CRA)  when the Organization Legal Name was registered. If a Payroll Program Account  Business Number was provided with an RP extension, this should be used instead  as it will expedite the confirmation process.</p>
 <p>In order to confirm the existence of your organization, please enter the  15 digit CRA Business Number. If you are a registered charity or a non-profit  organization, please enter its registration number (e.g., 123456789 AB 1234)</p>
 <p>Note: Supporting documentation may be requested  to complete the validation process in these cases.</p>
+<p>In  addition, you may provide a CRA Operating Name. This name will appear as the  name of your business on the Records of Employment (ROEs) that you will be  issuing. If you do not provide a CRA Operating Name, the CRA Legal Name will  appear on your ROEs.</p>
 
 	
 <form id="validate-organization" name="validate-organization" action="###" method="post" role="form">		
 			<div class="form-group">
 <input type="hidden" name="model.isBusinessNumberRequired" value="true" id="validate-organization_model_isBusinessNumberRequired"/>			</div>
-		
-
-	
+		<p tabindex="0">All fields are required unless otherwise stated.</p>
+			
 			<div id="businessDetails" class="hidden-toggle">
 				<div class="form-group">
 
 <div class="input"><fieldset class="form-inline">
 
-<legend class="label"><span class="field-name">CRA Business Number:</span><span class="required">(required)</span></legend>
+<legend class="label"><span class="field-name">CRA Business Number:</span></legend>
 	<label class="sr-only" for="validate-organization_model_businessNumberPrefix">
-CRA Business Number (prefix):<span class="required">(required)</span>	</label>
+CRA Business Number (prefix):</label>
 <input type="text" name="model.businessNumberPrefix" size="9" maxlength="9" value="" id="validate-organization_model_businessNumberPrefix" class="form-control"/>
 	<label class="sr-only" for="validate-organization_model_businessNumberIdentifier">
-CRA Business Number (identifier):<span class="required">(required)</span>	</label>
+CRA Business Number (identifier):</label>
 	
 <select name="model.businessNumberIdentifier" id="validate-organization_model_businessNumberIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
     <option value="RP">RP</option>
@@ -232,7 +233,7 @@ CRA Business Number (identifier):<span class="required">(required)</span>	</labe
 
 			
 	<label class="sr-only" for="validate-organization_model_businessNumberSuffix">
-CRA Business Number (suffix):<span class="required">(required)</span>	</label>
+CRA Business Number (suffix):</label>
 <input type="text" name="model.businessNumberSuffix" size="4" maxlength="4" value="" id="validate-organization_model_businessNumberSuffix" class="form-control"/></fieldset>
 	
 </div>
@@ -243,7 +244,11 @@ CRA Business Number (suffix):<span class="required">(required)</span>	</label>
 
 				</div>
 				
-				
+				<div class="form-group">
+<div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">CRA Operating Name: (optional)</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
+</div>
+				</div>
+			</div>
 			
 			<div id="businessDetailsReadOnly" class="hidden-toggle">
 				<div class="form-group">
@@ -276,11 +281,16 @@ CRA Business Number (suffix):	</label>
 </div>
 				</div>
 	
-							
+				<div class="form-group">
+<div class="input"><label for="validate-organization_validate-organization_operatingName"><span class="field-name">CRA Operating Name: (optional)</span></label><input type="text" name="validate-organization.operatingName" size="50" value="" disabled="disabled" id="validate-organization_validate-organization_operatingName" class="form-control"/>
+</div>
+				</div>
+			</div>			
 
 				<div id="businessPostalCode" class="hidden-toggle">
 					<div class="form-group">
-<div class="input"><label for="validate-organization_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span><span class="required">(required)</span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="validate-organization_model_regionPostalCode" class="form-control"/>
+<div class="input">
+  <label for="validate-organization_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="validate-organization_model_regionPostalCode" class="form-control"/>
 </div>
 					</div>
 				</div>
@@ -290,25 +300,12 @@ CRA Business Number (suffix):	</label>
 </div>
 					</div>
 				</div>
-	<p>In addition, you may provide a CRA Operating Name. This name will appear as the name of your business on the Records of Employment (ROEs) that you will be issuing. If you do not provide a CRA Operating Name, the CRA Legal Name will appear on your ROEs.</p>	
-				
-				
-				
-					
-					
-				<div class="form-group">
-<div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">CRA Operating Name (Common Name):</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
-</div>
-				</div>
-				<div class="form-group">
-<div class="input"><label for="validate-organization_validate-organization_operatingName"><span class="field-name">CRA Operating Name (Common Name):</span></label><input type="text" name="validate-organization.operatingName" size="50" value="" disabled="disabled" id="validate-organization_validate-organization_operatingName" class="form-control"/>
-</div>
-				</div>
-			
+		
 			<h2 tabindex="0">Overlapping ROEs</h2>
-			<p tabindex="0">If you have at least one employee who works in more than one position under this CRA Business Number, and is recorded separately under different payroll reference numbers, it may be necessary for you to issue more than one ROE for the same period of employment for this employee.</p>
+			<p>If you have at least 1 employee who works in more than 1 position under  this CRA Business Number, and if it is recorded separately under different  payroll reference numbers, it may be necessary for you to issue more than one  ROE for the same period of employment for this employee. </p>
 			<div class="form-group">
-<div class="input"><label for="validate-organization_model_isOverlapRuleRequired"><span class="field-name">Do you have at least one employee where the above applies?</span><span class="required">(required)</span></label><select name="model.isOverlapRuleRequired" id="validate-organization_model_isOverlapRuleRequired" class="form-control">
+<div class="input">
+  <label for="validate-organization_model_isOverlapRuleRequired"><span class="field-name">Do you have at least one employee where the above applies?</span></label><select name="model.isOverlapRuleRequired" id="validate-organization_model_isOverlapRuleRequired" class="form-control">
 		<option value="">Please select...</option>
 		<option value="false">No</option>
 		<option value="true">Yes</option>
@@ -320,19 +317,23 @@ CRA Business Number (suffix):	</label>
 				
 		<p tabindex="0">Note that the CRA Business information will be validated with CRA and that a letter will be mailed to the business owner or chief executive officer at the CRA business address on file.</p>
 
-		
+		<p>
+For more information visit the			<a href="###" target="_blank">help guide</a>.
+		</p>
 		
 <input type="hidden" name="struts.token.name" value="token" />
 
 	<input type="hidden" name="token" value="CQ8UAEOW1TZNYJW1QPLO1W6SJ4IPOEFX" /><input type="hidden" name="orgAccessId" value="A8CF628738C76AB0" id="validate-organization_orgAccessId"/>
 	<input type="hidden" name="model.organizationDefaultAddressEncryptedAddressId" value="" id="validate-organization_model_organizationDefaultAddressEncryptedAddressId"/>		
 
-	<a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1001.html">Save and Continue</a>
+	<a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1001-2.html">Save and Continue</a>
 
-	<a class="btn btn-default" id="validate-organization_validate-organization_skip" name="method:skipBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p1.html">Skip For Now</a>
+	<a class="btn btn-default" id="validate-organization_validate-organization_skip" name="method:skipBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p1-2.html">Skip For Now</a>
 	
 
-				</form>
+	<input type="submit" id="validate-organization_validate-organization_cancel" name="method:cancel" value="Cancel" class="btn btn-default"/>
+</form>
+
 
 
 
@@ -403,60 +404,46 @@ CRA Business Number (suffix):	</label>
 					document.getElementById("def-footer").outerHTML = wet.builder.appFooter({
 						cdnEnv: "AKAMAI",
 						footerSections: [
-
-
-
-
-
-
 							 {
 									href: "###",
 									text: "Employer Contact Center",
 									newWindow: true
 							},
-
 							 {
 									href: "###",
 									text: "Find a Service Canada Office",
 									newWindow: true
 							},
-
 							 {
 									href: "###",
 									text: "ROE Web",
 									newWindow: true
 							},
-
 							 {
 									href: "###",
 									text: "ROE Guide",
 									newWindow: true
 							},
-
 							 {
 									href: "###",
 									text: "Tutorials on Completing ROE  Form",
 									newWindow: true
 							},
-
 							 {
 									href: "###",
 									text: "CRA - My Account for Individuals",
 									newWindow: true
 							},
-
 							 {
 									href: "###",
 									text: "CRA – My Business Account",
 									newWindow: true
 							},
-
 							 {
 									href: "###",
 									text: "CRA – Represent a Client",
 									newWindow: true
 							},
-
 						],
 						contactLink: "http://www.edsc.gc.ca/cgi-bin/op-so/msca/redirection.asp?linkmsca=2e.html",
 						termsLink: "https://srv136.services.gc.ca/ecas-seca/rascl/SCL/PNS.aspx?mode=READONLY&amp;lang=eng",
@@ -501,7 +488,6 @@ CRA Business Number (suffix):	</label>
  
 	function toggleBusiness() {
 		var i=$('#validate-organization_model_isBusinessNumberRequired').val();
-
 		if(i === "false") {
 			$('#businessDetails').hide();
 			$('#businessPostalCode').hide();
@@ -515,7 +501,7 @@ CRA Business Number (suffix):	</label>
 		}
 	};
 	
-	 
+	
 		
 </script>
 		</body>
