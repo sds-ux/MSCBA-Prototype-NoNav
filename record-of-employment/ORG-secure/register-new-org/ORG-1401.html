@@ -429,13 +429,22 @@ Gouvernement du Canada					</span>
    <p>and the laws of Canada, exclusive of their conflicts-of-laws principles. The Account Holder agrees and hereby submits and attorns to the jurisdiction of the court in the applicable jurisdiction as determined in paragraph a) or b).</p>
 	</details>
 	<br />
-<label class="wb-toggle" data-toggle='{"selector": ".msca-btn-toggle", "stateOff":"msca-btn-disabled"}'>
-  <input type="checkbox" value="Online Agreement" name="onlineAgreement" > 
+<label>
+  <input id="msca-btn-check" type="checkbox" value="Online Agreement" name="onlineAgreement" > 
   I have read and agree to the online agreement
 </label>
 	<br />
 <input type="hidden" name="struts.token.name" value="token" />
 <input type="hidden" name="token" value="AFGHOD55HJKGMW81CWTHBWCF9LP4JPFF" /><input type="hidden" name="orgAccessId" value="85F3E5E9644AA299" id="validate-primary-officer_orgAccessId"/>		
+	<script>
+		document.getElementById("msca-btn-check").addEventListener("click",function(){
+		var btn = document.getElementById("msca-btn-toggle");
+		if(btn.className.indexOf("msca-btn-disabled")<0)
+			btn.setAttribute("class","msca-btn-disabled");
+		else
+			btn.setAttribute("class","msca-btn");
+		});
+	</script>
 	<style>
 		.msca-btn-toggle .btn	{
 			display:none;	
@@ -451,7 +460,7 @@ Gouvernement du Canada					</span>
 		}
 		
 	</style>
-	<div class="msca-btn-toggle msca-btn-disabled">
+	<div id="msca-btn-toggle" class="msca-btn-disabled">
 	<a class="btn btn-primary" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/ORG-1101.html">Continue</a>
 	<button disabled="disabled" class="btn btn-primary disabled">Continue</button>	
 	</div>
