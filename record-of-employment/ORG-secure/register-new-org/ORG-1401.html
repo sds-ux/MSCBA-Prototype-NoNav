@@ -430,15 +430,31 @@ Gouvernement du Canada					</span>
 	</details>
 	<br />
 <form>
-  <input type="checkbox" value="Online Agreement" name="onlineAgreement"> 
+  <input type="checkbox" value="Online Agreement" name="onlineAgreement" class="wb-toggle" data-toggle='{"selector": ".msca-btn-toggle", "stateOff":"msca-btn-disabled"}'> 
   I have read and agree to the online agreement
 </form>
 	<br />
 <input type="hidden" name="struts.token.name" value="token" />
 <input type="hidden" name="token" value="AFGHOD55HJKGMW81CWTHBWCF9LP4JPFF" /><input type="hidden" name="orgAccessId" value="85F3E5E9644AA299" id="validate-primary-officer_orgAccessId"/>		
-
+	<style>
+		.msca-btn-toggle .btn	{
+			display:none;	
+		}
+		.msca-btn-toggle a.btn {
+			display:block;
+		}
+		.msca-btn-toggle.msca-btn-disabled button.disabled {
+			display:block;
+		}
+		.msca-btn-toggle.msca-btn-disabled a.btn {
+			display:none;
+		}
+		
+	</style>
+	<div class="msca-btn-toggle msca-btn-disabled">
 	<a class="btn btn-primary" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/ORG-1101.html">Continue</a>
-	
+	<button disabled="disabled" class="btn btn-primary disabled">Continue</button>	
+	</div>
 	<a class="btn btn-default" id="validate-primary-officer_validate-primary-officer_cancel" name="method:cancel" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-incomplete.html">Cancel</a>
 
 </form>
