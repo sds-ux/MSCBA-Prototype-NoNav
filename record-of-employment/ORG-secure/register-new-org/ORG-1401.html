@@ -439,7 +439,7 @@ Gouvernement du Canada					</span>
 	<script>
 		document.getElementById("msca-btn-check").addEventListener("click",function(){
 		var btn = document.getElementById("msca-btn-toggle");
-		if(document.getElementById("msca-btn-check").checked)		
+		if(!document.getElementById("msca-btn-check").checked)		
 			btn.setAttribute("class","msca-btn-disabled");
 		else
 			btn.setAttribute("class","msca-btn");
