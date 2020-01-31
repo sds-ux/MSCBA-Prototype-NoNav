@@ -438,11 +438,13 @@ Gouvernement du Canada					</span>
 <input type="hidden" name="token" value="AFGHOD55HJKGMW81CWTHBWCF9LP4JPFF" /><input type="hidden" name="orgAccessId" value="85F3E5E9644AA299" id="validate-primary-officer_orgAccessId"/>		
 	<script>
 		document.getElementById("msca-btn-check").addEventListener("click",function(){
+		if(document.getElementById("msca-btn-check").checked){
 		var btn = document.getElementById("msca-btn-toggle");
 		if(btn.className.indexOf("msca-btn-disabled")<0)
 			btn.setAttribute("class","msca-btn-disabled");
 		else
 			btn.setAttribute("class","msca-btn");
+			}
 		});
 	</script>
 	<style>
