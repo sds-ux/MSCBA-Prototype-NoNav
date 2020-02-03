@@ -213,26 +213,24 @@ Gouvernement du Canada					</span>
 
 
 
-	<p>
-For more information on how your privacy is protected, please refer to our 		<a href="###" target="_blank" rel="external">Personal Information Collection Statement</a>.
-	</p>
+	
 
-	<p>To add a CRA business, you must enter the 15-digit Canada Revenue Agency (CRA) business number or, for registered charities and non-profit organizations, the CRA registration number (e.g., 123456789 AB 1234).</p>
+	<p>To add a CRA business, you must enter the 15-digit Canada Revenue Agency (CRA) business number. If you are a registered charity or a non-profit organization, please enter its registration number (e.g., 123456789 AB 1234)</p>
 
 		<p>
-If the CRA business you are adding to your organization belongs to a client employer, please make sure the ROE Web Client Employer Consent Form has been completed and signed by both your organization and the client employer.&nbsp;<a href="###" target="_blank" rel="external">Link to the INS5238 ROE Web Client Employer Consent Form.</a>		</p>
+If the CRA business you are adding to your organization belongs to a different organization that is your client, please make sure the Records of Employment (ROE) Web Client Employer Consent Form has been completed and signed by both your organization and the client employer.&nbsp;<a href="###" target="_blank" rel="external">Link to the INS5238 ROE Web Client Employer Consent Form.</a>		</p>
 
 <form id="add-business" name="add-business" action="###" method="post" role="form">			<div class="form-group">
 				<p>Using the RP program account to your organization will expedite the validation process.</p>
 
 <div class="input"><fieldset class="form-inline">
 
-<legend class="label"><span class="field-name">CRA Business Number:</span><span class="required">(required)</span></legend>
+<legend class="label"><span class="field-name">CRA Business Number:</span><span class="required"></span></legend>
 	<label class="sr-only" for="add-business_model_businessNumberPrefix">
-CRA Business Number (prefix):<span class="required">(required)</span>	</label>
+CRA Business Number (prefix):<span class="required"></span>	</label>
 <input type="text" name="model.businessNumberPrefix" size="9" maxlength="9" value="" id="add-business_model_businessNumberPrefix" class="form-control"/>
 	<label class="sr-only" for="add-business_model_businessNumberIdentifier">
-CRA Business Number (identifier):<span class="required">(required)</span>	</label>
+CRA Business Number (identifier):<span class="required"></span>	</label>
 	
 <select name="model.businessNumberIdentifier" id="add-business_model_businessNumberIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
     <option value="RP">RP</option>
@@ -251,34 +249,39 @@ CRA Business Number (identifier):<span class="required">(required)</span>	</labe
 
 			
 	<label class="sr-only" for="add-business_model_businessNumberSuffix">
-CRA Business Number (suffix):<span class="required">(required)</span>	</label>
+CRA Business Number (suffix):<span class="required"></span>	</label>
 <input type="text" name="model.businessNumberSuffix" size="4" maxlength="4" value="" id="add-business_model_businessNumberSuffix" class="form-control"/></fieldset>
 	
 </div>
 			</div>
 
 			<div class="form-group">
-<div class="input"><label for="add-business_model_businessLegalName"><span class="field-name">CRA Legal Name:</span><span class="required">(required)</span></label><input type="text" name="model.businessLegalName" size="50" maxlength="100" value="" id="add-business_model_businessLegalName" class="form-control"/>
+<div class="input"><label for="add-business_model_businessLegalName"><span class="field-name">CRA Legal Name:</span><span class="required"></span></label><input type="text" name="model.businessLegalName" size="50" maxlength="100" value="" id="add-business_model_businessLegalName" class="form-control"/>
 </div>
 			</div>
+
+			
 
 			<div class="form-group">
-<div class="input"><label for="add-business_model_businessOperatingName"><span class="field-name">CRA Operating Name (Common Name):</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="add-business_model_businessOperatingName" class="form-control"/>
+<div class="input"><label for="add-business_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span><span class="required"></span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="add-business_model_regionPostalCode" class="form-control"/>
 </div>
 			</div>
-
-			<div class="form-group">
-<div class="input"><label for="add-business_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span><span class="required">(required)</span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="add-business_model_regionPostalCode" class="form-control"/>
+<div class="form-group">
+<div class="input"><label for="add-business_model_businessOperatingName"><span class="field-name">CRA Operating Name (optional):</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="add-business_model_businessOperatingName" class="form-control"/>
 </div>
 			</div>
-
+	<details>
+	<summary>What is a CRA Operating Name?</summary>
+		<p>A CRA Operating Name will appear as the name of your business on the Records of Employment (ROEs) that you will be issuing. If you do not provide a CRA Operating Name, the CRA Legal Name will appear on your ROEs.</p>
+	</details>
 			<fieldset>
 				<legend>Overlapping Records of Employment (ROEs)</legend>
 
 				<p tabindex="0">If you have at least one employee who works in more than one position under this CRA Business Number, and is recorded separately under different payroll reference numbers, it may be necessary for you to issue more than one ROE for the same period of employment for this employee.</p>
 
 				<div class="form-group">
-<div class="input"><label for="add-business_model_isOverlapRuleRequired"><span class="field-name">Do you have at least one employee where the above applies?</span><span class="required">(required)</span></label><select name="model.isOverlapRuleRequired" id="add-business_model_isOverlapRuleRequired" class="form-control">
+<div class="input">
+  <label for="add-business_model_isOverlapRuleRequired"><span class="field-name">Do you have at least one employee where the above applies?</span></label><select name="model.isOverlapRuleRequired" id="add-business_model_isOverlapRuleRequired" class="form-control">
 		<option value="">Please select...</option>
 		<option value="false">No</option>
 		<option value="true">Yes</option>
@@ -292,9 +295,7 @@ CRA Business Number (suffix):<span class="required">(required)</span>	</label>
 
 		<p tabindex="0">Note that once the CRA Business Information is validated and the Primary Officer's Identity has been authenticated, a letter will be mailed to the business owner or chief executive officer to authorize creation of this account.</p>
 
-		<p>
-For more information visit the			<a href="###" target="_blank">help guide</a>.
-		</p>
+		
 
 <input type="hidden" name="struts.token.name" value="token" />
 <input type="hidden" name="token" value="CON2F547EXSSU9ESG1MZA56CEUAU40RQ" /><input type="hidden" name="orgAccessId" value="E3C2798FAAD7FCF9" id="add-business_orgAccessId"/>
@@ -323,7 +324,7 @@ For more information visit the			<a href="###" target="_blank">help guide</a>.
 	</div>
 </div></div>
 
-				<script type="text/javascript">
+			  <script type="text/javascript">
 					document.getElementById("def-preFooter").outerHTML = wet.builder.preFooter({
 							cdnEnv: "AKAMAI",
 							showShare: false,
