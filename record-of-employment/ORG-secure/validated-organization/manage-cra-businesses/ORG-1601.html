@@ -161,102 +161,57 @@ legend.label {
       <h1 property="name" id="wb-cont">Add CRA Business</h1>
       <p>In order to add a Canada Revenue Agency (CRA) business, you must enter the  15 digit CRA Business Number. If you are a registered charity or a non-profit  organization, please enter its registration number (e.g., 123456789 AB 1234). If a Payroll Program Account Business Number was provided with an RP extension, this should be used instead as it will speed up the confirmation process.</p>
       <p>If the CRA business you are adding to your organization belongs to a different organization that is your client, please make sure the <a href="" rel="external">Records of Employment (ROE) Web Client Employer Consent Form</a> has been completed and signed by both your organization and the client employer. </p>
-     <form id="validate-organization" name="validate-organization" action="###" method="post" role="form">		
+    <form id="add-business" name="add-business" action="###" method="post" role="form">			<div class="form-group">
+
+<div class="input"><fieldset class="form-inline">
+
+<legend class="label"><span class="field-name">CRA Business Number:</span><span class="required"></span></legend>
+	<label class="sr-only" for="add-business_model_businessNumberPrefix">
+CRA Business Number (prefix):<span class="required"></span>	</label>
+<input type="text" name="model.businessNumberPrefix" size="9" maxlength="9" value="" id="add-business_model_businessNumberPrefix" class="form-control"/>
+	<label class="sr-only" for="add-business_model_businessNumberIdentifier">
+CRA Business Number (identifier):<span class="required"></span>	</label>
+	
+<select name="model.businessNumberIdentifier" id="add-business_model_businessNumberIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
+    <option value="RP">RP</option>
+    <option value="RT">RT</option>
+    <option value="RC">RC</option>
+    <option value="RM">RM</option>
+    <option value="RR">RR</option>
+    <option value="RD">RD</option>
+    <option value="RE">RE</option>
+    <option value="RN">RN</option>
+    <option value="RG">RG</option>
+    <option value="RZ">RZ</option>
+
+
+</select>
+
+			
+	<label class="sr-only" for="add-business_model_businessNumberSuffix">
+CRA Business Number (suffix):<span class="required"></span>	</label>
+<input type="text" name="model.businessNumberSuffix" size="4" maxlength="4" value="" id="add-business_model_businessNumberSuffix" class="form-control"/></fieldset>
+	
+</div>
+			</div>
+
 			<div class="form-group">
-<input type="hidden" name="model.isBusinessNumberRequired" value="true" id="validate-organization_model_isBusinessNumberRequired"/>			</div>
-			
-			<div id="businessDetails" class="hidden-toggle">
-				<div class="form-group">
-
-<div class="input"><fieldset class="form-inline">
-
-<legend class="label"><span class="field-name">CRA Business Number:</span></legend>
-	<label class="sr-only" for="validate-organization_model_businessNumberPrefix">
-CRA Business Number (prefix):</label>
-<input type="text" name="model.businessNumberPrefix" size="9" maxlength="9" value="" id="validate-organization_model_businessNumberPrefix" class="form-control"/>
-	<label class="sr-only" for="validate-organization_model_businessNumberIdentifier">
-CRA Business Number (identifier):</label>
-	
-<select name="model.businessNumberIdentifier" id="validate-organization_model_businessNumberIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
-    <option value="RP">RP</option>
-
-
-</select>
+<div class="input"><label for="add-business_model_businessLegalName"><span class="field-name">CRA Legal Name:</span><span class="required"></span></label><input type="text" name="model.businessLegalName" size="50" maxlength="100" value="" id="add-business_model_businessLegalName" class="form-control"/>
+</div>
+			</div>
 
 			
-	<label class="sr-only" for="validate-organization_model_businessNumberSuffix">
-CRA Business Number (suffix):</label>
-<input type="text" name="model.businessNumberSuffix" size="4" maxlength="4" value="" id="validate-organization_model_businessNumberSuffix" class="form-control"/></fieldset>
-	
-</div>
-				</div>
-				<div class="form-group">
-<div class="input"><label for="validate-organization_model_businessLegalName"><span class="field-name">CRA Legal Name:</span><span class="required"></span></label><input type="text" name="model.businessLegalName" size="50" value="" id="validate-organization_model_businessLegalName" class="form-control"/>
-</div>
 
-				</div>
-				
-				<!--<div class="form-group">
-<div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">CRA Operating Name: (optional)</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
+			<div class="form-group">
+<div class="input"><label for="add-business_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span><span class="required"></span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="add-business_model_regionPostalCode" class="form-control"/>
 </div>
-				</div>
-			</div>-->
-			
-			<div id="businessDetailsReadOnly" class="hidden-toggle">
-				<div class="form-group">
-
-<div class="input"><fieldset class="form-inline">
-
-<legend class="label"><span class="field-name">CRA Business Number:</span></legend>
-	<label class="sr-only" for="validate-organization_bnPrefix">
-CRA Business Number (prefix):	</label>
-<input type="text" name="bnPrefix" size="9" maxlength="9" value="" disabled="disabled" id="validate-organization_bnPrefix" class="form-control"/>
-	<label class="sr-only" for="validate-organization_bnIdentifier">
-CRA Business Number (identifier):	</label>
-	
-<select name="bnIdentifier" disabled="disabled" id="validate-organization_bnIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
-    <option value="RP">RP</option>
-
-
-</select>
-
-			
-	<label class="sr-only" for="validate-organization_bnSuffix">
-CRA Business Number (suffix):	</label>
-<input type="text" name="bnSuffix" size="4" maxlength="4" value="" disabled="disabled" id="validate-organization_bnSuffix" class="form-control"/></fieldset>
-	
+			</div>
+<div class="form-group">
+<div class="input"><label for="add-business_model_businessOperatingName"><span class="field-name">CRA Operating Name (optional):</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="add-business_model_businessOperatingName" class="form-control"/>
 </div>
-				</div>
-	
-				<div class="form-group">	
-<div class="input"><label for="validate-organization_validate-organization_legalName"><span class="field-name">CRA Legal Name:</span></label><input type="text" name="validate-organization.legalName" size="50" value="" disabled="disabled" id="validate-organization_validate-organization_legalName" class="form-control"/>
-</div>
-				</div>
-	
-				<div class="form-group">
-<div class="input"><label for="validate-organization_validate-organization_operatingName"><span class="field-name">CRA Operating Name: (optional)</span></label><input type="text" name="validate-organization.operatingName" size="50" value="" disabled="disabled" id="validate-organization_validate-organization_operatingName" class="form-control"/>
-</div>
-				</div>
-			</div>			
-
-				<div id="businessPostalCode" class="hidden-toggle">
-					<div class="form-group">
-<div class="input">
-  <label for="validate-organization_model_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span></label><input type="text" name="model.regionPostalCode" maxlength="20" value="" id="validate-organization_model_regionPostalCode" class="form-control"/>
-</div>
-					</div>
-				</div>
-				<div id="businessPostalCodeReadOnly" class="hidden-toggle">
-					<div class="form-group">
-<div class="input"><label for="validate-organization_validate-organization_regionPostalCode"><span class="field-name">CRA Postal/Zip Code:</span></label><input type="text" name="validate-organization.regionPostalCode" value="" disabled="disabled" id="validate-organization_validate-organization_regionPostalCode" class="form-control"/>
-</div>
-					</div>
-				</div>
-	
-	<div class="form-group">
-<div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">Operating Name: (optional)</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
-</div>
-		</div><details>
+			</div>
+	  
+	  <details>
 	<summary>What is an Operating Name?</summary>
 		<p>An Operating Name will appear as the  name of your business on the Records of Employment (ROEs) that you will be  issuing. If you do not provide an Operating Name, the CRA Legal Name will  appear on your ROEs.</p>
 	</details><br />
