@@ -46,6 +46,96 @@
 
         <!-- GoC.WebTemplate Version ASPX 1.30.7010.20106 -->
         <!-- GoC.WebTemplate.Core Version 1.30.7010.20106 -->
+		<style type="text/css">
+.orange-bg {
+    background: linear-gradient(#f68b1f, #f89736);
+}
+.blue-bg {
+    background-color: #11409F;
+}
+.header-bg {
+    line-height: normal;
+    background: linear-gradient(to right, #ddd 50%, #fff 75%, #fff);
+}
+.header-bg .brdr-bttm-fade {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #26374a 50%, #fff 75%, #fff);
+}
+.header-bg h2 {
+    background: linear-gradient(297.5deg, transparent, transparent 25px, white 26px, white 31px, #26374a 32px, #26374a);
+    color: white;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px 30px 5px 15px;
+    min-width: 300px;
+    font-size: 1.3em;
+}
+.large-btn {
+    width: 85%;
+    text-align: left;
+}
+.large-btn b {
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+}
+.large-btn img {
+    display: inline-block;
+    width: 10%;
+    margin-left: 3%;
+}
+a.btn-green:hover, a.btn-purple:hover, a.btn-blue:hover {
+    color: white;
+}
+a.btn-green:link, a.btn-green:visited, a.btn-green:hover, a.btn-green:active, a.btn-purple:link, a.btn-purple:visited, a.btn-purple:hover, a.btn-purple:active, a.btn-blue:link, a.btn-blue:visited, a.btn-blue:hover, a.btn-blue:active {
+    color: white;
+    padding-left: 5px;
+}
+a.btn-green {
+    background: #444;
+}
+a.btn-green:hover, a.btn-green:active {
+    background: #787878;
+}
+a.btn-purple {
+    background: #32002A;
+}
+a.btn-purple:hover, a.btn-purple:active {
+    background: #4A0B38;
+}
+a.btn-blue:link, a.btn-blue:visited {
+    background: #283a7b;
+}
+a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
+    background: #26374a;
+}
+	/*
+	
+		
+	a.btn-green {
+		background: #000000;
+	}
+	a.btn-green:hover, a.btn-green:active {
+		background: #787878;
+	}
+	
+	
+	a.btn-purple {
+		background: #32002A;
+	}
+	a.btn-purple:hover, a.btn-purple:active {
+		background: #4A0B38;
+	}
+	
+	
+	a.btn-blue {
+		background: #26374a;
+	}
+	a.btn-blue:hover, a.btn-blue:active {
+		background: #26374a;
+	}*/
+</style>
     </head>
     <body vocab="http://schema.org/" typeof="WebPage">
         
@@ -134,7 +224,7 @@
                     
      
     <h1 id="wb-cont" property="name">
-        Create my profile
+        New or returning users 
         </h1>
 
 
@@ -153,11 +243,70 @@
     
     <section id="alertBoxSection" class="alert alert-info"> 
        <p>This page offers the opportunity to register as a new user or recover access to an existing profile.</p> 
-<p>Please choose from one (1) of the two (2) following options to continue.</p> 
+
     </section>
 
-    
- <fieldset class="panel panel-primary">
+    <section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="mrgn-tp-md header-bg">
+              <h2 id="a1-1" class="mrgn-tp-0">New user&nbsp;</h2>
+              <div class="brdr-bttm-fade"></div>
+            </div>
+            <br /> 
+            <p>Register for Record of Employment (ROE) Web to...</p>
+            <ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-AUTHENTICATION-VAUTHENTICATION.html';" type="button" class="btn btn-default">Register for ROE Web</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+			
+			<section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="mrgn-tp-md header-bg">
+              <h2 id="a1-1" class="mrgn-tp-0">New user&nbsp;</h2>
+              <div class="brdr-bttm-fade"></div>
+            </div>
+            <br /> 
+            <p>
+                        Recover access to my existing Record of Employment on the Web profile by providing my User Reference Number and answering my security questions:
+                    </p>
+                    <div class="row mrgn-tp-md">
+                        <div class="col-md-4">
+                            <label for="urnROE" class="control-label">User Reference Number (URN):</label>
+</div>
+<div class="col-md-4">
+<input type="text" id="urnROE" name="urnROE" class="form-control" value="" maxlength="100" size="option2RoeUrnP option2RoeUrnExample" autocomplete="off"/>
+
+
+                        </div>
+                        <div class="col-md-4" id="option2RoeUrnExample">
+                            (e.g. : XXX-123-456-789-000)
+                        </div>
+                    </div>
+                    <div class="row mrgn-tp-sm">
+                        <div class="col-md-8 pull-right">
+                            <a href="/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-QA-VLOOKUP.html" data-ajax="false"><br />Forgot my User Reference Number?</a>
+
+
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+			  
+         <ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '';" type="button" class="btn btn-default">Submit your  URN</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+			
+ <!--   <fieldset class="panel panel-primary">
            
                <legend class="panel-heading">
                         Option 1: New user
@@ -200,7 +349,7 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                </div>
+                </div>-->
             </fieldset>
 
         
