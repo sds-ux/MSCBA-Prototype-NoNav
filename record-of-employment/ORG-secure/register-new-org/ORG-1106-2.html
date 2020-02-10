@@ -196,22 +196,25 @@ Gouvernement du Canada					</span>
 </header>			</div>
 			
 
+
 			<div class="container">
 				<div class="row">
-						<main role="main" property="mainContentOfPage" class="col-md-9 col-md-push-0.5">
+						<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">
 							<h1 property="name" id="wb-cont">Confirm your Organization</h1>
 
+		<img src="/MSCBA-Prototype-NoNav/1b-steps-to-register-2.png" class="img-responsive" alt="" />
+<br />
+	<p>A Business or Registration Number was issued by Canada Revenue Agency (CRA)  when the Organization Legal Name was registered. If a Payroll Program Account  Business Number was provided with an RP extension, this should be used instead  as it will speed up the confirmation process. Supporting documentation may be requested  to complete the validation process in these cases.</p>
+<p>In order to confirm the existence of your organization, please enter the  15 digit CRA Business Number. If you are a registered charity or a non-profit  organization, please enter its registration number (e.g., 123456789 AB 1234).</p>
+							
+							<p>To confirm your organization, you must enter the following information that was registered with CRA:</p>
 
-	<p>A Business/Registration Number was issued by Canada Revenue Agency (CRA)  when the Organization Legal Name was registered. If a Payroll Program Account  Business Number was provided with an RP extension, this should be used instead  as it will expedite the confirmation process.</p>
-<p>In order to confirm the existence of your organization, please enter the  15 digit CRA Business Number. If you are a registered charity or a non-profit  organization, please enter its registration number (e.g., 123456789 AB 1234)</p>
-<p>Note: Supporting documentation may be requested  to complete the validation process in these cases.</p>
-<p>In  addition, you may provide a CRA Operating Name. This name will appear as the  name of your business on the Records of Employment (ROEs) that you will be  issuing. If you do not provide a CRA Operating Name, the CRA Legal Name will  appear on your ROEs.</p>
+
 
 	
 <form id="validate-organization" name="validate-organization" action="###" method="post" role="form">		
 			<div class="form-group">
 <input type="hidden" name="model.isBusinessNumberRequired" value="true" id="validate-organization_model_isBusinessNumberRequired"/>			</div>
-		<p tabindex="0">All fields are required unless otherwise stated.</p>
 			
 			<div id="businessDetails" class="hidden-toggle">
 				<div class="form-group">
@@ -225,8 +228,17 @@ CRA Business Number (prefix):</label>
 	<label class="sr-only" for="validate-organization_model_businessNumberIdentifier">
 CRA Business Number (identifier):</label>
 	
-<select name="model.businessNumberIdentifier" id="validate-organization_model_businessNumberIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
+<select name="model.businessNumberIdentifier" id="add-business_model_businessNumberIdentifier" class="form-control mrgn-lft-sm mrgn-rght-sm">
     <option value="RP">RP</option>
+    <option value="RT">RT</option>
+    <option value="RC">RC</option>
+    <option value="RM">RM</option>
+    <option value="RR">RR</option>
+    <option value="RD">RD</option>
+    <option value="RE">RE</option>
+    <option value="RN">RN</option>
+    <option value="RG">RG</option>
+    <option value="RZ">RZ</option>
 
 
 </select>
@@ -239,16 +251,16 @@ CRA Business Number (suffix):</label>
 </div>
 				</div>
 				<div class="form-group">
-<div class="input"><label for="validate-organization_model_businessLegalName"><span class="field-name">CRA Legal Name:</span><span class="required">(required)</span></label><input type="text" name="model.businessLegalName" size="50" value="" id="validate-organization_model_businessLegalName" class="form-control"/>
+<div class="input"><label for="validate-organization_model_businessLegalName"><span class="field-name">CRA Legal Name:</span><span class="required"></span></label><input type="text" name="model.businessLegalName" size="50" value="" id="validate-organization_model_businessLegalName" class="form-control"/>
 </div>
 
 				</div>
 				
-				<div class="form-group">
+				<!--<div class="form-group">
 <div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">CRA Operating Name: (optional)</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
 </div>
 				</div>
-			</div>
+			</div>-->
 			
 			<div id="businessDetailsReadOnly" class="hidden-toggle">
 				<div class="form-group">
@@ -300,44 +312,56 @@ CRA Business Number (suffix):	</label>
 </div>
 					</div>
 				</div>
-		
-			<h2 tabindex="0">Overlapping ROEs</h2>
-			<p>If you have at least 1 employee who works in more than 1 position under  this CRA Business Number, and if it is recorded separately under different  payroll reference numbers, it may be necessary for you to issue more than one  ROE for the same period of employment for this employee. </p>
+	
+	<div class="form-group">
+<div class="input"><label for="validate-organization_model_businessOperatingName"><span class="field-name">Operating Name: (optional)</span></label><input type="text" name="model.businessOperatingName" size="50" maxlength="100" value="" id="validate-organization_model_businessOperatingName" class="form-control"/>
+</div>
+		</div><details>
+	<summary>What is an Operating Name?</summary>
+		<p>An Operating Name will appear as the  name of your business on the Records of Employment (ROEs) that you will be  issuing. If you do not provide an Operating Name, the CRA Legal Name will  appear on your ROEs.</p>
+	</details><br />
+				<div class="well">
+		<h2 tabindex="0">Employee with multiple ROEs</h2>
+			<p>You may issue more than one ROE for an employee during the same period  of employment if: </p>
+            <ul>
+              <li>the employee has multiple positions under this CRA  Business Number; and</li>
+              <li>it is recorded under different payroll reference numbers.</li>
+            </ul>
 			<div class="form-group">
-<div class="input">
+  <div class="input">
   <label for="validate-organization_model_isOverlapRuleRequired"><span class="field-name">Do you have at least one employee where the above applies?</span></label><select name="model.isOverlapRuleRequired" id="validate-organization_model_isOverlapRuleRequired" class="form-control">
 		<option value="">Please select...</option>
 		<option value="false">No</option>
 		<option value="true">Yes</option>
 </select>
 </div>
-			</div>
-			<p tabindex="0">If No, continue to the next page.</p>
-			<p tabindex="0">If Yes, I request that the Overlap Rule be applied to my ROE Web account.  I understand that I should only issue multiple ROEs for the same period of employment under the Business Number above, when one employee performs two or more jobs and is recorded separately under different payroll reference numbers.</p>		
-				
-		<p tabindex="0">Note that the CRA Business information will be validated with CRA and that a letter will be mailed to the business owner or chief executive officer at the CRA business address on file.</p>
+		</div>
+				</div>
+				<br />
+		<!-- 	<p tabindex="0">If No, continue to the next page.</p>
+			
+			<p>Note  that the CRA Business information will be validated with CRA and a letter will  be mailed to the business owner or chief executive officer at the CRA business  address on file. When the business owner or CEO gives you the  authorization code contained in the letter, you will be able to complete the registration process.</p> -->
 
-		<p>
-For more information visit the			<a href="###" target="_blank">help guide</a>.
-		</p>
-		
+
+
+
 <input type="hidden" name="struts.token.name" value="token" />
 
 	<input type="hidden" name="token" value="CQ8UAEOW1TZNYJW1QPLO1W6SJ4IPOEFX" /><input type="hidden" name="orgAccessId" value="A8CF628738C76AB0" id="validate-organization_orgAccessId"/>
 	<input type="hidden" name="model.organizationDefaultAddressEncryptedAddressId" value="" id="validate-organization_model_organizationDefaultAddressEncryptedAddressId"/>		
 
-	<a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1001-2.html">Save</a>
+	<a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1001-2.html">Save and Continue</a>
 
-	<a class="btn btn-default" id="validate-organization_validate-organization_skip" name="method:skipBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p1-2.html">Skip For Now</a>
+	<a class="btn btn-default" id="validate-organization_validate-organization_skip" name="method:skipBusiness" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p1-2.html">Skip for now</a>
 	
 
-	<input type="submit" id="validate-organization_validate-organization_cancel" name="method:cancel" value="Cancel" class="btn btn-default"/>
-</form>
+	</form>
 
 
 
 
-						</main>
+						</main>			
+
 
 					
 				</div>
