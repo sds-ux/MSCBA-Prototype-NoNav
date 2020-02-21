@@ -1,11 +1,7 @@
 
-
-
-
-
 	<!DOCTYPE html>
-	<!--[if lt IE 9]><html class="no-js lt-ie9" lang="fr" dir="ltr"><![endif]-->
-	<!--[if gt IE 8]><!--><html class="no-js" lang="fr" dir="ltr"><!--<![endif]-->
+	<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+	<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
 		<head>
 			<meta charset="utf-8"/>
 			<meta content="width=device-width,initial-scale=1" name="viewport"/>
@@ -13,11 +9,12 @@
 <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
      wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
 
-				<title>Relevé d&#39;emploi - [Mes organisations]</title>
+				<title>Record of Employment - [My Organization(s)]</title>
 
 			<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/compiled/soyutils.js"></script>
-			<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/compiled/wet-fr.js"></script>
+			<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/compiled/wet-en.js"></script>
 
+		
 
 			<noscript>
 				<!--[if gte IE 9 | !IE ]><!-->
@@ -54,101 +51,121 @@
 			<script type="text/javascript">document.write(wet.builder.refTop({ cdnEnv: "AKAMAI", isApplication: true }))</script>
 			<style>.modal-footer { background-color: #FFF }</style>
 			<style type="text/css">
-
-
-
+.orange-bg {
+    background: linear-gradient(#f68b1f, #f89736);
+}
+.blue-bg {
+    background-color: #11409F;
+}
 .header-bg {
-	line-height: normal; 
-	background: linear-gradient(to right, #ddd 50%, #fff 75%, #fff); 
+    line-height: normal;
+    background: linear-gradient(to right, #ddd 50%, #fff 75%, #fff);
 }
-
-.header-bg .brdr-bttm-fade	 {
-	width: 100%;
-	height: 4px;
-	background: linear-gradient(to right, #26374a 50%, #fff 75%, #fff); 
+.header-bg .brdr-bttm-fade {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #26374a 50%, #fff 75%, #fff);
 }
-
 .header-bg h2 {
-	background: linear-gradient(297.5deg, transparent, transparent 25px, white 26px, white 31px, #26374a 32px, #26374a);
-	color: white;
-	display: inline-block;
-	margin: 0px;
-	padding: 5px 30px 5px 15px;
-	min-width: 300px;
-	font-size: 1.3em;
+    background: linear-gradient(297.5deg, transparent, transparent 25px, white 26px, white 31px, #26374a 32px, #26374a);
+    color: white;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px 30px 5px 15px;
+    min-width: 300px;
+    font-size: 1.3em;
 }
-
-
-.btn.large-btn {display:flex;flex-direction:row;padding:0;border:2px solid #000; background-color:#fff;width:85%;text-align:left;}
-.btn.large-btn .icon-btn {flex:1;display:flex;flex-direction:row;align-items:center;}
-.btn.large-btn .label-btn {flex:4; padding-left:15px;display:flex;flex-direction:row;align-items:center; }
-.btn.large-btn .label-btn b {display:block;}
-.btn.large-btn .icon-btn img {width:30px;margin:10px 15px;}
-
-
+.large-btn {
+    width: 85%;
+    text-align: left;
+}
+.large-btn b {
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+}
+.large-btn img {
+    display: inline-block;
+    width: 10%;
+    margin-left: 3%;
+}
+a.btn-green:hover, a.btn-purple:hover, a.btn-blue:hover {
+    color: white;
+}
+a.btn-green:link, a.btn-green:visited, a.btn-green:hover, a.btn-green:active, a.btn-purple:link, a.btn-purple:visited, a.btn-purple:hover, a.btn-purple:active, a.btn-blue:link, a.btn-blue:visited, a.btn-blue:hover, a.btn-blue:active {
+    color: white;
+    padding-left: 5px;
+}
+a.btn-green {
+    background: #444;
+}
+a.btn-green:hover, a.btn-green:active {
+    background: #787878;
+}
+a.btn-purple {
+    background: #32002A;
+}
+a.btn-purple:hover, a.btn-purple:active {
+    background: #4A0B38;
+}
 a.btn-blue:link, a.btn-blue:visited {
-  border:2px solid #003264;
-	color:#222;
-}
-a.btn-blue:link .icon-btn, a.btn-blue:visited .icon-btn{
-	background-color:#003264;
-
+    background: #283a7b;
 }
 a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
-	background: #003264;
-	color: white;
+    background: #26374a;
 }
-a.btn-red:link, a.btn-red:visited {
-  border:2px solid #990033;
-	color:#222;
-}
-a.btn-red:link .icon-btn, a.btn-red:visited .icon-btn{
-	background-color:#990033;
-}
-a.btn-red:hover, a.btn-red:active, a.btn-red:focus {
-	background: #990033;
-	color: white;
-}
-a.btn-lblue:link, a.btn-lblue:visited {
-  border:2px solid #00749C;
-	color:#222;
-}
-a.btn-lblue:link .icon-btn, a.btn-lblue:visited .icon-btn{
-  background: #00749C;
-}
-a.btn-lblue:hover, a.btn-lblue:active, a.btn-lblue:focus {
-	background: #00749C;
-	color: white;
-}	
+	/*
 	
-
+		
+	a.btn-green {
+		background: #000000;
+	}
+	a.btn-green:hover, a.btn-green:active {
+		background: #787878;
+	}
+	
+	
+	a.btn-purple {
+		background: #32002A;
+	}
+	a.btn-purple:hover, a.btn-purple:active {
+		background: #4A0B38;
+	}
+	
+	
+	a.btn-blue {
+		background: #26374a;
+	}
+	a.btn-blue:hover, a.btn-blue:active {
+		background: #26374a;
+	}*/
 </style>
 		</head>
 
 		<body vocab="http://schema.org/" typeof="WebPage">
 			<div id="def-top">
 					<ul id="wb-tphp">
-						<li class="wb-slc"><a class="wb-sl" href="">Passer au contenu principal</a></li>
-						<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="">Passer à «&nbsp;À propos de cette application&nbsp;»</a></li>
-						<li class="wb-slc visible-md visible-lg"><a class="wb-sl" href="">Passer au menu de la section</a></li>
+						<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+						<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this application"</a></li>
+						<li class="wb-slc visible-md visible-lg"><a class="wb-sl" href="#wb-sec">Skip to section menu</a></li>
 					</ul>
 <header role="banner">
 	<div id="wb-bnr" class="container">
 		<div class="row">
 			<div class="brand col-xs-9 col-sm-8 col-md-6">
-								<object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/sig-blk-fr.svg"></object>
+								<object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/sig-blk-en.svg"></object>
 				<span class="wb-inv">
 					<span>
-Gouvernement du Canada					</span>
-					<span>/</span>
-					<span lang="en">
 Government of Canada					</span>
+					<span>/</span>
+					<span lang="fr">
+Gouvernement du Canada					</span>
 				</span>
 			</div>
 			<section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
-				<h2 class="wb-inv">Sélection de la langue</h2>
+				<h2 class="wb-inv">Language selection</h2>
 				<ul class="list-inline margin-bottom-none">
-					<li><a lang="fr" href="">English</a></li>
+					<li><a lang="fr" href="###">Français</a></li>
 				</ul>
 			</section>
 		</div>
@@ -157,14 +174,14 @@ Government of Canada					</span>
 		<div class="container">
 			<div class="row">
 				<section class="col-sm-7">
-						<h2 class="wb-inv">Relevé d&#39;emploi</h2>
-						<a class="app-name" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-fr.html">Relevé d&#39;emploi</a>
+						<h2 class="wb-inv">Record of Employment</h2>
+						<a class="app-name" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated.html">Record of Employment</a>
 				</section>
 					<nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
-						<h2 class="wb-inv">Menu des paramètres du compte</h2>
+						<h2 class="wb-inv">Account menu</h2>
 						<ul class="app-list-account list-unstyled">
-							<li><a href="" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Paramètres du compte</a></li>
-							<li><a href="" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>  Fermer la session</a></li>
+							<li><a href="###" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account Settings</a></li>
+							<li><a href="###" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>  Sign Out</a></li>
 						</ul>
 					</nav>
 			</div>
@@ -172,71 +189,60 @@ Government of Canada					</span>
 	</div>
 	<div class="app-bar-mb container visible-xs-block hidden-print">
 		<nav role="navigation">
-			<h2 class="wb-inv">Recherche et menu</h2>
+			<h2 class="wb-inv">Search and menu</h2>
 			<ul class="app-list-main list-unstyled">
-				<li class="wb-mb-links" id="wb-glb-mn"><a href="" aria-controls="mb-pnl" class="btn overlay-lnk" role="button">Menu</a><h2>Menu</h2></li>
+				<li class="wb-mb-links" id="wb-glb-mn"><a href="#mb-pnl" aria-controls="mb-pnl" class="btn overlay-lnk" role="button">Menu</a><h2>Menu</h2></li>
 			</ul>
 			<div id="mb-pnl"></div>
 		</nav>
 	</div>
 		<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
-	<div class="pnl-strt container nvbar" lang="fr">
-		<h2 class="wb-inv">Menu des sujets</h2>
+	<div class="pnl-strt container nvbar" lang="en">
+		<h2 class="wb-inv">Topics menu</h2>
 		<div class="row">
 			<ul class="list-inline menu" role="menubar">
 				<li>
 							<a
- href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-fr.html">Mes organisations</a>
+ href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated.html">My Organizations</a>
 				</li>
 					<li>
-						<a href="" class="item">Relevé d&#39;emploi</a>
+						<a href="#section1" class="item">Record of Employment</a>
 						
 						
 
 							<ul class="sm list-unstyled" id="section1" role="menu">
 										<li>
-											<a href="" target="_self">
-												Démo RE Web
+											<a href="###" target="_self">
+												ROE Web Demo
 											</a>
 										</li>
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
 									
 									
 									
 							</ul>
 					</li>
 				<li>
-					<a href="" class="item">Aide et soutien</a>
+					<a href="#section2" class="item">Help and Support</a>
 					<ul class="sm list-unstyled" id="section2" role="menu">
 						
 								<li>
-									<a href="" target="_blank">
-										Marche à suivre pour remplir le relevé d&#39;emploi
+									<a href="###" target="_blank">
+										How to Complete an ROE
 									</a>
 								</li>
 								<li>
-									<a href="" target="_blank">
-										Guides d&#39;utilisateur RE Web
+									<a href="###" target="_blank">
+										ROE Web User Guides
 									</a>
 								</li>
 								<li>
-									<a href="" target="_blank">
-										Centre de services aux employeurs
+									<a href="###" target="_blank">
+										Employer Contact Center
 									</a>
 								</li>
 								<li>
-									<a href="" target="_blank">
-										Aide et soutien – Page principale
+									<a href="###" target="_blank">
+										Help and Support – Main Page
 									</a>
 								</li>
 					</ul>
@@ -245,69 +251,71 @@ Government of Canada					</span>
 		</div>
 	</div>		</nav>
 	<nav role="navigation" id="wb-bc" property="breadcrumb">
-		<h2>Vous êtes ici :</h2>
+		<h2>You are here:</h2>
 		<div class="container">
 			<div class="row">
 				<ol class="breadcrumb">
-						<li><a href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-fr.html">Relevé d&#39;emploi</a></li>
+						<li><a href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated.html">Record of Employment</a></li>
 						<li>
-								Mes organisations
+								My Organization(s)
 						</li>
 				</ol>
 			</div>
 		</div>
 	</nav> 
 </header>			</div>
-			
-		<div class="container">
+
+			<div class="container">
 				<div class="row">
-						<main role="main" property="mainContentOfPage">
-							<h1 property="name" id="wb-cont">Bienvenu Riley Smith (RIL‑167‑792‑543‑569)</h1>
-  <div class="row">
+						
+							<h1 property="name" id="wb-cont">Welcome Riley Smith (RIL-167-792-543-569)</h1>
+<div class="row">
     <div class="col-xs-12 col-md-3 pull-right">
       <div class="panel panel-default"> 
         <!-- Default panel contents -->
-        <div class="panel-heading"><strong>Sur cette page</strong></div>
+        <div class="panel-heading"><strong>On this page</strong></div>
         
         <!-- List group -->
         <ul class="list-group">
-          <li class="list-group-item"><a href="#a1-0">Mes organisations</a></li>
-          <li class="list-group-item"><a href="#a1-1">Organisation</a></li>
-          <li class="list-group-item"><a href="#a1-2">Agent principal</a></li>
-          <li class="list-group-item"><a href="#a1-4">Devenir représentant</a></li>
+          <li class="list-group-item"><a href="#a1-0">My Organization(s)</a></li>
+          <li class="list-group-item"><a href="#a1-1">Organization</a></li>
+          <li class="list-group-item"><a href="#a1-2">Primary Officer</a></li>
+          <li class="list-group-item"><a href="#a1-4">Become a Representative</a></li>
         </ul>
       </div>
       <div class="panel panel-default"> 
         <!-- Default panel contents -->
-        <div class="panel-heading"><strong>Services et renseignements connexes</strong></div>
+        <div class="panel-heading"><strong>Related services and information</strong></div>
         
         <!-- List group -->
         <ul class="list-group">
-         <!-- <li class="list-group-item"><a href="">Post a job on Job Bank</a>&nbsp;<span class="glyphicon glyphicon-share"></span></li>-->
-			<li class="list-group-item"><a href="">Contactez-nous</a>&nbsp;<span class="glyphicon glyphicon-share"></span></li>
+          <!--<li class="list-group-item"><a href="">Post a job on Job Bank</a>&nbsp;<span class="glyphicon glyphicon-share"></span></li>-->
+			<li class="list-group-item"><a href="">Contact us</a>&nbsp;<span class="glyphicon glyphicon-share"></span></li>
         </ul>
       </div>
     </div>
     <div class="col-xs-12 col-md-9">
-	<h2 id="a1-0">Mes organisations</h2>
+	<h2 id="a1-0">My Organization(s)</h2>
 
-				<table class="wb-tables table table-hover" data-wb-tables='{ "order" : [ [1, "asc"] ] }' >
+	
+	
+		<table class="wb-tables table table-hover" data-wb-tables='{ "order" : [ [1, "asc"] ] }' >
 			<thead>
 				<tr>
-					<th scope="col">Numéro d'organisation</th>
-					<th scope="col">Nom de l'organisation</th>
-					<th scope="col">Mon rôle</th>
-					<th scope="col">Mon statut</th>
+					<th scope="col">Organization Number</th>
+					<th scope="col">Organization Name</th>
+					<th scope="col">My Role</th>
+					<th scope="col">My Status</th>
 				</tr>
 			</thead>
 			<tbody>
 					<tr>
-						<td>ORG-185-584-321-165</td>
+						<td>(ORG-185-584-321-165)</td>
 						<td>	
 						<a href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/ORG-1101.html">Riley's Catering Inc.</a>
 						</td>
-						<td>Agent principal </td>				
-						<td>Actif</td>
+						<td>Primary Officer</td>				
+						<td>Active</td>
 					</tr>
 			</tbody>
 		</table>
@@ -316,20 +324,22 @@ Government of Canada					</span>
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="mrgn-tp-md header-bg">
-              <h2 id="a1-1" class="mrgn-tp-0">Organisation&nbsp;</h2>
+              <h2 id="a1-1" class="mrgn-tp-0">Organization&nbsp;</h2>
               <div class="brdr-bttm-fade"></div>
             </div>
             <br /> 
-            <p>Soumettez une demande d’inscription de l’organisation que vous représentez à Relevé d’emploi sur le Web. Veuillez vous assurer que l’organisation n’est pas déjà inscrite et que vous avez le pouvoir d’agir en tant qu’agent principal.</p>
+            <p>Submit a request to register the organization you represent to the Record of Employment on the Web (ROE Web). Please ensure the organization is not 
+              already registered and that you have the authority to act as the primary officer.</p>
 			  
 			  <details>
-			  <summary>Vos relevés d’emploi sont-ils soumis par une autre organisation?</summary>
-			  <p>Vous pouvez reprendre le contrôle de votre numéro d’entreprise en inscrivant votre organisation. Cela s’applique lorsqu’une autre organisation utilise votre numéro d’entreprise pour soumettre des relevés d’emploi au nom de votre organisation. Suivez les étapes d’inscription jusqu’à soumettre votre numéro d’entreprise pour confirmer votre organisation. Un de nos agents communiquera avec vous dans les 10 jours ouvrables. Il vous transférera le contrôle de votre numéro d’entreprise.</p>
+			  <summary>Are your ROEs submitted by a different Organization?</summary>
+			  <p>You can regain control of your Business Number by registering your organization. This applies when a different organization uses your Business Number (BN) to submit ROEs on your organization’s behalf. Follow the registration steps until you submit your BN to confirm your organization. One of our agents will get in touch with you within 10 working days. They will transfer control or your BN back to you.</p>
 			  </details><br />
+            
             
             <ul class="list-unstyled list-inline">
               <li class="mrgn-bttm-sm">
-                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1104-fr.html';" type="button" class="btn btn-default">Inscrire une nouvelle organisation</button>
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1104.html';" type="button" class="btn btn-default">Register a New Organization</button>
               </li>
             </ul>
           </div>
@@ -340,41 +350,44 @@ Government of Canada					</span>
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="mrgn-tp-md header-bg">
-              <h2 id="a1-2" class="mrgn-tp-0">Agent principal&nbsp;</h2>
+              <h2 id="a1-2" class="mrgn-tp-0">Primary Officer&nbsp;</h2>
               <div class="brdr-bttm-fade"></div>
             </div>
             <br />
-            <p>Soumettez une demande pour devenir le nouvel agent principal d’une organisation déjà inscrite. Avant de soumettre une demande, assurez-vous que vous avez le pouvoir de remplacer l’agent principal actuel.</p>
+            <p>Submit a request to become the new primary officer for an already registered organization. Before submitting a request, ensure you have the authority to replace the current primary officer. </p>
             <ul class="list-unstyled list-inline">
               <li class="mrgn-bttm-sm">
-                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/replace-or-become-po/ORG-1400-fr.html';" type="button" class="btn btn-default">Remplacer l’agent principal </button>
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/replace-or-become-po/ORG-1400.html';" type="button" class="btn btn-default">Replace the Primary Officer</button>
               </li>
             </ul>
           </div>
         </div>
       </section>
-							
+					 
 					
 					<section>
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="mrgn-tp-md header-bg">
-              <h2 id="a1-4" class="mrgn-tp-0">Devenir représentant&nbsp;</h2>
+              <h2 id="a1-4" class="mrgn-tp-0">Become a Representative&nbsp;</h2>
               <div class="brdr-bttm-fade"></div>
             </div>
             <br />
-            <p>Afin de devenir le représentant d’une organisation déjà inscrite, vous devez donner votre numéro de référence de l’utilisateur (NRU) à l’agent principal de cette organisation. Votre NRU est le code alphanumérique qui se trouve à côté de votre nom en haut de cette page. L’agent principal utilisera votre NRU pour vous envoyer une invitation à rejoindre l’organisation. </p>
+            <p>To become a representative of a registered organization, you need to give your user reference number (URN) to the primary officer of that organization. Your URN is the alphanumeric code next to your name at the top of this page. The primary officer will use your URN to send you an invitation to join the organization.</p>
             
           </div>
         </div>
       </section>
-	  </div>
+    
+				</div>
+					</div>
 						</main>
 
-				<div id="def-preFooter"><div class="row pagedetails">
+				
+<div id="def-preFooter"><div class="row pagedetails">
 	<div class="datemod col-xs-12 mrgn-tp-lg">
 		<dl id="wb-dtmd">
-							<dt>Identificateur d’écran : &#32;</dt>
+							<dt>Screen Identifier:&#32;</dt>
 				<dd>ORG-1100</dd>
 		</dl>
 	</div>
@@ -386,7 +399,7 @@ Government of Canada					</span>
 							showShare: false,
 							showFeedback: false,
 							showPostContent: false,
-							versionIdentifier: "2.7.2-RC.6",
+							versionIdentifier: "2.7.2",
 								screenIdentifier: "ORG-1100"
 					});
 				</script>
@@ -394,33 +407,34 @@ Government of Canada					</span>
 
 			<div id="def-footer"><footer role="contentinfo" id="wb-info">
 	<nav role="navigation" class="container wb-navcurr">
-		<h2 class="wb-inv">Liens connexes</h2>
+		<h2 class="wb-inv">Related Links</h2>
 		<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-						<li><a href="">Centre de services aux employeurs</a></li>
-						<li><a href="">Trouver un bureau de Service Canada</a></li>
-						<li><a href="">Programmes de financement</a></li>
-						<li><a href="">Guides des SELSC</a></li>
-						<li><a href="http://www.cra-arc.gc.ca/esrvc-srvce/tx/ndvdls/myccnt/menu-fra.html">ARC – Mon dossier pour les particuliers</a></li>
-						<li><a href="">ARC – Mon dossier d’entreprise</a></li>
-						<li><a href="">ARC – Représenter un client</a></li>
+						<li><a target="_blank" href="###">Employer Contact Center</a></li>
+						<li><a target="_blank" href="###">Find a Service Canada Office</a></li>
+						<li><a target="_blank" href="###">ROE Web</a></li>
+						<li><a target="_blank" href="###">ROE Guide</a></li>
+						<li><a target="_blank" href="###">Tutorials on Completing ROE  Form</a></li>
+						<li><a target="_blank" href="###">CRA - My Account for Individuals</a></li>
+						<li><a target="_blank" href="###">CRA – My Business Account</a></li>
+						<li><a target="_blank" href="###">CRA – Represent a Client</a></li>
 		</ul>
 	</nav>
 	<div class="brand">
 		<div class="container">
 			<div class="row">
 				<nav class="col-md-10 ftr-urlt-lnk">
-					<h2 class="wb-inv">À propos de cette application</h2>
+					<h2 class="wb-inv">About this Web application</h2>
 					<ul>
-						<li><a href="">Coordonnées</a></li>
-						<li><a href="">Avis</a></li>
-						<li><a href="">Confidentialité</a></li>
+						<li><a target="_blank" href="###">Contact information</a></li>
+						<li><a target="_blank" href="###">Terms and conditions</a></li>
+						<li><a target="_blank" href="###">Privacy</a></li>
 					</ul>
 				</nav>
 				<div class="col-xs-6 visible-sm visible-xs tofpg">
-					<a href="">Haut de la page <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+					<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
 				</div>
 				<div class="col-xs-6 col-md-2 text-right">
-					<object type="image/svg+xml" tabindex="-1" role="img" data="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/wmms-blk.svg" aria-label="Symbole du gouvernement du Canada"></object>
+					<object type="image/svg+xml" tabindex="-1" role="img" data="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
 				</div>
 			</div>
 		</div>
@@ -435,52 +449,61 @@ Government of Canada					</span>
 
 
 
+
+
+
 							 {
-									href: "",
-									text: "Centre de services aux employeurs",
+									href: "###",
+									text: "Employer Contact Center",
 									newWindow: true
 							},
 
 							 {
-									href: "",
-									text: "Trouver un bureau de Service Canada",
+									href: "###",
+									text: "Find a Service Canada Office",
 									newWindow: true
 							},
 
 							 {
-									href: "",
-									text: "Programmes de financement",
+									href: "###",
+									text: "ROE Web",
 									newWindow: true
 							},
 
 							 {
-									href: "",
-									text: "Guides des SELSC",
+									href: "###",
+									text: "ROE Guide",
 									newWindow: true
 							},
 
 							 {
-									href: "",
-									text: "ARC – Mon dossier pour les particuliers",
+									href: "###",
+									text: "Tutorials on Completing ROE  Form",
 									newWindow: true
 							},
 
 							 {
-									href: "",
-									text: "ARC – Mon dossier d’entreprise",
+									href: "###",
+									text: "CRA - My Account for Individuals",
 									newWindow: true
 							},
 
 							 {
-									href: "",
-									text: "ARC – Représenter un client",
+									href: "###",
+									text: "CRA – My Business Account",
+									newWindow: true
+							},
+
+							 {
+									href: "###",
+									text: "CRA – Represent a Client",
 									newWindow: true
 							},
 
 						],
-						contactLink: "http://www.edsc.gc.ca/cgi-bin/op-so/msca/redirection.asp?linkmsca=2f.html",
-						termsLink: "https://srv2140-s.services.gc.qat/ecas-seca/RASCL/SCL/PNS.aspx?mode=READONLY&lang=fra",
-						privacyLink: "https://srv2140-s.services.gc.qat/ecas-seca/RASCL/SCL/PNS.aspx?mode=READONLY&lang=fra",
+						contactLink: "http://www.edsc.gc.ca/cgi-bin/op-so/msca/redirection.asp?linkmsca=2e.html",
+						termsLink: "https://srv136.services.gc.ca/ecas-seca/rascl/SCL/PNS.aspx?mode=READONLY&amp;lang=eng",
+						privacyLink: "https://srv136.services.gc.ca/ecas-seca/rascl/SCL/PNS.aspx?mode=READONLY&amp;lang=eng",
 						showFeatures: false
 					});
 				</script>
@@ -492,11 +515,12 @@ Government of Canada					</span>
 				"inactivity" : 1020000,
 				"reactionTime" : 60000,
 				"sessionalive" : 1080000,
-				"logouturl" : "https://srv2140-s.services.gc.qat/sc/sys/mscba-mdesc/portal-portail/pro/portal/page/portal/mscba/logout",
-				"refreshCallbackUrl" : "https://srv2140-s.services.gc.qat/sc/sys/mscba-mdesc/portal-portail/pro/gcos/mscba/session-refresh.action",
+				"logouturl" : "https://srv136.services.gc.ca/sc/mscba-mdesc/portal-portail/pro/portal/page/portal/mscba/logout",
+				"refreshCallbackUrl" : "https://srv136.services.gc.ca/sc/mscba-mdesc/portal-portail/pro/roe/mscba/session-refresh.action",
 				"refreshOnClick" : false }'>
 			</span>
 
+			
 
 			<script>
 				$(function() {
@@ -507,4 +531,3 @@ Government of Canada					</span>
 			<script type="text/javascript"></script>
 		</body>
 	</html>
-
