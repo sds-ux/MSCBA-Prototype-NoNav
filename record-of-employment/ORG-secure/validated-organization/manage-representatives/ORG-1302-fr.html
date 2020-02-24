@@ -1,0 +1,592 @@
+
+
+
+
+
+	<!DOCTYPE html>
+	<!--[if lt IE 9]><html class="no-js lt-ie9" lang="fr" dir="ltr"><![endif]-->
+	<!--[if gt IE 8]><!--><html class="no-js" lang="fr" dir="ltr"><!--<![endif]-->
+		<head>
+			<meta charset="utf-8"/>
+			<meta content="width=device-width,initial-scale=1" name="viewport"/>
+
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+     wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+
+				<title>Relevé d&#39;emploi - [Mes organisations]</title>
+
+			<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/compiled/soyutils.js"></script>
+			<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/compiled/wet-fr.js"></script>
+
+
+			<noscript>
+				<!--[if gte IE 9 | !IE ]><!-->
+				<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/theme.min.css"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsfixes.css"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsapps.css"/>
+				<!--<![endif]-->
+
+				<!--[if lt IE 9]>
+				<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/favicon.ico" rel="shortcut icon"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/ie8-theme.min.css"/>
+				<![endif]-->
+
+				<!--[if lte IE 9]><![endif]-->
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/noscript.min.css"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsnoscript.css"/>
+
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/theme.min.css">
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsfixes.css">
+<!-- Are you using the application templates? If so add the following CSS file -->
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsapps.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/ie8-theme.min.css" />
+<![endif]-->
+<!--[if lte IE 9]><![endif]-->
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/noscript.min.css" />
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsnoscript.css" />			</noscript>
+
+			<script type="text/javascript">document.write(wet.builder.refTop({ cdnEnv: "AKAMAI", isApplication: true }))</script>
+			<style>.modal-footer { background-color: #FFF }</style>
+			<style type="text/css">
+
+
+
+.header-bg {
+	line-height: normal; 
+	background: linear-gradient(to right, #ddd 50%, #fff 75%, #fff); 
+}
+
+.header-bg .brdr-bttm-fade	 {
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(to right, #26374a 50%, #fff 75%, #fff); 
+}
+
+.header-bg h2 {
+	background: linear-gradient(297.5deg, transparent, transparent 25px, white 26px, white 31px, #26374a 32px, #26374a);
+	color: white;
+	display: inline-block;
+	margin: 0px;
+	padding: 5px 30px 5px 15px;
+	min-width: 300px;
+	font-size: 1.3em;
+}
+
+
+.btn.large-btn {display:flex;flex-direction:row;padding:0;border:2px solid #000; background-color:#fff;width:85%;text-align:left;}
+.btn.large-btn .icon-btn {flex:1;display:flex;flex-direction:row;align-items:center;}
+.btn.large-btn .label-btn {flex:4; padding-left:15px;display:flex;flex-direction:row;align-items:center; }
+.btn.large-btn .label-btn b {display:block;}
+.btn.large-btn .icon-btn img {width:30px;margin:10px 15px;}
+
+
+a.btn-blue:link, a.btn-blue:visited {
+  border:2px solid #003264;
+	color:#222;
+}
+a.btn-blue:link .icon-btn, a.btn-blue:visited .icon-btn{
+	background-color:#003264;
+
+}
+a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
+	background: #003264;
+	color: white;
+}
+a.btn-red:link, a.btn-red:visited {
+  border:2px solid #990033;
+	color:#222;
+}
+a.btn-red:link .icon-btn, a.btn-red:visited .icon-btn{
+	background-color:#990033;
+}
+a.btn-red:hover, a.btn-red:active, a.btn-red:focus {
+	background: #990033;
+	color: white;
+}
+a.btn-lblue:link, a.btn-lblue:visited {
+  border:2px solid #00749C;
+	color:#222;
+}
+a.btn-lblue:link .icon-btn, a.btn-lblue:visited .icon-btn{
+  background: #00749C;
+}
+a.btn-lblue:hover, a.btn-lblue:active, a.btn-lblue:focus {
+	background: #00749C;
+	color: white;
+}	
+	
+
+</style>
+		</head>
+
+		<body vocab="http://schema.org/" typeof="WebPage">
+			<div id="def-top">
+					<ul id="wb-tphp">
+						<li class="wb-slc"><a class="wb-sl" href="">Passer au contenu principal</a></li>
+						<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="">Passer à «&nbsp;À propos de cette application&nbsp;»</a></li>
+						<li class="wb-slc visible-md visible-lg"><a class="wb-sl" href="">Passer au menu de la section</a></li>
+					</ul>
+<header role="banner">
+	<div id="wb-bnr" class="container">
+		<div class="row">
+			<div class="brand col-xs-9 col-sm-8 col-md-6">
+								<object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/sig-blk-fr.svg"></object>
+				<span class="wb-inv">
+					<span>
+Gouvernement du Canada					</span>
+					<span>/</span>
+					<span lang="en">
+Government of Canada					</span>
+				</span>
+			</div>
+			<section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+				<h2 class="wb-inv">Sélection de la langue</h2>
+				<ul class="list-inline margin-bottom-none">
+					<li><a lang="fr" href="">English</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<div class="app-bar">
+		<div class="container">
+			<div class="row">
+				<section class="col-sm-7">
+						<h2 class="wb-inv">Relevé d&#39;emploi</h2>
+						<a class="app-name" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-fr.html">Relevé d&#39;emploi</a>
+				</section>
+					<nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
+						<h2 class="wb-inv">Menu des paramètres du compte</h2>
+						<ul class="app-list-account list-unstyled">
+							<li><a href="" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Paramètres du compte</a></li>
+							<li><a href="" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>  Fermer la session</a></li>
+						</ul>
+					</nav>
+			</div>
+		</div>
+	</div>
+	<div class="app-bar-mb container visible-xs-block hidden-print">
+		<nav role="navigation">
+			<h2 class="wb-inv">Recherche et menu</h2>
+			<ul class="app-list-main list-unstyled">
+				<li class="wb-mb-links" id="wb-glb-mn"><a href="" aria-controls="mb-pnl" class="btn overlay-lnk" role="button">Menu</a><h2>Menu</h2></li>
+			</ul>
+			<div id="mb-pnl"></div>
+		</nav>
+	</div>
+		<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+	<div class="pnl-strt container nvbar" lang="fr">
+		<h2 class="wb-inv">Menu des sujets</h2>
+		<div class="row">
+			<ul class="list-inline menu" role="menubar">
+				<li>
+							<a
+ href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-fr.html">Mes organisations</a>
+				</li>
+					<li>
+						<a href="" class="item">Relevé d&#39;emploi</a>
+						
+						
+
+							<ul class="sm list-unstyled" id="section1" role="menu">
+										<li>
+											<a href="" target="_self">
+												Démo RE Web
+											</a>
+										</li>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+							</ul>
+					</li>
+				<li>
+					<a href="" class="item">Aide et soutien</a>
+					<ul class="sm list-unstyled" id="section2" role="menu">
+						
+								<li>
+									<a href="" target="_blank">
+										Marche à suivre pour remplir le relevé d&#39;emploi
+									</a>
+								</li>
+								<li>
+									<a href="" target="_blank">
+										Guides d&#39;utilisateur RE Web
+									</a>
+								</li>
+								<li>
+									<a href="" target="_blank">
+										Centre de services aux employeurs
+									</a>
+								</li>
+								<li>
+									<a href="" target="_blank">
+										Aide et soutien – Page principale
+									</a>
+								</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>		</nav>
+	<nav role="navigation" id="wb-bc" property="breadcrumb">
+		<h2>Vous êtes ici :</h2>
+		<div class="container">
+			<div class="row">
+				<ol class="breadcrumb">
+						<li><a href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/ORG-1100-validated-fr.html">Relevé d&#39;emploi</a></li>
+						<li>Riley's Catering Inc. (ORG-185-584-321-165) 
+						</li>
+				</ol>
+			</div>
+		</div>
+	</nav> 
+</header>			</div>
+			
+		
+			
+			<div class="container">
+				<div class="row">
+						<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">
+							<h1 property="name" id="wb-cont">Inviter un représentant</h1>
+
+
+	<dl tabindex="0" class="well">
+					<dt>Nom de l'organisation :</dt>
+			<dd>Riley's Catering Inc.</dd><br />
+	<dt>Nom de l'organisation :</dt>
+			<dd>(ORG-185-584-321-165)</dd>
+		</dl>
+	
+	<table class="full-width table table-hover" title="Invite Representative">
+		<col style="width:30%"/>
+		<col style="width:70%"/>
+		
+		<tr>
+			<th scope="row">Nom :</th>
+			<td>Chris McDonald</td>
+		</tr>
+		<tr>
+			
+			      <th scope="row">Numéro de référence d'utilisateur :</th>
+		       
+			<td>CHR-141-143-886-742</td>
+		</tr>
+		<tr>
+			<th scope="row">Téléphone :	</th>
+			<td>6131332222</td>
+		</tr>	
+		<tr>
+			<th scope="row">Email:</th>
+			<td>chris_mcd@hotmail.com</td>
+		</t
+	></table>
+	
+<form id="add-representative" name="add-representative" action="###" method="post" role="form">		<div class="form-group">
+<div class="input"><label for="add-representative_model_clientTitle"><span class="field-name">Titre :</span><span class="required"></span></label><input type="text" name="model.clientTitle" size="50" maxlength="200" value="" id="add-representative_model_clientTitle" class="form-control"/>
+</div>
+		</div>
+		
+		<h3 tabindex="0">Droits d'administrateur :</h3>
+		<p tabindex="0">Cette option permet de déléguer des droits d'administrateur au représentant.</p>
+		
+			<table class="table table-hover" title="Administrative Rights:" tabindex="0">
+				<col style="width:70%">
+				<col style="width:30%">
+				
+				<thead>
+					<tr>
+						<th scope="col">Droit d'administrateur</th>
+						<th class="text-center" scope="col">Niveau d'accès
+</th>
+					</tr>
+					<tr>
+						<td class="text-right"><strong>Tout sélectionner	</strong></td>
+						<td class="text-center">
+<input type="checkbox" name="checkAllFunctionCodes" value="true" id="add-representative_checkAllFunctionCodes" title="Administrative Right: Select all"/><input type="hidden" id="__checkbox_add-representative_checkAllFunctionCodes" name="__checkbox_checkAllFunctionCodes" value="true" /><label class="sr-only" for="add-representative_checkAllFunctionCodes">Administrative Right: Select all</label>						</td>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								<strong>Modifier l'organisation
+</strong>
+	
+								<p>Cette option permet de modifier le profil de l&rsquo;organisation, le carnet d&rsquo;adresses, les contacts et d&rsquo;ajouter ou supprimer des entreprises inscrites auprès de l&rsquo;ARC.</p>
+							</td>
+							<td class="text-center">
+<input type="checkbox" name="functions[0].checked" value="true" id="add-representative_functions_0__checked" title="freemarker.core.TemplateHTMLOutputModel@34e89f22"/><input type="hidden" id="__checkbox_add-representative_functions_0__checked" name="__checkbox_functions[0].checked" value="true" /><label class="sr-only" for="add-representative_functions_0__checked">freemarker.core.TemplateHTMLOutputModel@34e89f22</label>							</td>				
+						</tr>
+						<tr>
+							<td>
+								<strong>Gérer les représentants de l'organisation
+</strong>
+	
+								<p>Cette option permet d&rsquo;inviter ou de supprimer d&rsquo;autres représentants et modifier leurs droits d&rsquo;accès. Le représentant peut uniquement déléguer ou supprimer des droits qu&rsquo;il possède déjà.</p>
+							</td>
+							<td class="text-center">
+<input type="checkbox" name="functions[1].checked" value="true" id="add-representative_functions_1__checked" title="freemarker.core.TemplateHTMLOutputModel@14278c51"/><input type="hidden" id="__checkbox_add-representative_functions_1__checked" name="__checkbox_functions[1].checked" value="true" /><label class="sr-only" for="add-representative_functions_1__checked">freemarker.core.TemplateHTMLOutputModel@14278c51</label>							</td>				
+						</tr>
+						<tr>
+							<td>
+								<strong>Gestion des dossiers
+</strong>
+	
+								<p>Cette option permet au représentant de créer, modifier ou supprimer des dossiers. Les dossiers permettent d&rsquo;organiser ou de limiter l&rsquo;accès aux documents et formulaires soumis en ligne.</p>
+							</td>
+							<td class="text-center">
+<input type="checkbox" name="functions[2].checked" value="true" id="add-representative_functions_2__checked" title="freemarker.core.TemplateHTMLOutputModel@306d242d"/><input type="hidden" id="__checkbox_add-representative_functions_2__checked" name="__checkbox_functions[2].checked" value="true" /><label class="sr-only" for="add-representative_functions_2__checked">freemarker.core.TemplateHTMLOutputModel@306d242d</label>							</td>				
+						</tr>
+				</tbody>
+		</table>
+		
+		<h3 tabindex="0">Entreprises inscrites auprès de l'ARC :
+</h3>
+		
+				<table class="table table-hover" title="CRA Businesses:" tabindex="0">
+					<col style="width:25%">
+					<col style="width:55%">
+					<col style="width:20%">
+					
+					<thead>
+						<tr>
+							<th colspan="3" scope="col" id="webTitle">RE Web
+</th>
+						</tr>
+						<tr>
+							<th scope="col" id="craBusiness">Numéro d'entreprise de l'ARC	</th>
+							<th scope="col" id="busLegalName">Nom d'entreprise de l'ARC	</th>
+							<th scope="col" id="busAccess">Niveau d'accès
+</th>
+						</tr>
+						<tr>
+							<td colspan="2" class="text-right" style="vertical-align: middle" headers="craBusiness busLegalName"><strong>Tout sélectionner	</strong></td>
+							<td class="text-right" style="vertical-align: middle" headers="busAccess">
+<label class="sr-only" for="add-representative_setAllBusinessAccessRightsTo">freemarker.core.TemplateHTMLOutputModel@4d621f31</label><div class="input"><select name="setAllBusinessAccessRightsTo" id="add-representative_setAllBusinessAccessRightsTo" class="form-control input-sm mrgn-lft-md mrgn-bttm-sm mrgn-tp-sm" title="freemarker.core.TemplateHTMLOutputModel@4d621f31">
+		<option value="??">Aucun</option>
+		<option value="R">Lecture</option>
+		<option value="W">Lecture/Ecriture</option>
+</select>
+</div>
+							</td>
+						</tr>
+					</thead>
+					
+					<tbody>
+							<tr>
+								<td headers="craBusiness">853218048RP0001</td>
+								<td headers="busLegalName">Riley's Catering Inc. </td>
+								<td headers="busAccess" class="text-center" style="vertical-align: middle">
+<label class="sr-only" for="add-representative_solutions_0__businesses_0__clientAccessRightCode">freemarker.core.TemplateHTMLOutputModel@16f50722</label><div class="input"><select name="solutions[0].businesses[0].clientAccessRightCode" id="add-representative_solutions_0__businesses_0__clientAccessRightCode" class="form-control input-sm mrgn-lft-md mrgn-bttm-sm mrgn-tp-sm" title="freemarker.core.TemplateHTMLOutputModel@16f50722">
+		<option value="??">Aucun</option>
+		<option value="R">Lecture</option>
+		<option value="W">Lecture/Ecriture</option>
+</select>
+</div>
+								</td>
+							</tr>
+					</tbody>
+				</table>
+		
+			<h3 tabindex="0">Dossiers :</h3>
+			<p tabindex="0">Cette option permet d'autoriser le représentant à visualiser ou sauvegarder des documents et formulaires dans un dossier spécifique.</p>
+				<table class="table table-hover" title="Folders:" tabindex="0">
+					<col style="width:30%">
+					<col style="width:50%">
+					<col style="width:20%">
+					
+					<thead>
+						<tr>
+							<th scope="col">Code du dossier	</th>
+							<th scope="col">Nom du dossier	</th>
+							<th scope="col">Niveau d'accès
+</th>
+						</tr>
+						<tr>
+							<td colspan="2" class="text-right"><strong>Tout sélectionner</strong></td>
+							<td class="text-center">
+<input type="checkbox" name="checkAllFolderCodes" value="true" id="add-representative_checkAllFolderCodes" title="freemarker.core.TemplateHTMLOutputModel@30a754f4"/><input type="hidden" id="__checkbox_add-representative_checkAllFolderCodes" name="__checkbox_checkAllFolderCodes" value="true" /><label class="sr-only" for="add-representative_checkAllFolderCodes">freemarker.core.TemplateHTMLOutputModel@30a754f4</label>							</td>
+						</tr>
+					</thead>
+					<tbody>
+							<tr>
+								<td>543vbdfb54</td>
+								<td>Dossier</td>
+								<td class="text-center">
+<input type="checkbox" name="folders[0].checked" value="true" id="add-representative_folders_0__checked" title="freemarker.core.TemplateHTMLOutputModel@39ba7820"/><input type="hidden" id="__checkbox_add-representative_folders_0__checked" name="__checkbox_folders[0].checked" value="true" /><label class="sr-only" for="add-representative_folders_0__checked">freemarker.core.TemplateHTMLOutputModel@39ba7820</label>								</td>				
+							</tr>
+					</tbody>
+				</table>
+		
+		
+		
+<input type="hidden" name="struts.token.name" value="token" />
+
+	<input type="hidden" name="token" value="PDTO5694QNNWIAN8JPZP94J68C4QGNKS" /><input type="hidden" name="representativeId" value="CA0982EDA4573664" id="add-representative_representativeId"/><input type="hidden" name="orgAccessId" value="E3C2798FAAD7FCF9" id="add-representative_orgAccessId"/>		
+
+	<a class="btn btn-primary" id="add-representative_add-representative_sendInvitation" name="method:addRepresentative" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/manage-representatives/ORG-1305-fr.html">Envoyer l'invitation</a>
+
+	<a class="btn btn-default" href="/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/ORG-1101-fr.html" id="add-representative_add-representative_cancel" name="method:cancel">Annuler</a>
+	
+</form>
+
+
+
+
+						</main>
+
+					
+				</div>
+
+				<div id="def-preFooter"><div class="row pagedetails">
+	<div class="datemod col-xs-12 mrgn-tp-lg">
+		<dl id="wb-dtmd">
+							<dt>Identificateur d'écran :&#32;</dt>
+				<dd>ORG-1302</dd>
+		</dl>
+	</div>
+</div></div>
+
+				<script type="text/javascript">
+					document.getElementById("def-preFooter").outerHTML = wet.builder.preFooter({
+							cdnEnv: "AKAMAI",
+							showShare: false,
+							showFeedback: false,
+							showPostContent: false,
+							versionIdentifier: "2.7.2-RC.6",
+								screenIdentifier: "ORG-1302"
+					});
+				</script>
+			</div>
+			
+			<div id="def-footer"><footer role="contentinfo" id="wb-info">
+	<nav role="navigation" class="container wb-navcurr">
+		<h2 class="wb-inv">Liens connexes</h2>
+		<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+						<li><a href="">Centre de services aux employeurs</a></li>
+						<li><a href="">Trouver un bureau de Service Canada</a></li>
+						<li><a href="">Programmes de financement</a></li>
+						<li><a href="">Guides des SELSC</a></li>
+						<li><a href="http://www.cra-arc.gc.ca/esrvc-srvce/tx/ndvdls/myccnt/menu-fra.html">ARC – Mon dossier pour les particuliers</a></li>
+						<li><a href="">ARC – Mon dossier d’entreprise</a></li>
+						<li><a href="">ARC – Représenter un client</a></li>
+		</ul>
+	</nav>
+	<div class="brand">
+		<div class="container">
+			<div class="row">
+				<nav class="col-md-10 ftr-urlt-lnk">
+					<h2 class="wb-inv">À propos de cette application</h2>
+					<ul>
+						<li><a href="">Coordonnées</a></li>
+						<li><a href="">Avis</a></li>
+						<li><a href="">Confidentialité</a></li>
+					</ul>
+				</nav>
+				<div class="col-xs-6 visible-sm visible-xs tofpg">
+					<a href="">Haut de la page <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+				</div>
+				<div class="col-xs-6 col-md-2 text-right">
+					<object type="image/svg+xml" tabindex="-1" role="img" data="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/wmms-blk.svg" aria-label="Symbole du gouvernement du Canada"></object>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer></div>
+
+			<div id="theFooter">
+				<script type="text/javascript">
+					document.getElementById("def-footer").outerHTML = wet.builder.appFooter({
+						cdnEnv: "AKAMAI",
+						footerSections: [
+
+
+
+							 {
+									href: "",
+									text: "Centre de services aux employeurs",
+									newWindow: true
+							},
+
+							 {
+									href: "",
+									text: "Trouver un bureau de Service Canada",
+									newWindow: true
+							},
+
+							 {
+									href: "",
+									text: "Programmes de financement",
+									newWindow: true
+							},
+
+							 {
+									href: "",
+									text: "Guides des SELSC",
+									newWindow: true
+							},
+
+							 {
+									href: "",
+									text: "ARC – Mon dossier pour les particuliers",
+									newWindow: true
+							},
+
+							 {
+									href: "",
+									text: "ARC – Mon dossier d’entreprise",
+									newWindow: true
+							},
+
+							 {
+									href: "",
+									text: "ARC – Représenter un client",
+									newWindow: true
+							},
+
+						],
+						contactLink: "http://www.edsc.gc.ca/cgi-bin/op-so/msca/redirection.asp?linkmsca=2f.html",
+						termsLink: "https://srv2140-s.services.gc.qat/ecas-seca/RASCL/SCL/PNS.aspx?mode=READONLY&lang=fra",
+						privacyLink: "https://srv2140-s.services.gc.qat/ecas-seca/RASCL/SCL/PNS.aspx?mode=READONLY&lang=fra",
+						showFeatures: false
+					});
+				</script>
+			</div>
+
+			<script type="text/javascript">document.write(wet.builder.refFooter({ cdnEnv: "AKAMAI" }))</script>
+
+			<span class="wb-sessto" data-wb-sessto='{
+				"inactivity" : 1020000,
+				"reactionTime" : 60000,
+				"sessionalive" : 1080000,
+				"logouturl" : "https://srv2140-s.services.gc.qat/sc/sys/mscba-mdesc/portal-portail/pro/portal/page/portal/mscba/logout",
+				"refreshCallbackUrl" : "https://srv2140-s.services.gc.qat/sc/sys/mscba-mdesc/portal-portail/pro/gcos/mscba/session-refresh.action",
+				"refreshOnClick" : false }'>
+			</span>
+
+
+			<script>
+				$(function() {
+					$("#wb-info").find("a").each(function(idx, elem) { $(elem).attr("target", "_blank"); });
+				});
+			</script>
+
+			<script type="text/javascript"></script>
+		</body>
+	</html>
+
