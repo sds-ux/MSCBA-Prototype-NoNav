@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gte IE 9 | !IE]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+
+<!-- H0-01 1.2.4 -->
+<title>GCKey - Sign In / Sign Up</title>
+<meta name="dcterms.description" content="English description / Description en anglais" />
+<meta name="description" content="English description / Description en anglais" />
+<meta name="keywords" content="English keywords / Mots-cl&eacute;s en anglais" />
+<meta name="dcterms.creator" content="Government of Canada, Shared Services Canada" />
+<meta name="dcterms.title" content="GCKey Sign In" />
+<meta name="dcterms.issued" title="W3CDTF" content="2012-05-07" />
+<meta name="dcterms.modified" title="W3CDTF" content="2015-11-15" />
+<meta name="dcterms.subject" title="scheme" content="Electronic government; Government Services" />
+<meta name="dcterms.language" title="ISO639-2" content="eng" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/css/fuelux.min.css">
+<!--[if gte IE 9 | !IE ]><!-->
+<link rel="shortcut icon" href="https://clegc-gckey.gc.ca/j/wet/assets/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/wet/css/wet-boew.min.css" />
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/wet/css/theme.min.css" />
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/css/gckey.css" />
+<!--<![endif]-->
+<!--[if lt IE 9]> 
+<link rel="shortcut icon" href="https://clegc-gckey.gc.ca/j/wet/assets/favicon.ico"/>
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/wet/css/ie8-wet-boew.min.css"/>
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/wet/css/theme.min.css" />
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/css/ie8-gckey.css" />
+<script src="https://clegc-gckey.gc.ca/j/js/jquery-ie.min.js"></script>
+<script src="https://clegc-gckey.gc.ca/j/wet/js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<noscript>
+<link rel="stylesheet" href="https://clegc-gckey.gc.ca/j/wet/css/noscript.min.css" />
+</noscript>
+</head>
+<body>
+<ul id="wb-tphp">
+  <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Passer au contenu principal</a></li>
+  <li class="wb-slc visible-md visible-lg"><a class="wb-sl" href="#wb-info">Passer au pied de page</a></li>
+</ul>
+<header role="banner">
+  <div id="wb-bnr" class="container">
+    <div id="wb-lng" class="visible-md visible-lg text-right">
+      <h2 class="wb-inv">Sélection de la langue</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-inline margin-bottom-none">
+            <li><a lang="fr" href='/MSCA-Prototype/scenarioA/services/my-account/chooser-page.html'>English</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="brand col-xs-7 col-sm-9"> <a href="#" title="Welcome to Canada.ca (opens in a new window)">
+        <object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="https://www.clegc-gckey.gc.ca/j/wet/assets/sig-blk-en.svg" aria-label="Government of Canada">
+        </object>
+        </a> </div>
+      <div class="wb-mb-links col-xs-5 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+        <h2 class="wb-inv">Barre de navigation</h2>
+        <ul class="list-inline text-right chvrn">
+          <li><a href="#mb-pnl" title="Menu" aria-controls="mb-pnl" class="overlay-lnk" role="button"> <span class="glyphicon glyphicon-th-list"> <span class="wb-inv">Barre de navigation</span> </span> </a></li>
+        </ul>
+        <div id="mb-pnl"></div>
+      </div>
+    </div>
+  </div>
+  <nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" typeof="SiteNavigationElement">
+    <h2 class="wb-inv">Barre de navigation du site</h2>
+    <div class="container visible-md visible-lg nvbar">
+      <div class="row">
+        <ul class="list-inline menu">
+          <li><a href="#">Définitions</a></li>
+          <li><a href="#">Foire aux questions (FAQ)</a></li>
+          <li class="last"><a href="#">Aide</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav role="navigation" id="wb-bc" property="breadcrumb">
+    <h2 class="wb-inv">Fil d'Ariane</h2>
+    <div class="container">
+      <div class="row">
+        <ol class="breadcrumb">
+          <li>Accueil</li>
+          <li>Se connecter / S'enregistrer</li>
+        </ol>
+      </div>
+    </div>
+  </nav>
+</header>
+
+ <div class="container body-container">
+  <main role="main" property="mainContentOfPage">
+  <div class="row">
+   <div class="col-xs-12">
+    <div class="fuelux fuelux-container hidden-sm hidden-xs">
+     <div id="my-wizard" class="wizard">
+      <ul class="steps">
+       <li data-target="#step1" class="complete"><span class="text">Avis</span><span class="chevron"></span></li>
+       <li data-target="#step2" class="active"><span class="text">Nom d'utilisateur</span><span class="chevron"></span></li>
+       <li data-target="#step3"><span class="text">Mot de passe</span><span class="chevron"></span></li>
+       <li data-target="#step4"><span class="text">Questions et r&eacute;ponses</span><span class="chevron"></span></li>
+      </ul>
+     </div>
+    </div>
+    <h1 id="wb-cont">Cr&eacute;er votre nom d'utilisateur</h1>
+    
+    <div class="row">
+     <div class="col-md-12">
+     <form autocomplete="off" id="login" method="post" action="/j/fra/rg?execution=e1s2" class="row-start row-end">
+      <fieldset>
+       <!--[if IE]><input type="text" style="display: none;" disabled="disabled" size="1" /><![endif]-->
+       <div class="row">
+        <div class="col-md-8">
+         <div style="margin-bottom: 20px;">
+          <p class="visible-xs visible-sm">Veuillez assurer la confidentialit&eacute; de votre nom d'utilisateur. Pour obtenir plus de renseignements sur la fa&ccedil;on dont la protection de vos renseignements personnels est assur&eacute;e, veuillez consulter notre <a href="#">D&eacute;claration sur la collecte des renseignements personnels</a>.</p>
+          <p>Votre nom d'utilisateur doit contenir entre huit et seize caract&egrave;res, au plus sept chiffres, et ne comprendre aucun caract&egrave;re sp&eacute;cial (par exemple&nbsp;: %, #, @). Lorsque vous créez votre nom d'utilisateur, nous vous recommandons :
+          <ul>
+           <li>de créer un nom d'utilisateur dont vous pouvez facilement vous souvenir, mais que d'autres personnes pourront difficilement deviner;</li>
+           <li>d'éviter d'utiliser des renseignements personnels, tels votre nom, votre numéro d'assurance sociale (NAS), votre adresse postale ou votre adresse électronique;</li>
+           <li>d'assurer en tout temps la confidentialité de votre nom d'utilisateur et de ne le partager avec personne.</li>
+          </ul>
+         </div>
+         <div class="form-group">
+          <label for="userID">Cr&eacute;ez votre nom d'utilisateur : <strong>(obligatoire)</strong></label>
+          
+          <input type="text" name="uid" id="userID" maxlength="16" value="" class="form-control noClearOnError" title="Obligatoire - Cr&eacute;ez votre nom d'utilisateur. Votre nom d'utilisateur doit contenir entre huit et seize caract&egrave;res, au plus sept chiffres, et ne comprendre aucun caract&egrave;re sp&eacute;cial." />
+         </div>
+         <p>
+          Veuillez s&eacute;lectionner <strong>Continuer</strong> pour poursuivre ou <strong>Annuler</strong> pour mettre fin &agrave; ce processus.
+         </p>
+         <div class="form-group form-buttons">
+                      <p style="text-align:center";> <a class="btn btn-primary" href="/MSCBA-Prototype-NoNav/record-of-employment/sign-in/GCKey/sign-up-create-password-fr.html">Continuer</a>
+                        <input type="submit" class="cancel btn btn-default" name="_eventId_reset" id="button2" value="Effacer tout" title="Information entered will be cleared" style="margin-left:auto; margin-right:auto"/>
+                        <input type="submit" class="cancel btn btn-default" name="_eventId_cancel" id="Cancel" value="Annuler" title="Cancel the process" style="margin-left:auto; margin-right:auto"/>
+                      </p>
+                    </div>
+        </div>
+        <div class="col-md-4 hidden-sm hidden-xs">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+           <h2 class="panel-title">La protection des renseignements personnels</h2>
+          </div>
+          <div class="panel-body">
+           <p>Veuillez assurer la confidentialit&eacute; de votre nom d'utilisateur. Pour obtenir plus de renseignements sur la fa&ccedil;on dont la protection de vos renseignements personnels est assur&eacute;e, veuillez consulter notre <a href="#">D&eacute;claration sur la collecte des renseignements personnels</a>.</p>
+          </div>
+         </div>
+         <div id="userID_checklist" class="container-checklist">
+          <div class="panel panel-default">
+           <div class="panel-heading">
+            <h2 class="panel-title">Liste de contr&ocirc;le des noms d'utilisateur</h2>
+           </div>
+           <div class="panel-body">
+            <ul>
+             <li id="userID_rg01e1" class="unSet" title="Crit&egrave;re exig&eacute; - Nom d'utilisateur - Doit contenir entre huit et seize caract&egrave;res."><span class="wb-invisible">Crit&egrave;re exig&eacute; - Nom d'utilisateur </span><span class="text">8 &agrave; 16 caract&egrave;res</span></li>
+             <li id="userID_rg01e2" class="unSet" title="Crit&egrave;re exig&eacute; - Nom d'utilisateur - Ne doit comprendre aucun caract&egrave;re sp&eacute;cial."><span class="wb-invisible">Crit&egrave;re exig&eacute; - Nom d'utilisateur </span><span class="text">Aucun caract&egrave;re sp&eacute;cial</span></li>
+             <li id="userID_rg01e3" class="unSet" title="Crit&egrave;re exig&eacute; - Nom d'utilisateur - Doit contenir au plus sept chiffres."><span class="wb-invisible">Crit&egrave;re exig&eacute; - Nom d'utilisateur </span><span class="text">Au plus 7 chiffres</span></li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </fieldset>
+     </form>
+     </div>
+    </div>
+    <div class="pagedetails row col-md-12">
+     <div class="datemod">
+      <dl id="wb-dtmd" role="contentinfo">
+       <dt>Date de modification&#160;:</dt>
+       <dd>
+        <time property="dateModified">2015-11-15</time>
+       </dd>
+      </dl>
+     </div>
+    </div>
+   </div>
+  </div>
+  </main>
+ </div>
+<footer role="contentinfo" id="wb-info">
+  <nav role="navigation" class="container visible-lg visible-md wb-navcurr">
+    <h2 class="wb-inv">Pied de page du site</h2>
+    <div class="row">
+      <section class="col-sm-3 col-lg-3">
+        <h3>&Agrave; propos</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">À propos de la cléGC</a></li>
+          <li><a href="#">Services adaptés</a></li>
+          <li><a href="#">Plan du site</a></li>
+        </ul>
+      </section>
+      <section class="col-sm-3 col-lg-3">
+        <h3>Transparence</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Divulgation proactive</a></li>
+          <li><a href="#">Avis</a></li>
+          <li><a href="#">Déclaration sur la collecte des renseignements personnels</a></li>
+        </ul>
+      </section>
+      <div class="col-sm-3 col-lg-3">
+        <section>
+          <h3>Nouvelles</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Activité récente du projet</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-3 col-lg-3">
+        <section>
+          <h3>Contactez-nous</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Numéros de téléphone</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </nav>
+  <div class="brand">
+    <div class="container">
+      <div class="row ">
+        <div class="col-xs-6 col-sm-6 visible-sm visible-xs tofpg"> <a href="#wb-cont">Haut de la page  <span class="glyphicon glyphicon-chevron-up"></span></a> </div>
+        <div class="col-xs-6 col-sm-6 col-md-12 text-right">
+          <object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="https://clegc-gckey.gc.ca/j/wet/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+          </object>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!--> 
+<script src="https://clegc-gckey.gc.ca/j/js/jquery.min.js"></script> 
+<script src="https://clegc-gckey.gc.ca/j/wet/js/wet-boew.min.js"></script> 
+<!--<![endif]--> 
+<!--[if lt IE 9]>
+<script src="https://clegc-gckey.gc.ca/j/wet/js/ie8-wet-boew2.min.js"></script>
+<![endif]--> 
+<script type="text/javascript">
+var invalidUserError = "Username may be missing, invalid or incomplete.";
+var invalidUserError_field = "Your Username may be missing, invalid or incomplete.";
+var invalidPasswordError = "Password may be missing, invalid or incomplete.";
+var invalidPasswordError_field = "Your Password may be missing, invalid or incomplete.";
+var errorTitle = "The form could not be submitted because {reason}. For your security, all fields have been cleared.";
+</script> 
+<script src="https://clegc-gckey.gc.ca/j/js/validation/HO-01_validationRules.js"></script> 
+<script src="https://clegc-gckey.gc.ca/j/js/validation/validationFunctions.js"></script>
+</body>
+</html>
