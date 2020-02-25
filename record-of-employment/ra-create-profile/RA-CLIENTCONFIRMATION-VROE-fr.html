@@ -46,6 +46,96 @@
 
         <!-- GoC.WebTemplate Version ASPX 1.30.7010.20106 -->
         <!-- GoC.WebTemplate.Core Version 1.30.7010.20106 -->
+		<style type="text/css">
+.orange-bg {
+    background: linear-gradient(#f68b1f, #f89736);
+}
+.blue-bg {
+    background-color: #11409F;
+}
+.header-bg {
+    line-height: normal;
+    background: linear-gradient(to right, #ddd 50%, #fff 75%, #fff);
+}
+.header-bg .brdr-bttm-fade {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #26374a 50%, #fff 75%, #fff);
+}
+.header-bg h2 {
+    background: linear-gradient(297.5deg, transparent, transparent 25px, white 26px, white 31px, #26374a 32px, #26374a);
+    color: white;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px 30px 5px 15px;
+    min-width: 300px;
+    font-size: 1.3em;
+}
+.large-btn {
+    width: 85%;
+    text-align: left;
+}
+.large-btn b {
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+}
+.large-btn img {
+    display: inline-block;
+    width: 10%;
+    margin-left: 3%;
+}
+a.btn-green:hover, a.btn-purple:hover, a.btn-blue:hover {
+    color: white;
+}
+a.btn-green:link, a.btn-green:visited, a.btn-green:hover, a.btn-green:active, a.btn-purple:link, a.btn-purple:visited, a.btn-purple:hover, a.btn-purple:active, a.btn-blue:link, a.btn-blue:visited, a.btn-blue:hover, a.btn-blue:active {
+    color: white;
+    padding-left: 5px;
+}
+a.btn-green {
+    background: #444;
+}
+a.btn-green:hover, a.btn-green:active {
+    background: #787878;
+}
+a.btn-purple {
+    background: #32002A;
+}
+a.btn-purple:hover, a.btn-purple:active {
+    background: #4A0B38;
+}
+a.btn-blue:link, a.btn-blue:visited {
+    background: #283a7b;
+}
+a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
+    background: #26374a;
+}
+	/*
+	
+		
+	a.btn-green {
+		background: #000000;
+	}
+	a.btn-green:hover, a.btn-green:active {
+		background: #787878;
+	}
+	
+	
+	a.btn-purple {
+		background: #32002A;
+	}
+	a.btn-purple:hover, a.btn-purple:active {
+		background: #4A0B38;
+	}
+	
+	
+	a.btn-blue {
+		background: #26374a;
+	}
+	a.btn-blue:hover, a.btn-blue:active {
+		background: #26374a;
+	}*/
+</style>
     </head>
     <body vocab="http://schema.org/" typeof="WebPage">
         <span class='wb-sessto' data-wb-sessto='{"enabled":true,"inactivity":1200000,"reactionTime":180000,"sessionalive":1200000,"logouturl":"https://srv136.services.gc.ca/ecas-seca/rascl/Support/GlobalLogout.aspx","refreshCallbackUrl":"#","refreshOnClick":false,"refreshLimit":120000,"method":"","additionalData":""}'></span>
@@ -127,6 +217,8 @@
             var defTop = document.getElementById("def-top");
             defTop.outerHTML = wet.builder.top({"cdnEnv":"prod","search":true,"lngLinks":[{"href":"https://srv253-hrsdc-rhdcc.fjgc-gccf.gc.ca/racr/racr.aspx?Lang=eng&ExitUrl=aHR0cHM6Ly9zcnYxMzYuc2VydmljZXMuZ2MuY2EvZWNhcy1zZWNhL3Jhc2NsL1NDTC9QTlMuYXNweA==","lang":"en","text":"English"}],"showPreContent":true,"breadcrumbs":[{"href":"https://www.canada.ca/fr.html","title":"Accueil"},{"title":"Inscription et authentification"}],"topSecMenu":true,"siteMenu":true});
         </script>
+		
+		
         <div class="container">
 	        <div class="row">
 	            <main property="mainContentOfPage" class="col-md-9 col-md-push-3" role="main">
@@ -134,108 +226,150 @@
                     
      
     <h1 id="wb-cont" property="name">
-        Créer mon profil
+        Nouvel utilisateur ou récupérer l'accès à un profil existant
         </h1>
 
 
-    <form method="post" action="./PNS.aspx?lang=fra" id="frmMain" autocomplete="off">
+    <form method="post" action="https://www.canada.ca/ClientConfirmation.aspx" id="frmMain" autocomplete="off">
 <div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
 </div>
 
 <div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="64F0FBBE" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="AWH/X+bnnUl9gZZjIKsrmFpf92SUKu0YzlixsFWcrjrBxcqe4VRUPG+1+3LgUoSsdcFKo5ZhKnqTSToX5IicOiBUzCMH8tor1H4ile6a06UYIjrUakTbvRp7LMrRIv7bT8XQxb59iQf07WKH5jydAvXJWbfAz8WIokOnXA==" />
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AAA56776" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="9M2pXHWyTv304MEK1O2Je6popuYAa6k7IdZOj4eSZAttvswlBfuRlMYdsWGgYmdhfgNIJh8JsbHw8wdsWx/mMK3/TtbFxPMCCakDnbmcTeEnTPlNyHCtHU59XCoLm9xljBz08oWVG1Wgrbjx" />
 </div>
         <div>
-            
+              
+    
+    <section> 
+       <p>Cette page offre la possibilité d'enregistrer en tant que nouvel utilisateur ou récupérer l'accès à un profil existant.</p> 
 
-    <h2>Énoncé de confidentialité</h2>
+    </section>
 
-<p>Puisque cette page contient des renseignements importants, vous pouvez l’imprimer pour consultation 
-   ultérieure.</p>
-
-<p>La protection de vos renseignements personnels est importante pour nous.</p>
-
-<p>La collection, l’utilisation et la divulgation de vos renseignements personnels en relation avec ces services en ligne sont 
-autorisées par la <i>Loi sur l’assurance-emploi</i>, la <i>Loi sur le ministère 
-   des Ressources humaines et du Développement des compétences</i> et la <i>Loi sur la protection des renseignements
-   personnels</i>. 
-</p>
-
-<p>Les renseignements que vous fournissez lors de la création d’un compte du Relevé d’emploi sur le Web (RE Web) et lors de la 
-demande d'inscription au RE Web sont recueillis par la Commission de l’assurance-emploi du Canada (CAEC) (Commission) sous 
-l’autorité de la <i>Loi sur l’assurance-emploi</i> à des fin d’administration et d’application. La communication de ces 
-renseignements est facultative, par contre le refus de fournir des renseignements personnels se traduira par un refus de 
-l’accès au système RE Web. 
-</p>
-
-<p>Les renseignements que vous fournissez pourraient être utilisés ou divulgués à des fins d’analyse des politiques ou 
-d’évaluation des recherches et ils pourraient être reliés à des renseignements relevant de la Commission. Dans certains cas, 
-ces renseignements pourraient être divulgués sans votre consentement si la loi l’autorise. Parmi ces cas, on compte notamment 
-le partage de renseignements avec le Programme des travailleurs étrangers temporaires (PTET) portant sur l’employeur et le 
-motif du licenciement, et ce, pour les besoins de l’administration et l’exécution du PTET en matière des avis relatifs au 
-Demande d'étude de l'impact sur le marché du travail. 
-</p>
-
-<p>Les renseignements que vous fournissez seront gérés conformément à la <i>Loi sur l’assurance-emploi</i>, la
-   <i>Loi sur le ministère des Ressources humaines et du Développement des compétences</i>, la <i>Loi sur la
-   protection des renseignements personnels</i> et toutes autres lois applicables. En vertu de la <i>Loi sur la 
-   protection des renseignements personnels</i>, vous avez le droit à la protection l’accès aux, et à la demande de correction de 
-tous renseignements vous concernant, tel que décrit dans les Répertoires de renseignements personnels RHDSC PPU 150, 180 et 385. 
-Les directives à suivre pour présenter une demande concernant vos renseignements personnels sont décrites dans la publication 
-gouvernementale intitulée « Info Source », disponible à l’adresse suivante : 
-<a href =''>www.infosource.gc.ca</a>. Info Source 
-   peut également être consultée en ligne à partir d’un Centre Service Canada.
-</p>
-<p>Il est obligatoire de compléter un relevé d’emploi lorsqu’il y a un arrêt de rémunération. Le défaut
-   d’émettre un RE dans le délai prescrit constitue une violation de l’article 136 de la <i>Loi sur l’assurance-
-   emploi</i>. En cas de condamnation, l’employeur peut encourir une amende ou une peine d’emprisonnement
-   ou les deux. 
-</p>
-
-<h2>Modalités d’utilisation des services en ligne du RE Web.</h2>
+   <section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="mrgn-tp-md header-bg">
+              <h2 id="a1-1" class="mrgn-tp-0">Nouvel utilisateur&nbsp;</h2>
+              <div class="brdr-bttm-fade"></div>
+            </div>
+            <br /> 
+            <p>S'enregistrer pour Relevé d'emploi sur le Web (RE Web)</p>
+            <ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-AUTHENTICATION-VAUTHENTICATION-fr.html';" type="button" class="btn btn-default">S'enregistrer pour RE Web</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+			
+			<section>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="mrgn-tp-md header-bg">
+              <h2 id="a1-1" class="mrgn-tp-0">Utilisateur déjà existant&nbsp;</h2>
+              <div class="brdr-bttm-fade"></div>
+            </div>
+            <br /> 
+            <p>
+                        Récupérer accès à mon profil Relevé d'emploi sur le Web existant en donnant mon numéro de référence d'utilisateur et en répondant à mes questions de sécurité :
+                    </p>
+                    <div class="row mrgn-tp-md">
+                        <div class="col-md-4">
+                            <label for="urnROE" class="control-label">Numéro de référence d’utilisateur (NRU) :</label>
+</div>
+<div class="col-md-4">
+<input type="text" id="urnROE" name="urnROE" class="form-control" value="" maxlength="100" size="option2RoeUrnP option2RoeUrnExample" autocomplete="off"/>
 
 
-<strong>IL EST IMPORTANT DE LIRE ATTENTIVEMENT TOUTES LES MODALITÉS D’UTILISATION.</strong>
+                        </div>
+                        <div class="col-md-4" id="option2RoeUrnExample">
+                            (e.g. : XXX-123-456-789-000)
+                        </div>
+                    </div>
+                    <div class="row mrgn-tp-sm">
+                        <div class="col-md-8 pull-right">
+                            <a href="/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-QA-VLOOKUP.html" data-ajax="false"><br />Numéro de référence d'utilisateur oublié?</a>
 
-<p>Le défaut de respecter les modalités d’utilisation peut entraîner la suspension ou la révocation de 
-votre accès au RE Web. Si vous n’acceptez pas les modalités d’utilisation, vous devez sélectionner 
-« Je n’accepte pas » au bas de cette page.  
-</p>
 
-<ol>
-<li>Je comprends et j’accepte que mon nom d’utilisateur et mon mot de passe me soient propres, et que je dois préserver leur confidentialité en tout temps afin de préserver la sécurité de mes communications par voie électronique. J’accepte aussi de ne pas divulguer mon nom d’utilisateur et mon mot de passe à quiconque et de prendre les mesures raisonnables pour empêcher la perte, la divulgation, la modification et l’utilisation non autorisée de ceux-ci.
-</li>
-<li>Je comprends et j’accepte que mon nom d’utilisateur et mon mot de passe soient utilisés pour établir mon identité, conformément aux renseignements d’identité fournis au cours du processus d’inscription, chaque fois que j’accède et utilise RE Web.
- </li>
-<li>J’atteste que chaque fois que j’accède et utilise RE Web, je suis le ou la seul(e) propriétaire de mon nom d’utilisateur et mon mot de passe et je suis entièrement responsable de tout accès ou utilisation du RE Web fait avec mon nom d’utilisateur et mon mot de passe. Je comprends et j’accepte aussi que la Commission et le ministère des Ressources humaines et du Développement des compétences (RHDCC) ne soient pas responsables des pertes ou dommages pouvant découler du défaut de protéger mon nom d’utilisateur et mon mot de passe.  
-</li>
-<li>J’accepte d’informer la Commission immédiatement si je soupçonne que d’autres ont obtenu mon nom d’utilisateur et mon mot de passe, ou si ceux-ci ont pu, de n’importe façon, été compromis. 
-</li>
-<li>J’accepte et atteste que tous renseignements que je fournis lors de mon utilisation des services en ligne au sein du RE Web sont véridiques, exacts, actuels et complets.   
-</li>
-<li>Je comprends et j’accepte qu’à moins que je mette à jour mes renseignements ou informe la Commission d’une imprécision ou d’un écart dans mes renseignements, la Commission a le droit de se fonder sur les renseignements dans, ou soumis de mon compte. 
-</li>
-<li>Je comprends et j’accepte qu’une fois le processus d’inscription terminé, mon prénom, mon nom de famille, mon numéro de téléphone et mon adresse courriel soient accessibles uniquement aux utilisateurs inscrits à la même organisation. Dans le cas où je m’inscris en tant qu’agent principal, je comprends aussi que ces renseignements seront également partagés avec un haut représentant de l’organisation que je représente afin de confirmer mon autorité d’agir à titre d’agent principal.  
- </li>
-<li>Je comprends et j’accepte que la Commission puisse modifier ces modalités d’utilisation en tout temps, sans préavis, et que ces modalités entreront en vigueur dès la publication de l’avis du changement sur le site Web de Service Canada.
-</li>
-<li>Je comprends et j’accepte que mon accès continu et utilisation du RE Web après que telles modifications sont publiées indiquera mon acceptation des modalités d’utilisation modifiées et la Commission aura le droit de se fonder sur mon accès au RE Web comme accord aux modifications. 
-</li>
-<li>Je reconnais que c’est ma responsabilité de consulter les modalités d’utilisation périodiquement afin de déterminer si des modifications ont été apportées.
-</li>
-</ol>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+			  
+         <ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '';" type="button" class="btn btn-default">Soumettre votre NRU</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+			
+<!--<fieldset class="panel panel-primary">
+           
+               <legend class="panel-heading">
+                        New user
+                </legend>
+                <div class="panel-body">
+                    <p>Create a new profile by registering for Record of Employment (ROE) Web</p>
+            <ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-AUTHENTICATION-VAUTHENTICATION.html';" type="button" class="btn btn-default">Register for ROE Web</button>
+              </li>
+            </ul>
 
-<p>Vous devez accepter les modalités d’utilisation susmentionnées afin d’accéder et utiliser l’application RE Web. En sélectionnant « J’accepte », vous indiquez que vous acceptez de vous conformer aux modalités d’utilisation énoncées ci-dessus. Si vous n’acceptez pas les modalités d’utilisation, votre accès au système RE Web sera refusé.  
-</p>
 
-    <div class="mrgn-tp-lg">
-        <a class="btn btn-primary" id="btnAgree" name="ctl00$ctl00$MainContent$ContentPlaceHolder$btnAgree" href="/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-CLIENTCONFIRMATION-VROE-fr.html">J'accepte</a>                  
-        <input type="submit" name="ctl00$ctl00$MainContent$ContentPlaceHolder$btnDisagree" value="Je refuse" id="btnDisagree" class="btn btn-default" />
+                </div>
+		</fieldset>
+
+            <fieldset class="panel panel-primary">
+                <legend class="panel-heading">
+                        Returning user
+                </legend>
+                <div class="panel-body">
+                    <p class="panel-text" id="option2RoeUrnP">
+                        Recover access to my existing Record of Employment on the Web profile by providing my User Reference Number and answering my security questions:
+                    </p>
+                    <div class="row mrgn-tp-md">
+                        <div class="col-md-4">
+                            <label for="urnROE" class="control-label">User Reference Number (URN):</label>
+</div>
+<div class="col-md-4">
+<input type="text" id="urnROE" name="urnROE" class="form-control" value="" maxlength="100" size="option2RoeUrnP option2RoeUrnExample" autocomplete="off"/>
+
+
+                        </div>
+                        <div class="col-md-4" id="option2RoeUrnExample">
+                            (e.g. : XXX-123-456-789-000)
+                        </div>
+                    </div>
+                    <div class="row mrgn-tp-sm">
+                        <div class="col-md-8 pull-right">
+                            <a href="/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-QA-VLOOKUP.html" data-ajax="false"><br />Forgot my User Reference Number?</a>
+
+
+                        </div>
+                    </div>
+					<ul class="list-unstyled list-inline">
+              <li class="mrgn-bttm-sm">
+                <button onclick="window.location.href = '';" type="button" class="btn btn-default">Submit your  URN</button>
+              </li>
+            </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </fieldset>-->
+
         
-    </div>
+
+    <!--<div class="mrgn-tp-lg">
+	    
+	    <a class="btn btn-primary" name="ctl00$ctl00$MainContent$ContentPlaceHolder$btnSubmit" id="btnSubmit" href="/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-AUTHENTICATION-VAUTHENTICATION.html">Continue</a>
+	       
+        
+    </div>-->
 
 
         </div>
@@ -243,7 +377,7 @@ votre accès au RE Web. Si vous n’acceptez pas les modalités d’utilisation,
 
 <div class="row">
 <div class="pull-right mrgn-tp-xl mrgn-rght-sm">
-<p class="panel panel-default panel-body">Identificateur d'écran : RA-PNS</p>
+<p class="panel panel-default panel-body">Screen Identifier: RA-CLIENTCONFIRMATION-VROE</p>
 </div>
 </div>
 <div class="clearfix"></div>
@@ -254,14 +388,14 @@ votre accès au RE Web. Si vous n’acceptez pas les modalités d’utilisation,
                         <div class="pagedetails">
 	<div class="row">
 		<div class="col-sm-6 col-md-5 col-lg-4">
-			<a href="" class="btn btn-default text-center">Signaler un problème sur cette page</a>
+			<a href="###" class="btn btn-default text-center">Report a problem on this page</a>
 		</div>
 	</div>
 	<!-- Share button -->
 	<!-- <div class="wb-share col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-4 col-lg-offset-5" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div> -->
 	<!-- END Share button -->
 	<dl id="wb-dtmd">
-		<dt>Date de modification: </dt>
+		<dt>Date modified: </dt>
 		<dd><time property="dateModified">2019-03-01</time></dd>
 	</dl>
 </div>
@@ -269,45 +403,46 @@ votre accès au RE Web. Si vous n’acceptez pas les modalités d’utilisation,
                     <!-- Write closure template -->
                     <script type="text/javascript">
                         var defPreFooter = document.getElementById("def-preFooter");
-                        defPreFooter.outerHTML = wet.builder.preFooter({"cdnEnv":"prod","dateModified":"2018-08-09","showPostContent":true,"showFeedback":"https://www.canada.ca/fr/signaler-probleme.html","showShare":false});
+                        defPreFooter.outerHTML = wet.builder.preFooter({"cdnEnv":"prod","dateModified":"2018-08-09","showPostContent":true,"showFeedback":"https://www.canada.ca/en/report-problem.html","showShare":false});
                     </script>
                 </main>
         	    <nav class="wb-sec col-md-3 col-md-pull-9" typeof="SiteNavigationElement" id="wb-sec" role="navigation">
                     <!-- Write closure fall-back static file -->
                     <!--
-<h2 id="wb-sec-h" class="wb-inv">Menu de la section</h2>
+<h2 id="wb-sec-h" class="wb-inv">Section menu</h2>
 <section class="list-group menu list-unstyled">
-	<h3><a href="">Sujet</a></h3>
+	<h3><a href="#">Topic</a></h3>
 	<ul class="list-group menu list-unstyled">
 		<li>
-			<a href="" class="list-group-item">Tâche 1</a>
+			<a href="#" class="list-group-item">Task 1</a>
 			<ul class="list-group menu list-unstyled">
-				<li><a href="" class="list-group-item">Sous-tâche 1</a></li>
-				<li><a href="" class="list-group-item">Sous-tâche 2</a></li>
-				<li><a href="" class="list-group-item">Sous-tâche 3</a></li>
-				<li><a href="" class="list-group-item">Sous-tâche 4</a></li>
-				<li><a href="" class="list-group-item">Sous-tâche 5</a></li>
-				<li><a href="" class="list-group-item">Sous-tâche 6</a></li>
-				<li><a href="" class="list-group-item">Sous-tâche 7</a></li>
+				<li><a href="#" class="list-group-item">Sub task 1</a></li>
+				<li><a href="#" class="list-group-item">Sub task 2</a></li>
+				<li><a href="#" class="list-group-item">Sub task 3</a></li>
+				<li><a href="#" class="list-group-item">Sub task 4</a></li>
+				<li><a href="#" class="list-group-item">Sub task 5</a></li>
+				<li><a href="#" class="list-group-item">Sub task 6</a></li>
+				<li><a href="#" class="list-group-item">Sub task 7</a></li>
 			</ul>
 		</li>
-		<li><a href="#" class="list-group-item">Tâche 2</a></li>
-		<li><a href="#" class="list-group-item">Tâche 3</a></li>
-		<li><a href="#" class="list-group-item">Tâche 4</a></li>
+		<li><a href="#" class="list-group-item">Task 2</a></li>
+		<li><a href="#" class="list-group-item">Task 3</a></li>
+		<li><a href="#" class="list-group-item">Task 4</a></li>
 	</ul>
 </section>
 -->
-<p>Le menu n'est pas disponible lorsque Javascript est désactivé.</p>
+<p>The menu is not available when Javascript is disabled.</p>
 		        </nav>
                 <!-- Write closure template -->
-	            <script type="text/javascript">
+	            	<script type="text/javascript">
 	                var secondarymenu = document.getElementById("wb-sec");
 	                secondarymenu.innerHTML = wet.builder.secmenu(
-	                    {"sections":[{"sectionName":"Menu","menuLinks":[{"href":"","text":"Aide"},{"href":"","text":"Foire aux questions (FAQ)"},{"href":"","text":"Modalités d'utilisation de RE Web"},{"href":"","text":"Fermer la session"}]}]}
+	                    {"sections":[{"sectionName":"Menu","menuLinks":[{"href":"###","text":"Aide"},{"href":"###","text":"Foire aux questions (FAQ)"},{"href":"###","text":"Modalités d'utilisation de RE Web"},{"href":"###","text":"Fermer la session"}]}]}
 	                );
-	            </script>	
+	            </script>
              </div>
 	    </div>
+		
         <div id="def-footer">
             <!-- Write closure fall-back static file -->
             		<footer id="wb-info">
