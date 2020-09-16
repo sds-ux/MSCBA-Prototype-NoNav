@@ -3,7 +3,7 @@
 
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en" dir="ltr">
+<html class="no-js" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!--<![endif]-->
     <head>
         <meta charset="utf-8"/>
@@ -224,7 +224,7 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
                     <!-- the main content -->
                     
      
-    <h1 id="wb-cont" property="name">
+    <h1 property="name" id="wb-cont">
         New or returning users 
         </h1>
 
@@ -255,10 +255,10 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
               <div class="brdr-bttm-fade"></div>
             </div>
             <br /> 
-            <p>Register for Record of Employment  on the Web (ROE Web)</p>
+            <p>Register an account to start using Record of Employment on the Web (ROE Web).</p>
             <ul class="list-unstyled list-inline">
               <li class="mrgn-bttm-sm">
-                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-AUTHENTICATION-VAUTHENTICATION.html';" type="button" class="btn btn-default">Register for ROE Web</button>
+                <button onclick="window.location.href = '/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-AUTHENTICATION-VAUTHENTICATION.html';" type="button" class="btn btn-default">Register your ROE Web account</button>
               </li>
             </ul>
           </div>
@@ -274,8 +274,11 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
             </div>
             <br /> 
             <p>
-                        Recover access to my existing ROE Web profile by providing my User Reference Number and answering my security questions:
+                        Recover access to my existing ROE Web profile by providing your User Reference Number (URN) and answering your security questions:
                     </p>
+            <details>
+			  <summary>What is a URN?</summary>
+			  <p>A URN is used to confirm your identity as a user. Service Canada had sent you an email with your URN when you first registered your ROE Web account.</p></details>
                     <div class="row mrgn-tp-md">
                         <div class="col-md-4">
                             <label for="urnROE" class="control-label">User Reference Number (URN):</label>
@@ -284,11 +287,11 @@ a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
 <input type="text" id="urnROE" name="urnROE" class="form-control" value="" maxlength="100" size="option2RoeUrnP option2RoeUrnExample" autocomplete="off"/>
 
 
-                        </div>
+                      </div>
                         <div class="col-md-4" id="option2RoeUrnExample">
                             (e.g. : XXX-123-456-789-000)
                         </div>
-                    </div>
+                </div>
                     <div class="row mrgn-tp-sm">
                         <div class="col-md-8 pull-right">
                             <a href="/MSCBA-Prototype-NoNav/record-of-employment/ra-create-profile/RA-QA-VLOOKUP.html" data-ajax="false"><br />Forgot my User Reference Number?</a>
