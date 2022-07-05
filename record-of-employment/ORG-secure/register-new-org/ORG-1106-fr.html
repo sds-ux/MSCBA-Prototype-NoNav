@@ -157,7 +157,7 @@ Government of Canada					</span>
 			<section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
 				<h2 class="wb-inv">Sélection de la langue</h2>
 				<ul class="list-inline margin-bottom-none">
-					<li><a lang="fr" href="">English</a></li>
+					<li><a lang="fr" href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1106.html">English</a></li>
 				</ul>
 			</section>
 		</div>
@@ -274,7 +274,8 @@ Government of Canada					</span>
 						<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">
 							<h1 property="name" id="wb-cont">Confirmer votre organisation</h1>
 
-		<img src="/MSCBA-Prototype-NoNav/1b-steps-to-register-2-fr.png" class="img-responsive" alt="" />
+		<!-- REMOVE THE PROGRESS BAR CALLED "STEPS TO REGISTER" -->
+		<!-- <img src="/MSCBA-Prototype-NoNav/1b-steps-to-register-2-fr.png" class="img-responsive" alt="" /> -->
 <br />
 	<!--<p>A Business or Registration Number was issued by Canada Revenue Agency (CRA)  when the Organization Legal Name was registered. If a Payroll Program Account  Business Number was provided with an RP extension, this should be used instead  as it will speed up the confirmation process. Supporting documentation may be requested  to complete the validation process in these cases.</p>//-->
 <p>L&rsquo;Agence  du revenu du Canada (ARC) a émis un numéro d&rsquo;entreprise ou d&rsquo;enregistrement lorsque  vous avez inscrit la dénomination sociale de l&rsquo;organisation. Si l&rsquo;ARC a  fourni un numéro d&rsquo;entreprise avec une extension RP, vous devriez plutôt  utiliser ce numéro car cela simplifiera le processus de confirmation. Service  Canada peut demander des documents à l&rsquo;appui pour compléter le processus de  validation lorsque vous utilisez une extension autre que RP. </p>
@@ -498,46 +499,48 @@ CRA Business Number (suffix):	</label>
 					document.getElementById("def-footer").outerHTML = wet.builder.appFooter({
 						cdnEnv: "AKAMAI",
 						footerSections: [
-							 {
-									href: "###",
-									text: "Employer Contact Center",
+							 							 {
+									href: "",
+									text: "Centre de services aux employeurs",
 									newWindow: true
 							},
+
 							 {
-									href: "###",
-									text: "Find a Service Canada Office",
+									href: "",
+									text: "Trouver un bureau de Service Canada",
 									newWindow: true
 							},
+
 							 {
-									href: "###",
-									text: "ROE Web",
+									href: "",
+									text: "Programmes de financement",
 									newWindow: true
 							},
+
 							 {
-									href: "###",
-									text: "ROE Guide",
+									href: "",
+									text: "Guides des SELSC",
 									newWindow: true
 							},
+
 							 {
-									href: "###",
-									text: "Tutorials on Completing ROE  Form",
+									href: "",
+									text: "ARC – Mon dossier pour les particuliers",
 									newWindow: true
 							},
+
 							 {
-									href: "###",
-									text: "CRA - My Account for Individuals",
+									href: "",
+									text: "ARC – Mon dossier d’entreprise",
 									newWindow: true
 							},
+
 							 {
-									href: "###",
-									text: "CRA – My Business Account",
+									href: "",
+									text: "ARC – Représenter un client",
 									newWindow: true
 							},
-							 {
-									href: "###",
-									text: "CRA – Represent a Client",
-									newWindow: true
-							},
+
 						],
 						contactLink: "http://www.edsc.gc.ca/cgi-bin/op-so/msca/redirection.asp?linkmsca=2e.html",
 						termsLink: "https://srv136.services.gc.ca/ecas-seca/rascl/SCL/PNS.aspx?mode=READONLY&amp;lang=eng",
