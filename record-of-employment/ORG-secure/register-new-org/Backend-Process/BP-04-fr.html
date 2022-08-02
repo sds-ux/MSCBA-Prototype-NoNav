@@ -167,13 +167,12 @@ Government of Canada					</span>
 
 </br>
 
-<h4>Ensure the BN is usable</h4>
-<p>When a user submits a business number (BN), a backend process performs the following tests and redirects the flow accordingly.</p>
+<h4>Check if BN already registered</h4>
+<p>When a user submits a business number (BN), a backend process performs the following test and redirects the flow accordingly.</p>
 
 			<ol>
 			<li>Tests if the BN is already registered with this program. If it is, generate a work item of type: CRA BN already registered.</li>
-			<li>Test if the BN has the RP extension. If not, generate a work item of type: BN requires manual validation.</li>
-			<li>In both cases, set the status of the confirm organization step to: pending.</li>
+			<li>If there is a work item, set the status of the confirm organization step to: pending.</li>
 			</ol>
 
 	<p><a class="btn btn-warning" id="validate-organization_validate-organization_save" name="method:addBusiness" 
