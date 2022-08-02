@@ -178,7 +178,15 @@ Pas un écrant publique 					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm the organization with CRA data</h1>
 </br>
 
-<p>When owners give consent, use the business number (BN15) to retrieve CRA data from the CRA Paydac database. 
+<h3>Test if the BN has the RP extention</h3>
+	<p>CRA Paydac database only contains nusiness numbers (BN) with the RP Extention. 
+		If the BN has a different extention, the Business Registration Centre (BRC) must manually confirm the organization.
+			This is possible because we have the owner's consent to ask CRA.</p>	
+	
+					<li>Test if the BN has the RP extension. If not, generate a work item of type: BN requires manual validation.</li>
+
+<h3>Automatically confirm the organization using CRA Paydac</h3>
+<p>When owners give consent, use the business number (BN15) to retrieve CRA data from the Paydac database. 
 	If the BN retrieves no data, generate a work item of type: CRA BN Not Found in Paydac.</p>
 
 <p>If Paydac data exists, compare it with the organization's data submitted by the user using the following rules. </p>
