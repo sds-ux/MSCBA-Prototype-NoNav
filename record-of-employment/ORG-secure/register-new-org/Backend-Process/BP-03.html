@@ -200,24 +200,34 @@ Pas un écrant publique 					</span>
 			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: CRA BN - Information Validation</li>                            
                           </ol>
 
-<p>Privacy rules require that any data we collect must be used for a business purpose. 
-	ESDC identity management policy states that we must compare all parts of the address. 
+<p>ESDC identity management policy states that we must compare all parts of the address.
+	Privacy rules require that any data we collect must be used for a business purpose. 
 	To meet both of these rules, we will collect and compare address lines 1 and 2 using the following rules.</p>
 
 			<ol>
                             <li>Always confirm the organization regardless of the outcome for address line 1 and 2</li>
-			    <li>Keep a count of when address lines 1 and 2 match and when they do not.</li>
+			    <li>Keep a count of when address lines 1 and 2 match and when they do not, so that SDS can asses
+				 if the number of mismatches falls within an acceptable range.</li>
 
 			</ol>
 
 </br>
-<p>When we confirm the organization, direct users to the final incomplete step in the registration process.</p>
+
+<p><b>At this point, the backend process automatically assigns the role of Primary Officer (PO) to the user.</b></p>
+
 
           		 <ol>
-                            <li>Users are automatically the PO when they are confirmed as the business owner.</li>
-			    <li>Users always confirm their identity before they can provide consent.</li>
-			    <li>For ROE Web and LEAF, users must accept the online agreement.</li>
-			    <li>GCOS users go to the active organization page where they can access the program.</li>
+			    <li>The user has confirmed their identity.</li>
+                            <li>the user has confirmed their status as the hightest authority in their organization, the business owner.</li>
+			</ol>  
+
+</br>
+<p>Once MSCBA confirms the organization, direct users to the final incomplete step in the registration process.</p>
+
+ 			<ol>
+ 			    <li>For ROE Web and LEAF, users must accept the online agreement.</li>
+			    <li>GCOS does not have an online agreement so users go directly to the active organization page 
+				where they can access the program.</li>
 
 			</ol>  
 
