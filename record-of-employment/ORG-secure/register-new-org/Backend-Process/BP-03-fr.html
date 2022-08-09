@@ -172,12 +172,12 @@ Government of Canada					</span>
 		If the BN has a different extention, the Business Registration Centre (BRC) must manually confirm the organization.
 			This is possible because we have the owner's consent to ask CRA.</p>	
 	
-				<li>Test if the BN has the RP extension. If not, generate a work item of type: BN requires manual validation.</li>
+				<li>Test if the BN has the RP extension. If not, generate a work item of type: <b>BN requires manual validation.</b></li>
 
 <h3>Automatically confirm the organization using CRA Paydac</h3>
 					
 <p>When owners give consent, use the business number (BN15) to retrieve CRA data from the CRA Paydac database. 
-	If the BN retrieves no data, generate a work item of type: CRA BN Not Found in Paydac.</p>
+	If the BN retrieves no data, generate a work item of type: <b>CRA BN Not Found in Paydac.</b></p>
 
 <p>If Paydac data exists, compare it with the organization's data submitted by the user using the following rules. </p>
 
@@ -185,9 +185,9 @@ Government of Canada					</span>
                             <li>The business number must be a perfect match</li>
                             <li>The legal name must be a perfect match</li>
                             <li>The postal/zip code, country, province/state, and city must be a perfect match</li>
-			    <li>Check that the CRA organization status is active. If it is not, generate the work item of type: Invalid CRA Status</li>
+			    <li>Check that the CRA organization status is active. If it is not, generate the work item of type: <b>Invalid CRA Status</b></li>
 			    <li>Confirm the organization when all the data match</li>
-			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: CRA BN - Information Validation</li>                            
+			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: <b>CRA BN - Information Validation</b></li>                            
                           </ol>
 
 <p>ESDC identity management policy states that we must compare all parts of the address.
@@ -244,7 +244,7 @@ Government of Canada					</span>
 	<div class="datemod col-xs-12 mrgn-tp-lg">
 		<dl id="wb-dtmd">
 							<dt>Identificateur d’écran : &#32;</dt>
-				<dd>BP-01</dd>
+				<dd>BP-03</dd>
 		</dl>
 	</div>
 </div></div>
@@ -256,7 +256,7 @@ Government of Canada					</span>
 							showFeedback: false,
 							showPostContent: false,
 							versionIdentifier: "2.7.2-RC.6",
-								screenIdentifier: "BP-01"
+								screenIdentifier: "BP-03"
 					});
 				</script>
 			</div>
