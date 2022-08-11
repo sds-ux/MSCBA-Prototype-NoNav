@@ -1,8 +1,282 @@
-<!DOCTYPE html>
 
-	<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">
-				<h1 property="name" id="wb-cont">Backend process: Send email to PO - E </h1>
 
-	<p>screen identifier: BP-16-E </p>
+	<!DOCTYPE html>
 
+		<head>
+			<meta charset="utf-8"/>
+			<meta content="width=device-width,initial-scale=1" name="viewport"/>
+
+			<title>Record of Employment - [My Organization(s)]</title>
+
+			<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/compiled/soyutils.js"></script>
+			<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/compiled/wet-en.js"></script>
+
+		
+
+			<noscript>
+				<!--[if gte IE 9 | !IE ]><!-->
+				<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/theme.min.css"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsfixes.css"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsapps.css"/>
+				<!--<![endif]-->
+
+				<!--[if lt IE 9]>
+				<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/favicon.ico" rel="shortcut icon"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/ie8-theme.min.css"/>
+				<![endif]-->
+
+				<!--[if lte IE 9]><![endif]-->
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/css/noscript.min.css"/>
+				<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/cdts/cdtsnoscript.css"/>
+
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/theme.min.css">
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsfixes.css">
+<!-- Are you using the application templates? If so add the following CSS file -->
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsapps.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/ie8-theme.min.css" />
+<![endif]-->
+<!--[if lte IE 9]><![endif]-->
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/css/noscript.min.css" />
+<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_26/cdts/cdtsnoscript.css" />			</noscript>
+
+			<script type="text/javascript">document.write(wet.builder.refTop({ cdnEnv: "AKAMAI", isApplication: true }))</script>
+			<style>.modal-footer { background-color: #FFF }</style>
+			<style type="text/css">
+.orange-bg {
+    background: linear-gradient(#f68b1f, #f89736);
+}
+.blue-bg {
+    background-color: #11409F;
+}
+.header-bg {
+    line-height: normal;
+    background: linear-gradient(to right, #ddd 50%, #fff 75%, #fff);
+}
+.header-bg .brdr-bttm-fade {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #26374a 50%, #fff 75%, #fff);
+}
+.header-bg h2 {
+    background: linear-gradient(297.5deg, transparent, transparent 25px, white 26px, white 31px, #26374a 32px, #26374a);
+    color: white;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px 30px 5px 15px;
+    min-width: 300px;
+    font-size: 1.3em;
+}
+.large-btn {
+    width: 85%;
+    text-align: left;
+}
+.large-btn b {
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+}
+.large-btn img {
+    display: inline-block;
+    width: 10%;
+    margin-left: 3%;
+}
+a.btn-green:hover, a.btn-purple:hover, a.btn-blue:hover {
+    color: white;
+}
+a.btn-green:link, a.btn-green:visited, a.btn-green:hover, a.btn-green:active, a.btn-purple:link, a.btn-purple:visited, a.btn-purple:hover, a.btn-purple:active, a.btn-blue:link, a.btn-blue:visited, a.btn-blue:hover, a.btn-blue:active {
+    color: white;
+    padding-left: 5px;
+}
+a.btn-green {
+    background: #444;
+}
+a.btn-green:hover, a.btn-green:active {
+    background: #787878;
+}
+a.btn-purple {
+    background: #32002A;
+}
+a.btn-purple:hover, a.btn-purple:active {
+    background: #4A0B38;
+}
+a.btn-blue:link, a.btn-blue:visited {
+    background: #283a7b;
+}
+a.btn-blue:hover, a.btn-blue:active, a.btn-blue:focus {
+    background: #26374a;
+}
+	/*
+	
+		
+	a.btn-green {
+		background: #000000;
+	}
+	a.btn-green:hover, a.btn-green:active {
+		background: #787878;
+	}
+	
+	
+	a.btn-purple {
+		background: #32002A;
+	}
+	a.btn-purple:hover, a.btn-purple:active {
+		background: #4A0B38;
+	}
+	
+	
+	a.btn-blue {
+		background: #26374a;
+	}
+	a.btn-blue:hover, a.btn-blue:active {
+		background: #26374a;
+	}*/
+</style>
+		</head>
+
+		<body vocab="http://schema.org/" typeof="WebPage">
+			<div id="def-top">
+					<ul id="wb-tphp">
+						<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+						<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this application"</a></li>
+						<li class="wb-slc visible-md visible-lg"><a class="wb-sl" href="#wb-sec">Skip to section menu</a></li>
+					</ul>
+<header role="banner">
+	<div id="wb-bnr" class="container">
+		<div class="row">
+			<div class="brand col-xs-9 col-sm-8 col-md-6">
+								<!--<object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_29/assets/sig-blk-en.svg"></object>-->
+				<span class="wb-inv">
+					<span>
+Not a public screen					</span>
+					<span>/</span>
+					<span lang="fr">
+Pas un écrant publique 					</span>
+				</span>
+			</div>
+			<section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+				<h2 class="wb-inv">Language selection</h2>
+				<ul class="list-inline margin-bottom-none">
+					<li><a lang="fr"https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Backend-Process/BP-16-fr.html">Français</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+
+
+
+</header>			</div>
+
+			<div class="container">
+				<div class="row">
+		<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">				
+				<h1 property="name" id="wb-cont">Backend process: Send email to MSCBA user </h1>
+</br>
+
+<p><b>Owner consent attempted</b></p>
+<p>When the business owner access the owner consent process, notify the MSCBA user by email of the outcome. 
+	The MSCBA user views the email and can then login to MSCBA to continue the registration or to attempt to recover from an 
+	incomplete owner consent process.</p>
+
+<p>Note: To simplify following the MSCBA user’s journey, we have added a link at the bottom of each of the emails. 
+	They are not part of the real emails but simply a convenience within this prototype. 
+	The links go directly to the appropriate MSCBA page without having to log in.</p>
+                       
+
+</br>
+<p><b>Select an email</b></p>
+     
+
+	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-06.html">Owner consent given</a></p>
+
+      
+
+	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-05.html">Owner consent not given</a></p>
+
+      
+
+	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-04.html">Owner cancelled the registration</a></p>
+
+      
+
+	<p><a class="btn btn-warning" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-02.html">Not recognized as owner</a></p>
+
+      
+
+	<p><a class="btn btn-warning" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-03.html">Owner identity not confirmed</a></p>
+
+
+</br>
+<p><b>Owner fails to act</b></p>
+<p>When the business owner does not attempt to access the owner consent process, 
+	we expect the MSCBA user to follow up directly with the business owner. 
+	MSCBA does not send any email to the MSCBA user.</p>
+
+	
+</br>
+<p><b>Owner does not provide a valid BN</b></p>
+<p>EWhen the business owner provides business number (BN) that does not match our records, MSCBA does not send any email to the MSCBA user.</p>
+
+
+</br>
+
+
+
+
+</main>
+
+				
+ <div id="def-preFooter"><div class="row pagedetails">
+	<div class="datemod col-xs-12 mrgn-tp-lg">
+		<dl id="wb-dtmd">
+							<dt>Screen Identifier:&#32;</dt>
+				<dd>BP-16</dd>
+		</dl>
+	</div> 
+</div></div>
+
+				<script type="text/javascript">
+					document.getElementById("def-preFooter").outerHTML = wet.builder.preFooter({
+							cdnEnv: "AKAMAI",
+							showShare: false,
+							showFeedback: false,
+							showPostContent: false,
+							versionIdentifier: "2.7.2",
+								screenIdentifier: "BP-16"
+					});
+				</script>
+			</div> 
+
+
+
+			<span class="wb-sessto" data-wb-sessto='{
+				"inactivity" : 1020000,
+				"reactionTime" : 60000,
+				"sessionalive" : 1080000,
+				"logouturl" : "https://srv136.services.gc.ca/sc/mscba-mdesc/portal-portail/pro/portal/page/portal/mscba/logout",
+				"refreshCallbackUrl" : "https://srv136.services.gc.ca/sc/mscba-mdesc/portal-portail/pro/roe/mscba/session-refresh.action",
+				"refreshOnClick" : false }'>
+			</span>
+
+			
+
+			<script>
+				$(function() {
+					$("#wb-info").find("a").each(function(idx, elem) { $(elem).attr("target", "_blank"); });
+				});
+			</script>
+
+			<script type="text/javascript"></script>
+		</body>
 	</html>
