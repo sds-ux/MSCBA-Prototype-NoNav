@@ -183,7 +183,7 @@ Pas un écrant publique 					</span>
 
 			<ol>
 			<li>Tests if the BN is already registered with this program. If it is, generate a work item of type: CRA BN already registered.</li>
-			<li>If there is a work item, set the status of the confirm organization step to: pending.</li>
+			<li>If there is a work item, set the status of the confirm organization step to say pending.</li>
 			</ol>
 
 	<p><a class="btn btn-warning" id="validate-organization_validate-organization_save" name="method:addBusiness" 
@@ -196,9 +196,10 @@ Pas un écrant publique 					</span>
                             <li>The business number must be a perfect match.</li>
                             <li>The legal name must be a perfect match</li>
                             <li>The postal code must be a perfect match</li>
-			    <li>Attempt to match the country, province/state, city, and address lines 1 and 2 if data is available.</li>
-			    <li>Confirm the organization when all the data match</li>
-			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: CRA BN - Information Validation</li>                            
+			    <li>Confirm the organization when all three data match.</li>
+			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: CRA BN - Information Validation</li>   
+			    <li>Attempt to match the country, province/state, city, and address lines 1 and 2 if the other program has similar data collected to confirm the organization.</li>
+			    <li>Record the hits and misses to evaluate when we can include these fields in the validation process.</li>                       
                          </ol>
 
 
@@ -214,7 +215,7 @@ Pas un écrant publique 					</span>
 <p>If we cannot confirm the organization with another program, direct the user to the owner consent process. 
 	We do not want to generate a work item at this point while there is a chance to confirm the organization using CRA PAYDAC data.</p>
 
-	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1901.html">Go to owner consent</a></p>
 
 </br>
