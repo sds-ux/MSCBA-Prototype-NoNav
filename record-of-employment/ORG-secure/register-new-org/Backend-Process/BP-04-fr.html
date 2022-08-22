@@ -1,5 +1,6 @@
 
 
+
 	<!DOCTYPE html>
 	<!--[if lt IE 9]><html class="no-js lt-ie9" lang="fr" dir="ltr"><![endif]-->
 	<!--[if gt IE 8]><!--><html class="no-js" lang="fr" dir="ltr"><!--<![endif]-->
@@ -171,11 +172,11 @@ Government of Canada					</span>
 <p>When a user submits a business number (BN), a backend process performs the following test and redirects the flow accordingly.</p>
 
 			<ol>
-			<li>Tests if the BN is already registered with this program. If it is, generate a work item of type: CRA BN already registered.</li>
+			<li>Tests if the BN is already registered with this program. If it is, generate a work item of type: <b>CRA BN already registered</b>.</li>
 			<li>If there is a work item, set the status of the confirm organization step to say pending.</li>
 			</ol>
 
-	<p><a class="btn btn-warning" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec.html">View error message</a></p>
 
 <h4>Confirm with another program</h4>
@@ -192,20 +193,35 @@ Government of Canada					</span>
                          </ol>
 
 
-<p>If we can confirm the organization, direct the user to the registration summary page where they can find 
+<h4>Confirmation successful</h4>
+<p>If we can confirm the new organization, direct the user to the registration summary page where they can find 
 	the next incomplete step in the registration process.</p>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p2.html">Organization confirmed</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p2-fr.html">New organization confirmed</a></p>
+
+
+<p>If we can confirm the CRA business, direct the user to the manage CRA businesses page where they can see that the CRA business in now active</p> 
+
+
+	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/manage-cra-businesses/ORG-1600-sec-bus-fr.html">CRA business confirmed</a></p>
+
+
 
 			
 </br>
 
+<h4>Go to owner consent process</h4>
 <p>If we cannot confirm the organization with another program, direct the user to the owner consent process. 
 	We do not want to generate a work item at this point while there is a chance to confirm the organization using CRA PAYDAC data.</p>
 
+	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1901-fr.html">Owner consent for a new organization</a></p>
+
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1901.html">Go to owner consent</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/manage-cra-businesses/ORG-1604-fr.html">Owner consent for a CRA business</a></p>
+
 
 </br>
 
@@ -228,7 +244,7 @@ Government of Canada					</span>
 							showShare: false,
 							showFeedback: false,
 							showPostContent: false,
-							versionIdentifier: "2.7.2-RC.6",
+							versionIdentifier: "2.7.2",
 								screenIdentifier: "BP-04"
 					});
 				</script>
@@ -258,3 +274,4 @@ Government of Canada					</span>
 			<script type="text/javascript"></script>
 		</body>
 	</html>
+
