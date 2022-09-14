@@ -162,23 +162,22 @@ Government of Canada					</span>
 		<div class="container">
 				<div class="row">
 						<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">
-							<h1 property="name" id="wb-cont">Processus serveur : Confirmez le propriétaire</h1>
+							<h1 property="name" id="wb-cont">Processus en arrière-plan : Confirmer le propriétaire d’entreprise</h1>
   
 
 
 </br>
 
-<p>When a user claims to be the business owner, the system checks if this is true using the following steps:</p>
+<p>Le système confirme le propriétaire d’entreprise en :</p>
 
                         <ol>
-                            <li>Use BN-9 to retrieve owner names from the BN Validation Service – CRA data can contain up to 5 owners for a BN.</li>
-                            <li>Compare the user’s name from their profile with the owner names.</li>
-                            <li>The names must be a perfect match to pass the test.</li>
-                            
-                          </ol>
-
+                            <li>utilisant le NE-9 pour récupérer les noms du propriétaire d’entreprise à partir du service de validation des NE – Remarque : Les données de l'ARC peuvent contenir jusqu'à cinq propriétaires par NE, et</li>
+                            <li>comparant le nom de l'utilisateur figurant dans le profil avec les noms des propriétaires d’entreprise figurant dans le service de validation des NE.</li>
+                       </ol>
+					<p><b>Pour poursuivre, le prénom et le nom de famille doivent correspondre parfaitement.</b></p>
+					
 </br>
-<p>If the MSCBA user is confirm as the owner, continue with owner consent process.</p>
+<p>Si les noms correspondent, l'utilisateur est confirmé comme étant le propriétaire d’entreprise et peut poursuivre le processus de consentement du propriétaire d’entreprise.</p>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1004-fr.html">Continuer</a></p>
@@ -186,10 +185,10 @@ Government of Canada					</span>
 
 </br>
 
-<p>If the MSCBA user is not the owner, redirect the flow to the owner consent process for external users.</p>
+<p>Si les noms ne correspondent pas, l'utilisateur est redirigé vers le processus de consentement du propriétaire d’entreprise pour les utilisateurs externes.</p>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1907-fr.html">Échouer</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1907-fr.html">Échec</a></p>
 
 </br>				
 	  
