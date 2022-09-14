@@ -161,34 +161,31 @@ Government of Canada					</span>
 		<div class="container">
 				<div class="row">
 						<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">
-							<h1 property="name" id="wb-cont">Processus serveur : Confirmez l'identité du client</h1>
+							<h1 property="name" id="wb-cont">Processus en arrière-plan : Confirmer l’identité de l’utilisateur</h1>
   
 
 
 </br>
 
-<p>When users attempt to confirm their identity online through CRA, the CRA Portageur system redirects the user back to MSCBA 
-	and returns the data that the user agreed to share. The backend process does the following:</p>
+<p>Une fois que l'utilisateur s'est connecté à son compte Mon dossier de l'ARC par le biais de Portageur pour tenter de confirmer son identité, 
+	Portageur redirige l'utilisateur vers MDESC et renvoie les données que l'utilisateur a accepté de partager dans MDESC.</p>
 
-                        <ol>
-                            <li>Compare the user’s first and last name from their profile with the first and last name received from CRA.</li>
-                            <li>The names must be a perfect match to pass the test.</li>
-                                                     
-                          </ol>
+					<p>Le système compare le prénom et le nom de famille de l'utilisateur provenant de son profil avec le prénom et le nom de famille reçus des données de l'ARC.</p>
+					<p><b>Pour poursuivre, le prénom et le nom doivent correspondre parfaitement.</b></p>
 
 </br>
-<p>If CRA data confirms the MSCBA user’s identity, continue with owner consent process.</p>
+<p>Si les noms correspondent, l'identité de l'utilisateur est confirmée et il peut poursuivre le processus de consentement du propriétaire de l'entreprise.</p>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1902-fr.html">Continuer</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1902-fr.html">Poursuivre</a></p>
 
 
 </br>
 
-<p>If CRA data fails confirm a user’s identity, generate a work item called “Online Identification” and redirect the flow away from owner consent.</p>
+<p>Si les données de l'ARC ne permettent pas de confirmer l'identité de l’utilisateur, le système génère un élément de travail appelé "Identification en ligne" et redirige le flux vers le processus de consentement du propriétaire.</p>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1909-fr.html">Échouer</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1909-fr.html">Échec</a></p>
 
 </br>				
 	  
