@@ -178,17 +178,14 @@ Gouvernement du Canada					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm user’s identity</h1>
 </br>
 
-<p>When users attempt to confirm their identity online through CRA, the CRA Portageur system redirects the user back to MSCBA 
-	and returns the data that the user agreed to share. The backend process does the following:</p>
+<p>Once the user has logged in their CRA My Account through Portageur to attempt to confirm their identity, 
+	Portageur redirects the user back to MSCBA and returns to MSCBA the data that the user agreed to share. </p>
 
-                        <ol>
-                            <li>Compare the user’s first and last name from their profile with the first and last name received from CRA.</li>
-                            <li>The names must be a perfect match to pass the test.</li>
-                                                     
-                          </ol>
+		<p>The system compares the user’s first and last name from their profile with the first and last name received from the CRA data.</p>         
+		<p><b>To continue, the first name and last name must be a perfect match</b></p>
 
 </br>
-<p>If CRA data confirms the MSCBA user’s identity, continue with owner consent process.</p>
+<p>If the names are a match, the identity of the user is confirmed and they can continue with the business owner consent process.</p>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1902.html">Continue</a></p>
@@ -196,7 +193,7 @@ Gouvernement du Canada					</span>
 
 </br>
 
-<p>If CRA data fails confirm a user’s identity, generate a work item called “Online Identification” and redirect the flow away from owner consent.</p>
+<p>If CRA data fails to confirm the user’s identity, the system generates a work item called “Online Identification” and redirects the flow away from owner consent.</p>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1909.html">Fail</a></p>
