@@ -178,56 +178,54 @@ Pas un écrant publique 					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm the organization with CRA data</h1>
 </br>
 
-<h3>Test if the BN has the RP extension</h3>
+<h3>1 - The system verifies if the BN has the RP extension</h3>
 	<p>CRA PAYDAC database only contains business numbers (BN) with the RP extension. 
-		If the BN has a different extension, the Business Registration Centre (BRC) must manually confirm the organization.
-			This is possible because we have the owner's consent to ask CRA.</p>	
+		If the BN has a different extension, the Business Registration Centre (BRC) must manually confirm the organization 
+		(this is possible because the business owner provided their consent for ESDC to confirm the existence of their organization with the CRA).</p>	
 	
-					<li>Test if the BN has the RP extension. If not, generate a work item of type: <b>BN requires manual validation.</b></li>
+					<li>The system tests if the BN has the RP extension. If not, the system generates a work item called <b>“BN requires manual validation”.</b></li>
 
-<h3>Automatically confirm the organization using CRA PAYDAC</h3>
-<p>When owners give consent, use the business number (BN15) to retrieve CRA data from the PAYDAC database. 
-	If the BN retrieves no data, generate a work item of type: <b>CRA BN Not Found in PAYDAC.</b></p>
+<h3>2 - The system automatically confirms the organization using CRA PAYDAC</h3>
+<p>When the business owner gives consent, the system uses the business number (BN15) to retrieve CRA data from the PAYDAC database. 
+	If the BN provided is not found in PAYDAC, the system generates a work item called <b>“CRA BN Not Found in PAYDAC”.</b></p>
 
-<p>If PAYDAC data exists, compare it with the organization's data submitted by the user using the following rules. </p>
+<p>If the system finds the BN in PAYDAC, the system compares the PAYDAC data with the organization's data submitted by the user using the following rules:</p>
 
                         <ol>
                             <li>The business number must be a perfect match</li>
                             <li>The legal name must be a perfect match</li>
                             <li>The postal/zip code, country, province/state, and city must be a perfect match</li>
-			    <li>Check that the CRA organization status is active. If it is not, generate the work item of type: <b>Invalid CRA Status</b></li>
+			    <li>The system verifies that the CRA organization status is active. If it is not, generate a work item called <b>"Invalid CRA Status"</b></li>
 			    <li>Confirm the organization when all the data match</li>
-			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: <b>CRA BN - Information Validation</b></li>                            
+			    <li>When there is a mismatch, the system prevents the confirmation of the organization and generates a work item called <b>"CRA BN - Information Validation"</b></li>                            
                           </ol>
 
-<p>ESDC identity management policy states that we must compare all parts of the address.
-	Privacy rules require that any data we collect must be used for a business purpose. 
-	To meet both of these rules, we will collect and compare address lines 1 and 2 using the following rules.</p>
+<p>ESDC identity management policy states that we must compare all parts of the address (not only the postal code). 
+	As for privacy rules, they require that any data we collect must be used for a business purpose. 
+	To meet both of these rules, the system collects and compares address lines 1 and 2 using the following rules:</p>
 
 			<ol>
-                            <li>Always confirm the organization regardless of the outcome for address line 1 and 2</li>
-			    <li>Keep a count of when address lines 1 and 2 match and when they do not, so that SDS can asses
-				 if the number of mismatches falls within an acceptable range.</li>
+                            <li>The system always confirms the organization, regardless of the outcome for address line 1 and 2</li>
+			    <li>The system keeps count of when address lines 1 and 2 match and when they do not, 
+				    so that we can asses if the number of mismatches falls within an acceptable range</li>
 
 			</ol>
 
 </br>
 
-<p><b>At this point, the backend process automatically assigns the role of Primary Officer (PO) to the user.</b></p>
-
+<h3>3. The system automatically assigns the role of Primary Officer (PO) to the user</h3>				
 
           		 <ol>
-			    <li>The user has confirmed their identity.</li>
-                            <li>the user has confirmed their status as the highest authority in their organization, the business owner.</li>
+			    <li>The user has confirmed their identity</li>
+                            <li>The user has confirmed their status as business owner</li>
 			</ol>  
 
 </br>
-<p>Once MSCBA confirms the organization, direct users to the final incomplete step in the registration process.</p>
+<p>Once the organization is confirmed, the system directs the user to the final incomplete step in the registration process:</p>
 
  			<ol>
- 			    <li>For ROE Web and LEAF, users must accept the online agreement.</li>
-			    <li>GCOS does not have an online agreement so users go directly to the active organization page 
-				where they can access the program.</li>
+ 			    <li>For ROE Web and LEAF, the user must accept the online agreement.</li>
+			    <li>GCOS does not have an online agreement; users are directed to the active organization page where they can access the program.</li>
 
 			</ol>  
 
@@ -237,7 +235,7 @@ Pas un écrant publique 					</span>
 			
 </br>
 
-<p>When there is a work item, direct users to the generic error message.</p>
+<p>When a work item is generated, the system directs the user to the generic error message.</p>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec.html">Error</a></p>
