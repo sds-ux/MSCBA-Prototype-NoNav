@@ -183,11 +183,11 @@ Pas un écrant publique 					</span>
 		If the BN has a different extension, the Business Registration Centre (BRC) must manually confirm the organization 
 		(this is possible because the business owner provided their consent for ESDC to confirm the existence of their organization with the CRA).</p>	
 	
-					<li>The system tests if the BN has the RP extension. If not, the system generates a work item called <b>“BN requires manual validation”.</b></li>
+					<li>The system tests if the BN has the RP extension. If not, the system generates a work item called “BN requires manual validation”.</li>
 
 <h3>2 - The system automatically confirms the organization using CRA PAYDAC</h3>
 <p>When the business owner gives consent, the system uses the business number (BN15) to retrieve CRA data from the PAYDAC database. 
-	If the BN provided is not found in PAYDAC, the system generates a work item called <b>“CRA BN Not Found in PAYDAC”.</b></p>
+	If the BN provided is not found in PAYDAC, the system generates a work item called “CRA BN Not Found in PAYDAC”.</p>
 
 <p>If the system finds the BN in PAYDAC, the system compares the PAYDAC data with the organization's data submitted by the user using the following rules:</p>
 
@@ -195,9 +195,9 @@ Pas un écrant publique 					</span>
                             <li>The business number must be a perfect match</li>
                             <li>The legal name must be a perfect match</li>
                             <li>The postal/zip code, country, province/state, and city must be a perfect match</li>
-			    <li>The system verifies that the CRA organization status is active. If it is not, generate a work item called <b>"Invalid CRA Status"</b></li>
+			    <li>The system verifies that the CRA organization status is active. If it is not, generate a work item called "Invalid CRA Status"</li>
 			    <li>Confirm the organization when all the data match</li>
-			    <li>When there is a mismatch, the system prevents the confirmation of the organization and generates a work item called <b>"CRA BN - Information Validation"</b></li>                            
+			    <li>When there is a mismatch, the system prevents the confirmation of the organization and generates a work item called "CRA BN - Information Validation"</li>                            
                           </ol>
 
 <p>ESDC identity management policy states that we must compare all parts of the address (not only the postal code). 
