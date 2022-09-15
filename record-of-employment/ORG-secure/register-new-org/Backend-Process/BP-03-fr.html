@@ -161,76 +161,78 @@ Government of Canada					</span>
 		<div class="container">
 				<div class="row">
 						<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">
-							<h1 property="name" id="wb-cont">Processus serveur : Verifiez l'organisme</h1>
+							<h1 property="name" id="wb-cont">Processus en arrière-plan: Confirmer l’organisme avec les données de l’ARC</h1>
   
 
 
 </br>
 
-<h3>Test if the BN has the RP extention</h3>
-	<p>CRA Paydac database only contains nusiness numbers (BN) with the RP Extention. 
-		If the BN has a different extention, the Business Registration Centre (BRC) must manually confirm the organization.
-			This is possible because we have the owner's consent to ask CRA.</p>	
+<h3>1 - Le système vérifie si le NE a l'extension RP</h3>
+	<p>La base de données PAYDAC de l'ARC ne contient que les numéros d'entreprise (NE) avec l'extension RP. Si le NE a une extension différente, 
+		le Centre d'enregistrement des entreprises (BRC) doit manuellement confirmer l'organisme (cela est possible car le propriétaire d’entreprise a 
+		fourni son consentement à ce qu’EDSC confirme l’existence de son organisme auprès de l’ARC).</p>	
 	
-				<li>Test if the BN has the RP extension. If not, generate a work item of type: <b>BN requires manual validation.</b></li>
+				<li>Le système vérifie si le NE a l'extension RP. Si ce n'est pas le cas, 
+					le système génère un  élément de travail intitulé « Requiert autorisation manuelle ».</li>
 
-<h3>Automatically confirm the organization using CRA Paydac</h3>
+<h3>2 - Le système confirme automatiquement l'organisme en utilisant la base de données PAYDAC de l’ARC</h3>
 					
-<p>When owners give consent, use the business number (BN15) to retrieve CRA data from the CRA Paydac database. 
-	If the BN retrieves no data, generate a work item of type: <b>CRA BN Not Found in Paydac.</b></p>
+<p>Une fois que le propriétaire de l'entreprise a donné son consentement, le système utilise le numéro d'entreprise (BN15) 
+	pour extraire les données de l’ARC de la base de données PAYDAC. Si le système ne trouve pas le NE dans PAYDAC, 
+	le système génère un élément de travail intitulé « NE ARC non trouvé dans Paydac ».</p>
 
-<p>If Paydac data exists, compare it with the organization's data submitted by the user using the following rules. </p>
+<p>Si le système trouve le NE dans PAYDAC, il compare les données de PAYDAC avec les données de l'organisme soumises par l'utilisateur en appliquant les règles suivantes :</p>
 
                         <ol>
-                            <li>The business number must be a perfect match</li>
-                            <li>The legal name must be a perfect match</li>
-                            <li>The postal/zip code, country, province/state, and city must be a perfect match</li>
-			    <li>Check that the CRA organization status is active. If it is not, generate the work item of type: <b>Invalid CRA Status</b></li>
-			    <li>Confirm the organization when all the data match</li>
-			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: <b>CRA BN - Information Validation</b></li>                            
+                            <li>Le numéro d'entreprise doit correspondre parfaitement</li>
+                            <li>Le nom légal doit correspondre parfaitement</li>
+                            <li>Le code postal/zip, le pays, la province/l'état et la ville doivent correspondre parfaitement</li>
+			    <li>Le système vérifie que le statut de l'organisme auprès de l'ARC est identifié comme étant « actif ». 
+				    S'il ne l'est pas, le système génère un élément de travail intitulé « Statut ARC invalide ».</li>
+			    <li>Le système confirme l'organisme lorsque toutes les données correspondent</li>
+			    <li>Lorsque les données ne correspondent pas, le système empêche la confirmation de l’organisme et génère un élément de travail intitulé « NE ARC - Validation de l'information ».</li>                            
                           </ol>
 
-<p>ESDC identity management policy states that we must compare all parts of the address.
-	Privacy rules require that any data we collect must be used for a business purpose. 
-	To meet both of these rules, we will collect and compare address lines 1 and 2 using the following rules.</p>
+<p>La politique de gestion de l'identité d'EDSC stipule que nous devons comparer toutes les composantes de l'adresse (et non seulement le code postal). 
+	Les règles de confidentialité, quant à elles, exigent que toutes les données que nous recueillons soient utilisées à des fins commerciales. 
+	Pour satisfaire à ces deux règles, le système collecte et compare les lignes d'adresse 1 et 2 en appliquant les règles suivantes :</p>
 
 			<ol>
-                            <li>Always confirm the organization regardless of the outcome for address line 1 and 2</li>
-			    <li>Keep a count of when address lines 1 and 2 match and when they do not, so that SDS can asses
-				 if the number of mismatches falls within an acceptable range.</li>
+                            <li>Le système confirme toujours l'organisme, quel que soit le résultat des lignes d'adresse 1 et </li>
+			    <li>Le système comptabilise les cas où les lignes d'adresse 1 et 2 correspondent et ceux où elles ne correspondent pas, 
+				    afin que nous puissions déterminer si le nombre de cas qui ne correspondent pas se situe dans des limites acceptables. </li>
 
 			</ol>
 
 </br>
 
-<p><b>At this point, the backend process automatically assigns the role of Primary Officer (PO) to the user.</b></p>
+<h3>3 - Le système attribue automatiquement le rôle d’agent principal à l'utilisateur.</h3>
 
 
           		 <ol>
-			    <li>The user has confirmed their identity.</li>
-                            <li>the user has confirmed their status as the hightest authority in their organization, the business owner.</li>
+			    <li>L'utilisateur a confirmé son identité</li>
+                            <li>L'utilisateur a confirmé son statut en tant que propriétaire d'entreprise</li>
 			</ol>  
 
 </br>
-<p>Once MSCBA confirms the organization, direct users to the final incomplete step in the registration process.</p>
+<p>Une fois l'organisme confirmé, le système dirige l'utilisateur vers la dernière étape incomplète du processus d'inscription :</p>
 
  			<ol>
- 			    <li>For ROE Web and LEAF, users must accept the online agreement.</li>
-			    <li>GCOS does not have an online agreement so users go directly to the active organization page 
-				where they can access the program.</li>
+ 			    <li>Pour RE Web et le FPTAVE, l'utilisateur doit accepter l'Entente en ligne.</li>
+			    <li>Les SELSC n'ont pas d'entente en ligne; l’utilisateur est dirigé vers la page de l'organisme actif où il peut accéder au programme.</li>
 
 			</ol>  
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1801-fr.html">Continuer</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1801-fr.html">Poursuivre</a></p>
 
 			
 </br>
 
-<p>When there is a work item, direct users to the generic error message.</p>
+<p>Lorsqu'un élément de travail a été généré, le système dirige l'utilisateur vers le message d'erreur générique.</p>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec-fr.html">Erreur</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec-fr.html">Échec</a></p>
 
 </br>
 				
