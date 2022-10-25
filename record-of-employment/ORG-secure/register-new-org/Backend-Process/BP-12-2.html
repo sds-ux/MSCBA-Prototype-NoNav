@@ -176,20 +176,20 @@ Gouvernement du Canada					</span>
 			<div class="container">
 				<div class="row">
 		<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">				
-				<h1 property="name" id="wb-cont">Backend process: Confirm the owner with CRA</h1>
+				<h1 property="name" id="wb-cont">Backend process: Confirm the business owner</h1>
 </br>
 
-<p>When a user claims to be the business owner, the system checks if this is true using the following steps:</p>
+<p>The system confirms the person claiming to be the business owner by</p>
 
                         <ol>
-                            <li>Use BN-9 to retrieve owner names from the BN Validation Service – CRA data can contain up to 5 owners for a BN.</li>
-                            <li>Compare the user’s name from their profile with the owner names.</li>
-                            <li>The names must be a perfect match to pass the test.</li>
-                            
+                            <li>Using the BN-9 to retrieve the business owner’s name from the BN Validation Service – Note: CRA data can contain up to five business owners per BN.</li>
+                            <li>Comparing the user’s name from their profile with the business owner names in the BN Validation service.</li>
+                              
                         </ol>
-
+<p><b>To continue, the first name and last name must be a perfect match.</b></p>
+					
 </br>
-<p>If the user is confirmed as the owner, continue with owner consent process.</p>
+<p>If the names are a match, the user is confirmed as the business owner and can continue the business owner consent process.</p>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1005-2.html">Continue</a></p>
@@ -197,7 +197,7 @@ Gouvernement du Canada					</span>
 
 </br>
 
-<p>If the user is not the owner, the system displays an error message then closes the secure session.</p>
+<p>If the names do not match, the user is redirected to an error message and the secure session ends.</p>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2013-2.html">Fail</a></p>
