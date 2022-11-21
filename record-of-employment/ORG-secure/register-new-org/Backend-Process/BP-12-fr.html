@@ -171,11 +171,12 @@ Government of Canada					</span>
 <p>When a user claims to be the business owner, the system checks if this is true using the following steps:</p>
 
                         <ol>
-                            <li>Use BN-9 to retrieve owner names from the BN Validation Service – CRA data can contain up to 5 owners for a BN.</li>
-                            <li>Compare the user’s name from their profile with the owner names.</li>
-                            <li>The names must be a perfect match to pass the test.</li>
-                            
+                            <li>Extract the BN-9 from the BN-15 in found in the BUS database.</li>
+			    <li>Use BN-9 to retrieve owner names from the BN Validation Service – CRA data can contain up to 5 owners for a BN.</li>
+                            <li>Compare the user’s name from their profile with the owner names in the BN Validation service.</li>
+                                                      
                         </ol>
+<p><b>To continue, the first name and last name must be a perfect match.</b></p>
 
 </br>
 <p>If the user is confirmed as the owner, continue with owner consent process.</p>
