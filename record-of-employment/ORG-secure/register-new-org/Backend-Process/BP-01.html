@@ -179,30 +179,55 @@ Gouvernement du Canada					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm the business owner</h1>
 </br>
 
-<p>The system confirms the person claiming to be the business owner by </p>
-
-                        <ol>
-                            <li>Using the BN-9 to retrieve the business owner’s names from the BN Validation Service – Note: CRA data can contain up to five business owners per BN.</li>
-                            <li>Comparing the user’s name from their profile with the business owner names in the BN Validation service.</li>
-                        </ol>
-					<p><b>To continue, the first name and last name must be a perfect match.</b></p>
+<i><p>In this scenario:</p>
+	<ul>
+		<li>the user (i.e. the account holder) is also the business owner</li>
+	</ul>
+	
+</i>
+					
+<ol>					
+<li>The system uses the BN Validation Service to confirm that the person claiming to be the business owner really is the business owner.</li>
+	<p>The BN Validation Service is:</p>
+                        <ul>
+                            <li>populated with CRA data</li>
+                            <li>managed by ISED</li>
+                        </ul>
+					
 					
 </br>
-<p>If the names are a match, the user is confirmed as the business owner and can continue the business owner consent process.</p>
+<li>The system:</li>
+	<ol style="list-style-type:lower-alpha">
+		<li>Extracts the BN-9 from the BN-15 found in the BUS database.</li>
+		<ul>
+			<li>The BN Validation Service contains BN-9s while MSCBA collects BN-15s. 
+				To accurately compare data from the BUS database with data from the BN Validation Service, 
+				the system must extract the BN-9 from the BN-15s found in the BUS database.</li>
+		</ul>
+		<li>Uses the BN-9 to retrieve the business owner’s name from the BN Validation Service</li>
+		<li>Compares the name submitted by the user with the business owner names in the BN Validation service</li>
+		<ul>
+			<li>CRA data can contain up to five business owners per BN</li>
+		</ul>
+	</ol>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1004.html">Continue</a></p>
+					
+</br>
+<b><li>To continue, the first name and last name must be a perfect match.</li></b>
 
+	<p>If the names are a match, the user is confirmed as the business owner and can continue the business owner consent process.</p>
+		<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1004.html">Continue</a></p>		
+				
+ 	<p>If the names do not match, the system redirects the user to an error message.</p>
+
+		<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1907.html">Fail - View error message</a></p>
 
 </br>
-
-<p>If the names do not match, the user the user is redirected to the business owner consent process for external users.</p>
-
-	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1907.html">Fail</a></p>
-
-</br>
-
+</ol>
 
 
 
