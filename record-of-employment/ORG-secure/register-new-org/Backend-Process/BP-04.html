@@ -179,61 +179,71 @@ Pas un écrant publique 					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm the organization with ESDC data</h1>
 </br>
 
-<h4>Check if BN already registered</h4>
-<p>When a user submits a business number (BN), a backend process performs the following test and redirects the flow accordingly.</p>
+<ol>					
+	<h4><li>The system verifies if the BN is already registered with the program</li></h4>
+		<p>If yes, the system:</p>
 
-			<ol>
+			<ol style="list-style-type:lower-alpha">
 			<li>Tests if the BN is already registered with this program. If it is, generate a work item of type: <b>CRA BN already registered</b>.</li>
 			<li>If there is a work item, set the status of the confirm organization step to say pending.</li>
 			</ol>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec.html">View error message</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec.html">Fail: View error message</a></p>
 
-<h4>Confirm with another program</h4>
-<p>The next step is to check if the BN is registered with another MSCBA program. If it is, compare the data submitted by the user with the data from the other program using the following rule:</p>
+	<h4><li>The system verifies if the BN is registered with another MSCBA program</li></h4>
+<p>If yes, the system compares the following data submitted by the user with the data from the other program:</p>
 
                         <ol>
-                            <li>The business number must be a perfect match.</li>
-                            <li>The legal name must be a perfect match</li>
-                            <li>The postal code must be a perfect match</li>
+                            <li>business number</li>
+                            <li>organization legal name</li>
+                            <li>postal/zip code</li>
+				<ul>
+					Note: The ESDC Identity Management Policy requires the entire address to match in order to confirm the organization. 
+					Currently, MSCBA only matches the postal code. To evaluate the fail/success rate if MSCBA was to include the other address fields in the validation process, 
+					the system attempts to match the country, province/state, city, and address lines 1 and 2 (if the other program has similar data collected) 
+					and records the hits and misses. 
+				</ul>
 			    <li>Confirm the organization when all three data match.</li>
 			    <li>When there is a mismatch, prevent confirmation and generate a work item of type: CRA BN - Information Validation</li>   
 			    <li>Attempt to match the country, province/state, city, and address lines 1 and 2 if the other program has similar data collected to confirm the organization.</li>
 			    <li>Record the hits and misses to evaluate when we can include these fields in the validation process.</li>                       
                          </ol>
 
-
-<h4>Confirmation successful</h4>
-<p>If we can confirm the new organization, direct the user to the registration summary page where they can find 
-	the next incomplete step in the registration process.</p>
+	<p><b>The system confirms the organization only when all three data elements are a perfect match.</b> When there is a mismatch, 
+		the system fails to confirm the organization and generates a work item of type “CRA BN - Information Validation”.
+	</p>
+	
+	<h4><li>The system redirects the user</li></h4>
+	<ol>
+		<li><b>If the organization is confirmed with another program’s data,</b> the system redirects the user to the Registration Summary page 
+			where they can find the next incomplete step in the registration process.</li>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p2.html">New organization confirmed</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p2.html">Organization confirmed</a></p>
 
 
-<p>If we can confirm the CRA business, direct the user to the manage CRA businesses page where they can see that the CRA business in now active</p> 
+		<li>2.	If the CRA business is confirmed, the system directs the user to the manage CRA businesses page where they can see that the CRA business in now active</li> 
 
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/manage-cra-businesses/ORG-1600-sec-bus.html">CRA business confirmed</a></p>
 
-
-
 			
 </br>
 
-<h4>Go to owner consent process</h4>
-<p>If we cannot confirm the organization with another program, direct the user to the owner consent process. 
-	We do not want to generate a work item at this point while there is a chance to confirm the organization using CRA PAYDAC data.</p>
+	<li><b>If the system cannot confirm the organization with another program’s data,</b> the system directs the user to the business owner consent 
+		process where it will attempt to confirm the organization using CRA PAYDAC data (no work item generated at this point).</li>
+
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1901.html">Owner consent for a new organization</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1901.html">Business owner consent - New organization</a></p>
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/manage-cra-businesses/ORG-1604.html">Owner consent for a CRA business</a></p>
-
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/manage-cra-businesses/ORG-1604.html">Business owner consent - CRA business</a></p>
 </br>
+</ol>
+
 
 
 
