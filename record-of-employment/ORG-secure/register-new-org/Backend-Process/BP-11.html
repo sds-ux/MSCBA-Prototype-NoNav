@@ -179,25 +179,25 @@ Pas un écrant publique 					</span>
 				<h1 property="name" id="wb-cont">Backend process: Find valid registration </h1>
 </br>
 
-<p>After a user submits a registration number, the system uses the number to search for a match in the BUS database for this program.</p>
+<p>After the business owner submits the unique registration number provided in the email, 
+	the system uses this number to search for a match in the BUS database for this program.</p>
 
-                       
-</br>
-<p>If it finds a registration waiting for owner consent, it directs the user to the next step in the owner consent process.</p>
+<ul>                     
 
-             
-
+	<li>If it finds a registration waiting for owner consent, it directs the user to the next step in the owner consent process.</li>
+         
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Backend-Process/BP-12.html">Continue</a></p>
 
 
 </br>
 
-<p>If there is no registration needing owner consent, the user has no valid reason to be here. The system displays an error message and closes the secure session.</p>
+	<li>If the system does not find a registration needing business owner consent, the system displays an error message and redirects the owner to try again.</li>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2012.html">Fail</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2012.html">Fail: View error message</a></p>
 
+</ul>
 </br>
 
 
