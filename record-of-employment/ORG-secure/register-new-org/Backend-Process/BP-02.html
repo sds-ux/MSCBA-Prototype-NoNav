@@ -178,29 +178,39 @@ Gouvernement du Canada					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm user’s identity</h1>
 </br>
 
-<p>Once the user has logged in their CRA My Account through Portageur to attempt to confirm their identity, 
-	Portageur redirects the user back to MSCBA and returns to MSCBA the data that the user agreed to share. </p>
+<ol>
+	<li>Once the user has logged in their CRA My Account through Portageur to attempt to confirm their identity, Portageur:</li>
+		<ul>
+			<li>redirects the user back to MSCBA, and</li>
+			<li>returns to MSCBA the data that the user agreed to share</li>
+		</ul>
 
-		<p>The system compares the user’s first and last name from their profile with the first and last name received from the CRA data.</p>         
-		<p><b>To continue, the first name and last name must be a perfect match</b></p>
-
+	<li>The MSCBA system compares the user’s first and last name from their profile with the first and last name received from the CRA data.</li>         
+		
 </br>
-<p>If the names are a match, the identity of the user is confirmed and they can continue with the business owner consent process.</p>
+	<b><li>To continue, the first name and last name must be a perfect match.</li></b>
+		<ul>
+			<li><b>If the names match CRA data,</b> the user’s identity is confirmed. The user can continue with the business owner consent process.</li>
+		</ul>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1902.html">Continue</a></p>
 
 
 </br>
-
-<p>If CRA data fails to confirm the user’s identity, the system generates a work item called “Online Identification” and redirects the flow away from owner consent.</p>
-
+		<ul>
+			<li><b>If the names do not match CRA data,</b> the system fails to confirm the user’s identity: </li>
+			<ul>
+				<li>the system generates a work item of type  “Online Identification”</li>
+				<li>the user views an error message, and</li>
+				<li>the system  redirects the flow away from owner consent.</li>
+			</ul>
+		</ul>
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1909.html">Fail</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1909.html">Fail: View error message</a></p>
 
+</ol>
 </br>
-
-
 
 
 </main>
