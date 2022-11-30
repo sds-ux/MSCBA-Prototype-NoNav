@@ -178,42 +178,62 @@ Pas un écrant publique 					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm the organization with CRA data</h1>
 </br>
 
-<h3>1 - The system verifies if the BN has the RP extension</h3>
-	<p>CRA PAYDAC database only contains business numbers (BN) with the RP extension. 
-		If the BN has a different extension, the Business Registration Centre (BRC) must manually confirm the organization 
-		(this is possible because the business owner provided their consent for ESDC to confirm the existence of their organization with the CRA).</p>	
+<ol>
+	<li>The system records the consent</li>
+	<p>Upon receiving business owner consent, the system records:</p>
+		<ol>
+			<li>the first name and last name of the person providing consent</li>
+			<li>the date the consent is given, and</li>
+			<li>the organization for which consent is given </li>
+		</ol>
+	</br>
 	
-					<li>The system tests if the BN has the RP extension. If not, the system generates a work item called “BN requires manual validation”.</li>
+	<li>The system verifies if the BN has the RP extension</li>
+		<ul>
+			<li>CRA PAYDAC database only contains BNs with the RP extension.</li>
+			<li>If the BN has a different extension, the system generates a work item* of type “BN requires manual validation” 
+				and the Business Registration Centre (BRC) must manually confirm the organization 
+				(this is possible because the business owner provided their consent for ESDC to confirm the existence of their 
+				organization with the CRA).</li>
+		</ul>
 
-<h3>2 - The system automatically confirms the organization using CRA PAYDAC</h3>
-<p>When the business owner gives consent, the system uses the business number (BN15) to retrieve CRA data from the PAYDAC database. 
-	If the BN provided is not found in PAYDAC, the system generates a work item called “CRA BN Not Found in PAYDAC”.</p>
-
-<p>If the system finds the BN in PAYDAC, the system compares the PAYDAC data with the organization's data submitted by the user using the following rules:</p>
-
-                        <ol>
-                            <li>The business number must be a perfect match</li>
-                            <li>The legal name must be a perfect match</li>
-                            <li>The postal/zip code, country, province/state, and city must be a perfect match</li>
-			    <li>The system verifies that the CRA organization status is active. If it is not, generate a work item called "Invalid CRA Status"</li>
-			    <li>Confirm the organization when all the data match</li>
-			    <li>When there is a mismatch, the system prevents the confirmation of the organization and generates a work item called "CRA BN - Information Validation"</li>                            
-                          </ol>
-
-<p>ESDC identity management policy states that we must compare all parts of the address (not only the postal code). 
-	As for privacy rules, they require that any data we collect must be used for a business purpose. 
-	To meet both of these rules, the system collects and compares address lines 1 and 2 using the following rules:</p>
-
+	</br>	
+	<li>The system compares the organization information against CRA PAYDAC data</li>
+		<ul>
+			<li>The system uses the BN15 to retrieve CRA data from the PAYDAC database.</li>
+			<li><b>If the system does not find the BN in PAYDAC,</b> the system generates a work item* of type “CRA BN Not Found in PAYDAC”.</li>
+			<li><b>If the system finds the BN in PAYDAC,</b> the system compares the following data elements submitted by the user against PAYDAC data:</li>
+				<ol>
+					<li>Business number</li>
+					<li>Organization legal name</li>
+					<li>Postal/zip code, country, province/state, and city</li>
+				</ol>
+			<li><b>All the data elements must be a perfect match to confirm the organization.</b> 
+				When there is a mismatch, the system fails the confirmation and generates a work item* of type "CRA BN - Information Validation".</li>
+			<li><b>Note:</b></li>
+				<ul>
+					<li>ESDC identity management policy states that we must compare all parts of the address (not only the postal code).</li>
+					<li>Privacy rules require that any data we collect must be used for a business purpose.</li>
+					<li>To meet both of these rules, the system collects and compares address lines 1 and 2 using the following rules:</li>
+					<ol>
+						<li>The system always confirms the organization, regardless of the outcome for address line 1 and 2</li>
+						<li>The system keeps count of when address lines 1 and 2 match and when they do not, 
+							so that we can asses if the number of mismatches falls within an acceptable range</li>
+					</ol>
+				</ul>
+			<li>The system also verifies:</li>
 			<ol>
-                            <li>The system always confirms the organization, regardless of the outcome for address line 1 and 2</li>
-			    <li>The system keeps count of when address lines 1 and 2 match and when they do not, 
-				    so that we can asses if the number of mismatches falls within an acceptable range</li>
-
+				<li>The organization’s payroll account status</li>
+				<ul>
+					<li>If it is not “active”, the system generates a work item* of type "Invalid CRA Status"</li>
+				</ul>
+				<li>The date the payroll account was created with the CRA</li>
 			</ol>
+		</ul>
 
 </br>
 
-<h3>3. The system automatically assigns the role of Primary Officer (PO) to the user</h3>				
+	<li>The system automatically assigns the role of Primary Officer (PO) to the user</li>				
 
           		 <ol>
 			    <li>The user has confirmed their identity</li>
@@ -221,7 +241,8 @@ Pas un écrant publique 					</span>
 			</ol>  
 
 </br>
-<p>Once the organization is confirmed, the system directs the user to the final incomplete step in the registration process:</p>
+	<li>The system redirects the user</li>
+	<li>Once the organization is confirmed, the system directs the user to the final incomplete step in the registration process:</li>
 
  			<ol>
  			    <li>For ROE Web and LEAF, the user must accept the online agreement.</li>
@@ -240,6 +261,7 @@ Pas un écrant publique 					</span>
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec.html">Error</a></p>
 
+</ol>
 </br>
 
 
