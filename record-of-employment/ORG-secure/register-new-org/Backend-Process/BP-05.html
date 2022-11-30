@@ -175,40 +175,33 @@ Pas un écrant publique 					</span>
 			<div class="container">
 				<div class="row">
 		<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">				
-				<h1 property="name" id="wb-cont">Backend process: Send owner consent request email</h1>
+				<h1 property="name" id="wb-cont">Backend process: Send business owner consent request email</h1>
 </br>
 
-<p>When the MSCBA user is not the business owner, MSCBA sends an email requesting the owner’s consent to the MSCBA user, who then forwards the email to the business owner.</p>
+<p>The system initiates an out-of-band process:</p>
+	<ol>
+		<li>The system sends an email to the user, requesting the business owner’s consent</li>
+			<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+			href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-01.html">Consent request email</a></p>
+		
+		<li>The user forwards the email to the business owner.</li>
+		<li>The user views a confirmation message that the consent status is now pending.</li>
+			<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
+			href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1906.html">View confirmation message</a></p>
+		
+		<li>The user leaves the flow until the business owner takes action.</li>
+	</ol>
+					
 
-<p>The rationale is to make the organization responsible for getting the owner to provide consent. </p>
-
-                        <ol>
-                            <li>If the owner does not take timely action, the MSCBA user or their manager can follow-up directly with the owner.</li>
-                            <li>If MSCBA were to send the email directly to the owner, then the MSCBA user would have to follow-up with the Employer Contact Centre (ECC). 
+<p>The organization is responsible for getting the owner to provide consent.</p>
+	<ul>
+               	<li>If the business owner does not take timely action, the user or their manager can follow-up directly with the owner.</li>
+                <li>If the system were to send the email directly to the owner, the user would have to follow-up with the Employer Contact Centre (ECC). 
 				This becomes an expensive transaction for ESDC, and the ECC can do little to persuade the owner to take action.</li>
-                       </ol>
+	</ul>
 
 </br>					
-	<p>Before leaving MSCBA, the user continues on to view a message that the consent status is now pending.</p>
-
-	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1906.html">Confirmation message</a></p>
-
-
-</br>
- 
-	<p>The flow leaves the MSCBA user and goes to the business owner. The system automatically sends this email to the MSCBA user, who must forward it to the business owner.</p>
-			
-	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-01.html">Consent request email</a></p>
-
-
-</br>
-
-
-
-
-
+	
 
 </main>
 
