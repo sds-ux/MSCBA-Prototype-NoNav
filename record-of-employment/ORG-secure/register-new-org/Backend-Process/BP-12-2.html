@@ -179,39 +179,48 @@ Gouvernement du Canada					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm the business owner</h1>
 </br>
 
-<p>The system confirms the person claiming to be the business owner by</p>
+<ol>
+	<li>The system uses the BN Validation Service to confirm that the person claiming to be the business owner really is the business owner.</li>
+		<p>The BN Validation Service is:</p>
+		<ul>
+			<li>populated with CRA data </li>
+			<li>managed by ISED</li>
+	<li>The system:</li>
+		<ul>
+			<li>Extracts the BN-9 from the BN-15 in found in the BUS database.</li>
+			<ul>
+				<li>The BN Validation Service contains BN-9s while MSCBA collects BN-15s. 
+					To accurately compare data from the BUS database with data from the BN Validation Service, 
+					the system must extract the BN-9 from the BN-15s found in the BUS database.</li>
+			</ul>
+			<li>Extracts the BN-9 from the BN-15 found in the BUS database.</li>
+			<li>Uses the BN-9 to retrieve the business owner’s name from the BN Validation Service.</li>
+			<li>Compares the name submitted by the user with the business owner names in the BN Validation service</li>
+			<ul>
+				<li>CRA data can contain up to five business owners per BN</li>
+			</ul>
+                            
+		</ul>
 
-                        <ol>
-                            <li>Extracting the BN-9 from the BN-15 in found in the BUS database.</li>
-			    <li>Using the BN-9 to retrieve the business owner’s name from the BN Validation Service – Note: CRA data can contain up to five business owners per BN.</li>
-                            <li>Comparing the name submitted by the user with the business owner names in the BN Validation service.</li>
-                              
-                        </ol>
-<p><b>To continue, the first name and last name must be a perfect match.</b></p>
+	<li><b>To continue, the first name and last name must be a perfect match.</b></li>
 					
-</br>
-<p>If the names are a match, the user is confirmed as the business owner and can continue the business owner consent process.</p>
-
+		<p>If the names are a match, the user is confirmed as the business owner and can continue the business owner consent process.</p>
+			
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1005-2.html">Continue</a></p>
 
 
 </br>
 
-<p>If the names do not match, the system redirects the user to an error message and closes the secure session.</p>
+		<P>If the names do not match, the system redirects the user to an error message.</P>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2013-2.html">Fail</a></p>
 
 </br>
 
-<p>To leave the owner consent process and return to the MSCBA user’s journey, click here:</p>
-
-	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Backend-Process/BP-16.html">MSCBA user’s journey</a></p>
-
-</br>
-</br>
+			
+</ol>
 
 
 
