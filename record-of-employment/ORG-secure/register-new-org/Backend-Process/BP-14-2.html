@@ -176,25 +176,32 @@ Pas un écrant publique 					</span>
 			<div class="container">
 				<div class="row">
 		<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">				
-				<h1 property="name" id="wb-cont">Backend process: Process the owner's reasons </h1>
+				<h1 property="name" id="wb-cont">Backend process: Process the business owner's reasons not to authorize the PO</h1>
 </br>
 
-<p>When owners decide to cancel the registration or choose to not consent, they must provide a reason for their decision. 
-	The system stores the reason in the BUS database and inserts it into an email to the MSCBA user that is registering the organization.</p>
+<ol>
+<li>When the business owner decides to not authorize the primary officer or chooses to not provide consent, they must provide a reason for their decision. 
+	The system:</li>
+	<ul>
+		<li>stores the reason in the BUS database, and</li>
+		<li>inserts the reason into an email to the user that is registering the organization</li>
+	</ul>
+	</br>
 
-<p>Because the owner does not want this registration to happen, the system removes all organization data from view (marked for deletion) for this registration, including:</p>
+<li>Because the owner refused to authorize the PO, the registration cannot continue. The system marks all organization data for deletion, including:</li>
                         <ol>
-                            <li>The organization profile</li>
-                            <li>The BN an other validation data</li>
+                            <li>the organization profile</li>
+                            <li>the BN an other validation data</li>
                         </ol>
 
-<p>The only thing we retain is if the MSCBA user validated their identity. If users wants to recover, they must begin a new registration process.</p>
+<p>The only thing the system retains is if the MSCBA user validated their identity.</p>
+					
+<li>The MSCBA user will not be able to continue with the organization registration they had started. If they wish to resume, they must start a new registration.</li>
+	</br>
+<li>The system closes the secure session and redirects the business owner to the program’s chooser page.</li>
                        
 </br>
-<p>The system closes the secure session and redirects the owner to the chooser page. 
-	You can follow the owner’s journey to the end by selecting continue.</p>
-
-             
+            
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/chooser-page-2.html">Continue</a></p>
