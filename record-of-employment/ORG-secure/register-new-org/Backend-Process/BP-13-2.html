@@ -179,29 +179,43 @@ Pas un écrant publique 					</span>
 				<h1 property="name" id="wb-cont">Backend process: Confirm user’s identity </h1>
 </br>
 
-<p>When users attempt to confirm their identity online through CRA, the CRA Portageur system redirects the user back to MSCBA 
-	and returns the data that the user agreed to share. The backend process does the following:</p>
+<ol>					
+	<li>Once the user has logged in their CRA My Account through Portageur to attempt to confirm their identity, Portageur:</li>
 
                         <ol>
-                            <li>Compare the user’s first and last name from their profile with the first and last name received from CRA.</li>
-                            <li>The names must be a perfect match to pass the test.</li>
+                            <li>redirects the user back to MSCBA, and</li>
+                            <li>returns to MSCBA the data that the user agreed to share.</li>
                                                      
                           </ol>
 
 </br>
-<p>If CRA data confirms the MSCBA user’s identity, continue with owner consent process.</p>
+	<li>The MSCBA system compares the first and last name submitted by the user with the first and last name received from CRA.</li>
+					
+</br>
+	<b><li>To continue, the names must be a perfect match.</li></b>
+		<ul>
 
+			<li><b>If the names match CRA data,</b> the user’s identity is confirmed. The user can continue with the business owner consent process.</li>
+</br>
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2007-2.html">Continue</a></p>
 
 
 </br>
 
-<p>If CRA data fails confirm a user’s identity, the user sees an error message and then the system closes the secure session.</p>
+			<li><b>If the names to not match CRA data,</b> the system fails to confirm the user’s identity:</li>
+				<ul>
+					<li>the system generates a work item of type “Online Identification”</li>
+					<li>the user views an error message</li>
+					<li>the system closes the secure session</li>
+				</ul>
+				
+</br>			
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2010-2.html">Fail</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2010-2.html">Fail: View error message</a></p>
 
+				</ul>
 </br>
 
 
@@ -209,6 +223,8 @@ Pas un écrant publique 					</span>
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Backend-Process/BP-16.html">MSCBA user’s journey</a></p>
+
+</ol>
 
 </br></br>
 
