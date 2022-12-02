@@ -206,7 +206,7 @@ Pas un écrant publique 					</span>
 				<ol>
 					<li>Business number</li>
 					<li>Organization legal name</li>
-					<li>Postal/zip code, country, province/state, and city</li>
+					<li>Postal/zip code, country, and province/state</li>
 				</ol>
 			<li><b>All the data elements must be a perfect match to confirm the organization.</b> 
 				When there is a mismatch, the system fails the confirmation and generates a work item* of type "CRA BN - Information Validation".</li>
@@ -214,10 +214,10 @@ Pas un écrant publique 					</span>
 				<ul>
 					<li>ESDC identity management policy states that we must compare all parts of the address (not only the postal code).</li>
 					<li>Privacy rules require that any data we collect must be used for a business purpose.</li>
-					<li>To meet both of these rules, the system collects and compares address lines 1 and 2 using the following rules:</li>
+					<li>To meet both of these rules, the system collects and compares address lines 1 and 2, and the city name using the following rules:</li>
 					<ol>
-						<li>The system always confirms the organization, regardless of the outcome for address line 1 and 2</li>
-						<li>The system keeps count of when address lines 1 and 2 match and when they do not, 
+						<li>The system always confirms the organization, regardless of the outcome for address lines 1 and 2, and the city name.</li>
+						<li>The system keeps count of when address lines 1 and 2, and city name match and when they do not, 
 							so that we can asses if the number of mismatches falls within an acceptable range</li>
 					</ol>
 				</ul>
