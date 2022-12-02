@@ -176,69 +176,80 @@ Pas un écrant publique 					</span>
 			<div class="container">
 				<div class="row">
 		<main role="main" property="mainContentOfPage" class="col-md-12 col-md-push-0.5">				
-				<h1 property="name" id="wb-cont">Backend process: Send email to MSCBA user </h1>
+				<h1 property="name" id="wb-cont">Backend process: Send email to user</h1>
 </br>
 
-<p><b>Owner consent attempted</b></p>
-<p>When the business owner access the owner consent process, notify the MSCBA user by email of the outcome. 
-	The MSCBA user views the email and can then login to MSCBA to continue the registration or to attempt to recover from an 
-	incomplete owner consent process.</p>
 
-<p>Note: To simplify following the MSCBA user’s journey, we have added a link at the bottom of each of the emails. 
-	They are not part of the real emails but simply a convenience within this prototype. 
-	The links go directly to the appropriate MSCBA page without having to log in.</p>
-                       
+<p>When the business owner accesses the owner consent process, the system notifies the user by email of the outcome. 
+	The user views the email and can then login to MSCBA to continue the registration or to attempt to recover 
+	from an incomplete owner consent process.</p>
+
+<p>On this page is a collection of the emails that a user could receive when the business owner attempts to provide consent.</p>
+					
+<p>At the bottom of each email is a link that will direct you to the appropriate MSCBA page. 
+	These links are not part of the real emails but simply a convenience within the prototype.</p>
 
 </br>
-<p><b>Select an email</b></p>
-     
+<ol>
+
+	
+<b><li>Business owner provided consent</p></b>
+</br>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-06.html">Owner consent given</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-06.html">Consent successful</a></p>
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-07.html">Consent given - work item generated</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-07.html">Pending organization confirmation</a></p>
 
 				
 </br>
-	<p>When a confirmed owner chooses to end the registration or does not give consent, the system deletes the organization profile and the validation data. 
-		If the MSCBA user has confirmed their identity, the system retains that ID confirmation for further use.
-		MSCBA does not stop users from attempting to register organizations. To recover from this failure, the MSCBA user can 
-		attempt to register the same organization if they think they can get an owner's consent.
-	</p>
+<b><li>Business owner did not provide consent</li></b>
+	<p>When a confirmed business owner chooses to end the registration or does not give consent: </p>
+	<ul>
+		<li>The system deletes the organization profile and the validation data.</li>
+		<li>If the user has confirmed their identity, the system retains that ID confirmation for further use. </li>
+		<li>MSCBA does not stop users from attempting to register organizations.</li>
+		<li>To recover from this failure, the MSCBA user can attempt to register the same organization if they think they can get another business owner's consent.</li>
+	</ul>
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-05.html">Owner consent denied</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-05.html">Consent declined</a></p>
 
  
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-04.html">Owner cancelled the registration</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-04.html">PO not authorized</a></p>
 
 </br>
-	<p>When we cannot confirm the owner, the system retains the all of the information collected for the registration for 2 months before deleting it.
-		This time allows the owner to make sure CRA has their name as an owner and that the name attached to their CRA account matches the name they submit to MSCBA.
-		The MSCBA user can also attempt to contact other owners (if applicable) and get them to access the owner consent process.
-	</p>    
+<b><li>Business owner not confirmed</li></b>
+	<p>When the system cannot confirm the business owner:</p>    
+	<ul>
+		<li>The system retains all the information collected for the registration for a period of two months before deleting it.</li>
+		<li>This period of time allows the business owner to verify with the CRA that their name is on file as business owner.</li>
+		<li>It also allows the business owner to ensure that the first name and last name associated to their CRA account matches the ones they submit to MSCBA (spelling, middle initial, etc.).</li>
+		<li>The user can also attempt to contact other owners (if applicable) and get them to access the business owner consent process.</li>
+	</ul>
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-02.html">Not recognized as owner</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-02.html">Business owner not recognized by the CRA</a></p>
 
       
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-03.html">Owner identity not confirmed</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/consent-emails/Email-03.html">Business owner ID verification failed</a></p>
 
 
 </br>
-<p><b>Owner fails to act</b></p>
-<p>When the business owner does not attempt to access the owner consent process, 
-	we expect the MSCBA user to follow up directly with the business owner. 
-	MSCBA does not send any email to the MSCBA user.</p>
+<b><li>Owner fails to act</li></b>
+	<p>When the business owner does not attempt to access the owner consent process, we expect the user to follow up directly with them or their manager, 
+		as appropriate.</p>
+
+	<p>The system does not send an email to the user in this situation.</p>
 
 	
 </br>
-<p><b>Owner does not provide a valid BN</b></p>
-<p>When the business owner provides business number (BN) that does not match our records, MSCBA does not send any email to the MSCBA user.</p>
+<b><li>Owner does not provide a valid BN</li></b>
+	When the business owner provides a business number (BN) that does not match our records, the system does not send any email to the user.</p>
 
 
 </br>
