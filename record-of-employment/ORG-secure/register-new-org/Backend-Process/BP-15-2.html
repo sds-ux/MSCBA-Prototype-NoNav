@@ -179,40 +179,80 @@ Pas un écrant publique 					</span>
 </br>
 
 
-<p>Upon receiving owner consent, record an audit trail of who gave consent, when and for which organization.</p>
 
-<p>When owners give consent, use the business number (BN15) to retrieve CRA data from the CRA Paydac database. 
-	If the BN retrieves no data, generate a work item of type: <b>CRA BN Not Found in Paydac</b>.</p>
+<ol>
+	<h3><li>The system records the consent</li></h3>
+	<p>Upon receiving business owner consent, the system records:</p>
+		<ol>
+			<li>the first name and last name of the person providing consent</li>
+			<li>the date the consent is given, and</li>
+			<li>the organization for which consent is given </li>
+		</ol>
+	</br>
+	
+	<h3><li>The system verifies if the BN has the RP extension</li></h3>
+		<ul>
+			<li>CRA PAYDAC database only contains BNs with the RP extension.</li>
+			<li>If the BN has a different extension, the system generates a work item* of type “BN requires manual validation” 
+				and the Business Registration Centre (BRC) must manually confirm the organization 
+				(this is possible because the business owner provided their consent for ESDC to confirm the existence of their 
+				organization with the CRA).</li>
+		</ul>
 
-<p>If Paydac data exists, compare it with the organization's data submitted by the user using the following rules. </p>
-
-                        <ol>
-                            <li>The business number must be a perfect match</li>
-                            <li>The legal name must be a perfect match</li>
-                            <li>The postal/zip code, country, province/state, and city must be a perfect match</li>
-			    <li>Check that the CRA organization status is active. If it is not, generate the work item of type: <b>Invalid CRA Status</b></li>
-			    <li>Confirm the organization when all the data match</li>
-			    <li>When there is a mismatch, generate a work item of type: <b>CRA BN - Information Validation</b></li>                            
-                          </ol>
-
-<p>Privacy rules state that we can only collect data used for a business purpose. 
-	ESDC identity management policy states that we should compare the full address. 
-	Programs fear that comparing more data can lead to more mismatches and failed registrations. 
-	To meet both of these standards and with ISB’s consent, we will collect and compare address lines 1 and 2, 
-	and the city name using the following rules.</p>
-
+	</br>	
+	<h3><li>The system compares the organization information against CRA PAYDAC data</li></h3>
+		<ul>
+			<li>The system uses the BN15 to retrieve CRA data from the PAYDAC database.</li>
+			<li><b>If the system does not find the BN in PAYDAC,</b> the system generates a work item* of type “CRA BN Not Found in PAYDAC”.</li>
+			<li><b>If the system finds the BN in PAYDAC,</b> the system compares the following data elements submitted by the user against PAYDAC data:</li>
+				<ol>
+					<li>Business number</li>
+					<li>Organization legal name</li>
+					<li>Postal/zip code, country, and province/state</li>
+				</ol>
+			<li><b>All the data elements must be a perfect match to confirm the organization.</b> 
+				When there is a mismatch, the system fails the confirmation and generates a work item* of type "CRA BN - Information Validation".</li>
+			<li><b>Note:</b></li>
+				<ul>
+					<li>ESDC identity management policy states that we must compare all parts of the address (not only the postal code).</li>
+					<li>Privacy rules require that any data we collect must be used for a business purpose.</li>
+					<li>To meet both of these rules, the system collects and compares address lines 1 and 2, and the city name using the following rules:</li>
+					<ol>
+						<li>The system always confirms the organization, regardless of the outcome for address lines 1 and 2, and the city name.</li>
+						<li>The system keeps count of when address lines 1 and 2, and city name match and when they do not, 
+							so that we can asses if the number of mismatches falls within an acceptable range</li>
+					</ol>
+				</ul>
+			<li>The system also verifies:</li>
 			<ol>
-                            <li>Always confirm the organization regardless of the outcome for address line 1 and 2, and for the city name.</li>
-			    <li>Keep a count of when the city name, and address lines 1 and 2 match and when they do not, 
-				so that SDS can asses if the number of mismatches falls within an acceptable failure rate.</li>
-
+				<li>The organization’s payroll account status</li>
+				<ul>
+					<li>If it is not “active”, the system generates a work item* of type "Invalid CRA Status"</li>
+				</ul>
+				<li>The date the payroll account was created with the CRA</li>
 			</ol>
+		</ul>
 
 </br>
 
-<p>Display a confirmation message telling the owner they have completed the consent process.</p>
+	<h3><li>The system automatically assigns the role of Primary Officer (PO) to the user</li></h3>				
 
- 			
+          		 <ol>
+			    <li>The user has confirmed their identity</li>
+                            <li>The user has confirmed their status as business owner</li>
+			</ol>  
+
+</br>
+
+ 	<H3><li>The system redirects the user</li></H3>
+		<p>Once the organization is confirmed, the system directs the user to the final incomplete step in the registration process:</p>
+
+ 			<ol>
+ 			    <li>For ROE Web and LEAF, the user must accept the online agreement.</li>
+			    <li>GCOS does not have an online agreement; users are directed to the active organization page where they can access the program.</li>
+
+			</ol>  
+		
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2006-2.html">Continue</a></p>
 
@@ -225,7 +265,8 @@ Pas un écrant publique 					</span>
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Backend-Process/BP-16.html">MSCBA user’s journey</a></p>
 
-</br>
+
+</ol>
 </br>
 
 
