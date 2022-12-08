@@ -184,15 +184,17 @@ Pas un écrant publique 					</span>
 		<p>If yes, the system:</p>
 
 			<ol style="list-style-type:lower-alpha">
-			<li>Tests if the BN is already registered with this program. If it is, generate a work item of type: <b>CRA BN already registered</b>.</li>
-			<li>If there is a work item, set the status of the confirm organization step to say pending.</li>
+			<li>generates a work item of type “CRA BN already registered”</li>
+			<li>bsets the status of the “Confirm your organization” step in the Registration summary page to “Pending”</li>
+			<li>directs the user to an error message</li>
 			</ol>
-
+	<p></p>
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec.html">Fail: View error message</a></p>
 
 	<h4><li>The system verifies if the BN is registered with another MSCBA program</li></h4>
-<p>If yes, the system compares the following data submitted by the user with the data from the other program:</p>
+		<p>This verification can only be done with programs that meet the same level of assurance (LOA) or higher.</p>
+		<p>If yes, the system compares the following data submitted by the user with the data from the other program:</p>
 
                         <ol>
                             <li>business number</li>
@@ -214,13 +216,14 @@ Pas un écrant publique 					</span>
 	<ol>
 		<li><b>If the organization is confirmed with another program’s data,</b> the system redirects the user to the Registration Summary page 
 			where they can find the next incomplete step in the registration process.</li>
+		<p></p>
 
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1102-p2.html">Organization confirmed</a></p>
 
 
-		<li>2.	If the CRA business is confirmed, the system directs the user to the manage CRA businesses page where they can see that the CRA business in now active</li> 
-
+		<li>If the CRA business is confirmed, the system directs the user to the manage CRA businesses page where they can see that the CRA business in now active</li> 
+		<p></p>
 
 	<p><a class="btn btn-default" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/validated-organization/manage-cra-businesses/ORG-1600-sec-bus.html">CRA business confirmed</a></p>
@@ -231,7 +234,7 @@ Pas un écrant publique 					</span>
 	<li><b>If the system cannot confirm the organization with another program’s data,</b> the system directs the user to the business owner consent 
 		process where it will attempt to confirm the organization using CRA PAYDAC data (no work item generated at this point).</li>
 
-
+		<p></p>
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1901.html">Business owner consent - New organization</a></p>
 
