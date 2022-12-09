@@ -188,7 +188,7 @@ Pas un écrant publique 					</span>
 			<li>the date the consent is given, and</li>
 			<li>the organization for which consent is given </li>
 		</ol>
-	</br>
+
 	
 	<h3><li>The system verifies if the BN has the RP extension</li></h3>
 		<ul>
@@ -199,7 +199,7 @@ Pas un écrant publique 					</span>
 				organization with the CRA).</li>
 		</ul>
 
-	</br>	
+
 	<h3><li>The system compares the organization information against CRA PAYDAC data</li></h3>
 		<ul>
 			<li>The system uses the BN15 to retrieve CRA data from the PAYDAC database.</li>
@@ -208,7 +208,9 @@ Pas un écrant publique 					</span>
 				<ol>
 					<li>Business number</li>
 					<li>Organization legal name</li>
-					<li>Postal/zip code, country, and province/state</li>
+					<li>Postal/zip code
+					<li>country</li>
+					<li>province/state</li>
 				</ol>
 			<li><b>All the data elements must be a perfect match to confirm the organization.</b> 
 				When there is a mismatch, the system fails the confirmation and generates a work item* of type "CRA BN - Information Validation".</li>
@@ -233,28 +235,15 @@ Pas un écrant publique 					</span>
 			</ol>
 		</ul>
 
-</br>
 
-	<h3><li>The system automatically assigns the role of Primary Officer (PO) to the user</li></h3>				
-
-          		 <ol>
-			    <li>The user has confirmed their identity</li>
-                            <li>The user has confirmed their status as business owner</li>
-			</ol>  
-
-</br>
-
- 	<H3><li>The system redirects the user</li></H3>
-		<p>Once the organization is confirmed, the system directs the user to the final incomplete step in the registration process:</p>
-
- 			<ol>
- 			    <li>For ROE Web and LEAF, the user must accept the online agreement.</li>
-			    <li>GCOS does not have an online agreement; users are directed to the active organization page where they can access the program.</li>
-
-			</ol>  
+	<h3><li>The system redirects the business owner</li></h3>
+		<ol>
+ 		    <li>The business owner views a confirmation message stating that they have completed the consent process.</li>
+		    <li>The system closes the secure session.</li>
+		</ol>  
 		
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2006-2.html">Continue</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-2006-2.html">Success – view confirmation message</a></p>
 
 			
 </br>
