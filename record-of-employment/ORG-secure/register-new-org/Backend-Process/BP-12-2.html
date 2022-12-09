@@ -181,22 +181,22 @@ Gouvernement du Canada					</span>
 
 <ol>
 	<li>The system uses the BN Validation Service to confirm that the person claiming to be the business owner really is the business owner.</li>
+	<p></p>
 		<p>The BN Validation Service is:</p>
 		<ul>
 			<li>populated with CRA data </li>
 			<li>managed by ISED</li>
-		<ul>
+		</ul>
 			
 </br>
 	<li>The system:</li>
-	
+		<ul>
 			<li>Extracts the BN-9 from the BN-15 in found in the BUS database.</li>
 			<ul>
 				<li>The BN Validation Service contains BN-9s while MSCBA collects BN-15s. 
 					To accurately compare data from the BUS database with data from the BN Validation Service, 
 					the system must extract the BN-9 from the BN-15s found in the BUS database.</li>
 			</ul>
-			<li>Extracts the BN-9 from the BN-15 found in the BUS database.</li>
 			<li>Uses the BN-9 to retrieve the business owner’s name from the BN Validation Service.</li>
 			<li>Compares the name submitted by the user with the business owner names in the BN Validation service</li>
 			<ul>
