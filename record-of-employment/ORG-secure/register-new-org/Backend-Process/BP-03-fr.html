@@ -203,6 +203,7 @@ Government of Canada					</span>
 			<li><b>Toutes les donées doivent correspondre parfaitement pour confirmer l’organisme.</b> 
 				Lorsque les données ne correspondent pas, le système empêche la confirmation de l’organisme et 
 				génère un élément de travail intitulé « NE ARC - Validation de l'information ».</li>
+			
 			<li><b>Veuillez noter:</b></li>
 			
 			<ul>
@@ -216,20 +217,29 @@ Government of Canada					</span>
 				   	 afin que nous puissions déterminer si le nombre de cas qui ne correspondent pas se situe dans des limites acceptables. </li>
 
 				</ol>
+				<li>Aussi, le système confirme:</li>
+				<ol>
+					<li>Le statut de l'organisme </li>
+					<ul>
+						<li>Le système vérifie que le statut de l'organisme auprès de l'ARC est identifié comme étant « actif ». 
+						S'il ne l'est pas, le système génère un élément de travail intitulé « Statut ARC invalide ».</li>
+					</ul>
+					<li>La date de création du compte de retenues sur la paie avec l'ARC</li>
+				</ol>
 			</ul>
 
 </br>
 
-<h3>3 - Le système attribue automatiquement le rôle d’agent principal à l'utilisateur.</h3>
+	<h3><li>Le système attribue automatiquement le rôle d’agent principal à l'utilisateur.</li></h3>
 
-
-          		 <ol>
-			    <li>L'utilisateur a confirmé son identité</li>
-                            <li>L'utilisateur a confirmé son statut en tant que propriétaire d'entreprise</li>
-			</ol>  
+       		 <ol>
+		    <li>L'utilisateur a confirmé son identité</li>
+                    <li>L'utilisateur a confirmé son statut en tant que propriétaire d'entreprise</li>
+		</ol>  
 
 </br>
-<p>Une fois l'organisme confirmé, le système dirige l'utilisateur vers la dernière étape incomplète du processus d'inscription :</p>
+	<h3><li>Le système dirige l'utilisateur</li></h3>
+		<p>Une fois l'organisme confirmé, le système dirige l'utilisateur vers la dernière étape incomplète du processus d'inscription :</p>
 
  			<ol>
  			    <li>Pour RE Web et le FPTAVE, l'utilisateur doit accepter l'Entente en ligne.</li>
@@ -243,7 +253,7 @@ Government of Canada					</span>
 			
 </br>
 
-<p>Lorsqu'un élément de travail a été généré, le système dirige l'utilisateur vers le message d'erreur générique.</p>
+	<p>Lorsqu'un élément de travail a été généré, le système dirige l'utilisateur vers le message d'erreur générique.</p>
 
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec-fr.html">Échec</a></p>
