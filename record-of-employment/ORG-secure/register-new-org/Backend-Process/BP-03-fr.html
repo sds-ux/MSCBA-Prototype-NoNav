@@ -167,42 +167,56 @@ Government of Canada					</span>
 
 </br>
 
-<h3>1 - Le système vérifie si le NE a l'extension RP</h3>
-	<p>La base de données PAYDAC de l'ARC ne contient que les numéros d'entreprise (NE) avec l'extension RP. Si le NE a une extension différente, 
-		le Centre d'enregistrement des entreprises (BRC) doit manuellement confirmer l'organisme (cela est possible car le propriétaire d’entreprise a 
-		fourni son consentement à ce qu’EDSC confirme l’existence de son organisme auprès de l’ARC).</p>	
-	
-				<li>Le système vérifie si le NE a l'extension RP. Si ce n'est pas le cas, 
-					le système génère un  élément de travail intitulé « Requiert autorisation manuelle ».</li>
+<ol>
+	<h3><li>The system records the consent</li></h3>
+	<p>Upon receiving business owner consent, the system records:</p>
+		<ol>
+			<li>the first name and last name of the person providing consent</li>
+			<li>the date the consent is given, and</li>
+			<li>the organization for which consent is given </li>
+		</ol>
+	</br>
 
-<h3>2 - Le système confirme automatiquement l'organisme en utilisant la base de données PAYDAC de l’ARC</h3>
-					
-<p>Une fois que le propriétaire de l'entreprise a donné son consentement, le système utilise le numéro d'entreprise (BN15) 
-	pour extraire les données de l’ARC de la base de données PAYDAC. Si le système ne trouve pas le NE dans PAYDAC, 
-	le système génère un élément de travail intitulé « NE ARC non trouvé dans Paydac ».</p>
+	<h3><li>Le système vérifie si le NE a l'extension RP</li></h3>
+		<ul>
+			<li>La base de données PAYDAC de l'ARC ne contient que les numéros d'entreprise (NE) avec l'extension RP.</li>
+			<li>Si le NE a une extension différente, le système génère un élément de travail appelé "NE Requiert validation manuelle" 
+				et le Centre d’inscription des entreprises (CIE) doit manuellement confirmer l'organisme 
+				(cela est possible car le propriétaire d’entreprise a fourni son consentement à ce qu’EDSC confirme 
+				l’existence de son organisme auprès de l’ARC).</li>
+		</ul>				
 
-<p>Si le système trouve le NE dans PAYDAC, il compare les données de PAYDAC avec les données de l'organisme soumises par l'utilisateur en appliquant les règles suivantes :</p>
 
-                        <ol>
-                            <li>Le numéro d'entreprise doit correspondre parfaitement</li>
-                            <li>Le nom légal doit correspondre parfaitement</li>
-                            <li>Le code postal/zip, le pays, la province/l'état et la ville doivent correspondre parfaitement</li>
-			    <li>Le système vérifie que le statut de l'organisme auprès de l'ARC est identifié comme étant « actif ». 
-				    S'il ne l'est pas, le système génère un élément de travail intitulé « Statut ARC invalide ».</li>
-			    <li>Le système confirme l'organisme lorsque toutes les données correspondent</li>
-			    <li>Lorsque les données ne correspondent pas, le système empêche la confirmation de l’organisme et génère un élément de travail intitulé « NE ARC - Validation de l'information ».</li>                            
-                          </ol>
+	</br>	
 
-<p>La politique de gestion de l'identité d'EDSC stipule que nous devons comparer toutes les composantes de l'adresse (et non seulement le code postal). 
-	Les règles de confidentialité, quant à elles, exigent que toutes les données que nous recueillons soient utilisées à des fins commerciales. 
-	Pour satisfaire à ces deux règles, le système collecte et compare les lignes d'adresse 1 et 2 en appliquant les règles suivantes :</p>
+	<h3><li>Le système confirme automatiquement l'organisme en utilisant la base de données PAYDAC de l’ARC</li></h3>
 
-			<ol>
-                            <li>Le système confirme toujours l'organisme, quel que soit le résultat des lignes d'adresse 1 et </li>
-			    <li>Le système comptabilise les cas où les lignes d'adresse 1 et 2 correspondent et ceux où elles ne correspondent pas, 
-				    afin que nous puissions déterminer si le nombre de cas qui ne correspondent pas se situe dans des limites acceptables. </li>
+		<ul>
+			<li>le système utilise le numéro d'entreprise (BN15) pour extraire les données de l’ARC de la base de données PAYDAC.</li>
+			<li><b>Si le système ne trouve pas le NE dans PAYDAC,</b> le système génère un élément de travail intitulé « NE ARC non trouvé dans Paydac ».</li>
+			<li><b>Si le système trouve le NE dans PAYDAC,</b> le système compare les données l'organisme soumises par l'utilisateur suivante avec les donées de PAYDAC :</li>
+				<ol>
+					<li>le numéro d'entreprise</li>
+					<li>Le nom de l'entreprise légal</li>
+					<li>e code postal/zip, le pays, la province/l'état</li>
+				</ol>
+			<li><b>Toutes les donées doivent correspondre parfaitement pour confirmer l’organisme.</b> 
+				Lorsque les données ne correspondent pas, le système empêche la confirmation de l’organisme et 
+				génère un élément de travail intitulé « NE ARC - Validation de l'information ».</li>
+			<li><b>Veuillez noter:</b></li>
+			
+			<ul>
+				<li>La politique de gestion de l'identité d'EDSC stipule que nous devons comparer toutes les composantes de l'adresse (et non seulement le code postal).</li>
+				<li>Les règles de confidentialité, quant à elles, exigent que toutes les données que nous recueillons soient utilisées à des fins commerciales.</li>
+				<li>Pour satisfaire à ces deux règles, le système collecte et compare les lignes d'adresse 1 et 2 en appliquant les règles suivantes :</li>
+						
+				<ol>
+                           		 <li>Le système confirme toujours l'organisme, quel que soit le résultat des lignes d'adresse 1 et </li>
+			   		 <li>Le système comptabilise les cas où les lignes d'adresse 1 et 2 correspondent et ceux où elles ne correspondent pas, 
+				   	 afin que nous puissions déterminer si le nombre de cas qui ne correspondent pas se situe dans des limites acceptables. </li>
 
-			</ol>
+				</ol>
+			</ul>
 
 </br>
 
@@ -234,6 +248,7 @@ Government of Canada					</span>
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/ORG-1109-dec-fr.html">Échec</a></p>
 
+</ol>
 </br>
 				
 	  
