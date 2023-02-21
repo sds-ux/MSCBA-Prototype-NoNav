@@ -166,26 +166,42 @@ Government of Canada					</span>
 
 
 </br>
-
-<p>Une fois que l'utilisateur s'est connecté à son compte Mon dossier de l'ARC par le biais de Portageur pour tenter de confirmer son identité, 
-	Portageur redirige l'utilisateur vers MDESC et renvoie les données que l'utilisateur a accepté de partager dans MDESC.</p>
-
-					<p>Le système compare le prénom et le nom de famille de l'utilisateur provenant de son profil avec le prénom et le nom de famille reçus des données de l'ARC.</p>
-					<p><b>Pour poursuivre, le prénom et le nom doivent correspondre parfaitement.</b></p>
-
 </br>
-<p>Si les noms correspondent, l'identité de l'utilisateur est confirmée et il peut poursuivre le processus de consentement du propriétaire de l'entreprise.</p>
 
+<ol>
+	<li>Une fois que l'utilisateur s'est connecté à son compte Mon dossier de l'ARC par le biais de Portageur pour tenter de confirmer son identité, 
+	Portageur:</li>
+		<ul>
+			<li>redirige l'utilisateur vers MDESC, et</li>
+			<li>renvoie les données que l'utilisateur a accepté de partager dans MDESC</li>
+		</ul>
+	</br>
+
+	<li>Le système compare le prénom et le nom de famille de l'utilisateur provenant de son profil avec le prénom et le nom de famille reçus des données de l'ARC.</li>         
+		
+	</br>
+	<b><li>Pour poursuivre, le prénom et le nom doivent correspondre parfaitement.</li></b>
+		<ul>
+			<li><b>Si les noms correspondent,</b> l'identité de l'utilisateur est confirmée et il peut poursuivre le processus de consentement du propriétaire de l'entreprise.</li>
+
+		</ul>
+</br>
 	<p><a class="btn btn-primary" id="validate-organization_validate-organization_save" name="method:addBusiness" 
 		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1902-fr.html">Poursuivre</a></p>
 
-
+</br>
+		<ul>
+			<li><b>Si les données de l'ARC ne permettent pas de confirmer l'identité de l’utilisateur :</li>
+			<ul>
+				<li>le système génère un élément de travail appelé "Identification en ligne"</li>
+				<li>l’utilisateur vois un message d’erreur, et</li>
+				<li>le système redirige le flux vers le processus de consentement du propriétaire.</li>
+			</ul>
+		</ul>
 </br>
 
-<p>Si les données de l'ARC ne permettent pas de confirmer l'identité de l’utilisateur, le système génère un élément de travail appelé "Identification en ligne" et redirige le flux vers le processus de consentement du propriétaire.</p>
-
 	<p><a class="btn btn-danger" id="validate-organization_validate-organization_save" name="method:addBusiness" 
-		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1909-fr.html">Échec</a></p>
+		href="https://sds-ux.github.io/MSCBA-Prototype-NoNav/record-of-employment/ORG-secure/register-new-org/Owner-Consent/ORG-1909-fr.html">Échec : voir le message d’erreur</a></p>
 
 </br>				
 	  
